@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { StyleSheet, Text } from 'react-native';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -11,26 +10,17 @@ import { FontAwesome6 } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 
 /** Importação de telas */
-=======
-
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
->>>>>>> 2d1526a70fd7670d20811b8ab002428508821a2b
 import HomeScreen from '../Screens/HomeScreen/HomeScreen';
 import JobScreen from '../Screens/JobScreen/JobScreen';
 import ProfileScreen from '../Screens/ProfileScreen/ProfileScreen';
 import ConversationScreen from '../Screens/ConversationScreen/ConversationScreen';
 import RankingScreen from '../Screens/RankingScreen/RankingScreen';
-<<<<<<< HEAD
 import Colors from '../Utils/Colors';
-=======
->>>>>>> 2d1526a70fd7670d20811b8ab002428508821a2b
 
 const Tab = createBottomTabNavigator();
 
 export default function TabNavigation(){
     return(
-<<<<<<< HEAD
  
             <Tab.Navigator screenOptions={{
                 headerShown: false,
@@ -107,16 +97,3 @@ const Styles = StyleSheet.create({
     },
 
 })
-=======
-
-        <Tab.Navigator>
-            <Tab.Screen name="Home" component={HomeScreen}/>
-            <Tab.Screen name="Job" component={JobScreen}/>
-            <Tab.Screen name="Profile" component={ProfileScreen}/>
-            <Tab.Screen name="Conversation" component={ConversationScreen}/>
-            <Tab.Screen name="Ranking" component={RankingScreen}/>
-        </Tab.Navigator>
-
-    )
-}
->>>>>>> 2d1526a70fd7670d20811b8ab002428508821a2b
