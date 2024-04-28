@@ -17,16 +17,21 @@ import ConversationScreen from '../Screens/ConversationScreen/ConversationScreen
 import RankingScreen from '../Screens/RankingScreen/RankingScreen';
 import Colors from '../Utils/Colors';
 
+/** isso tira a letra: tabBarShowLabel: false, */
 const Tab = createBottomTabNavigator();
 
 export default function TabNavigation(){
     return(
- 
-            <Tab.Navigator screenOptions={{
+        
+            <Tab.Navigator  screenOptions={{
                 headerShown: false,
-                tabBarActiveTintColor: Colors.AZUL_MARINHO,
+                
+                tabBarActiveTintColor: Colors.AZUL_PACIFICO,
+                tabBarInactiveTintColor: Colors.BRANCO,
                 tabBarActiveBackgroundColor: Colors.AZUL_PACIFICO,
-                tabBarStyle:{backgroundColor: Colors.AZURE},
+                tabBarStyle:{
+                    backgroundColor: Colors.AZURE,  
+                },
             }}>
 
                 <Tab.Screen name="Home" component={HomeScreen}
