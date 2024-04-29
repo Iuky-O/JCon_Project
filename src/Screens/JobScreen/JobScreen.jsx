@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
   },
   text:{
     marginTop: 35,
-    fontSize:30,
+    fontSize:25,
+    color: Colors.BRANCO,
   }
 });
