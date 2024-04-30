@@ -6,7 +6,7 @@ import styles from '../../Utils/style';
 export default function JobScreen() {
   return (
     <><View style={styles.header}>
-      <Text style={styles.text}>JobScreen</Text>
+      <Text style={styles.text}>JOBCREEN</Text>
     </View><View style={styles.container}>
 
       </View></>
