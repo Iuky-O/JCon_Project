@@ -7,7 +7,6 @@ export default function HomeScreen() {
   return (
     <View>
       <View style={styles.header}>
-        <Image source={require('')}/>
       </View>
       
       <Text>HomeScreen</Text>
