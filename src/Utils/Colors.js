@@ -8,5 +8,8 @@ export default{
     AZUL_CELESTE: '#90E0EF',
     NEVASCA_AZUL: '#ADE8F4',
     TURQUESA_CLARO: '#CAF0F8',
-    BRANCO: '#FFFFFF'
+    BRANCO: '#FFFFFF',
+    OURO: '#FFD700',
+    PRATA: '#C0C0C0',
+    COBRE: '#CD7F32',
 }
