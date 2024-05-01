@@ -11,16 +11,15 @@ export default function JobScreen() {
     <SafeAreaView >
       
       <><View style={styles.header}>
-      <Ionicons
+      <Ionicons style={styles.iconBack}
           name="chevron-back"
-          style={{marginTop:35, color:Colors.BRANCO}}
           size={40}
           color="write"
           onPress={() => {}}
           />
-        <Image
+        <Image style={styles.imgLogo}
           source={require('../../../assets/images/logo-azul.jpg')}
-          style={{ width: 50, height: 70, marginTop:35, }}
+          
           resizeMode='contain'
         />
       </View>
@@ -59,6 +58,7 @@ export default function JobScreen() {
             },
           }],
           {useNativeDriver: false})}>
+
             <View style={styles.boxVaga}></View> 
 
             <View style={styles.boxVaga}></View>
@@ -77,3 +77,12 @@ export default function JobScreen() {
     </SafeAreaView >
   )
 }
+/*<View style= {{marginTop:"10%"}}>
+<View style={styles.viewTitle}><Text> Serviço de Faxina</Text></View>
+<View style={styles.viewTitle}><Text> Imperador, Castanhal- PA</Text></View>
+<View style={styles.viewTitle}><Text> 01/01/2024</Text></View>
+<Image style={styles.imgVagas} source={require('../../../assets/images/vaga-faxina.jpg')}
+resizeMode='contain'
+/>
+<Text>Estela Pinheiro</Text>
+</View>*/

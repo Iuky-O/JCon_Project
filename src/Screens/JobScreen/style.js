@@ -11,6 +11,15 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10,
   },
+  iconBack:{
+    marginTop:35, 
+    color:Colors.BRANCO,
+  },
+  imgLogo:{
+    width: 50, 
+    height: 70, 
+    marginTop:35,
+  },
   viewBusca:{
     flexDirection:"row",
     justifyContent:"center",
@@ -35,11 +44,13 @@ const styles = StyleSheet.create({
     */
   },
   textTitle: {
-    Color: Colors.MALTE,
+    color: Colors.MALTE,
     fontSize: 30,
+    marginBottom:10,
   },
   textFiltrar: {
     marginTop:20,
+    color:Colors.AZUL_PACIFICO,
   },
   container: {
     width: "100%",
@@ -51,11 +62,25 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 50,
   },
   boxVaga: {
-    height: 250,
+    /*justifyContent: "space-between",*/
+    height: 200,
     backgroundColor: Colors.MALTE,
     margin: 7,
-    borderRadius: 5,
-    padding: 80,
+    borderRadius: 30,
+    //padding: 20,
+  },
+  imgVagas:{
+    width: 150, 
+    height: "50%",
+    borderRadius:10,
+    justifyContent:"center",
+  },
+  viewTitle:{
+    width:"50%",
+    padding: 2,
+    marginHorizontal:150,
+    backgroundColor:Colors.AZUL_CELESTE,
+    
   }
 });
 
