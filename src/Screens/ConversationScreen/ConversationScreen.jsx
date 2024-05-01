@@ -1,10 +1,15 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { View, Text, Button } from 'react-native';
 
-export default function ConversationScreen() {
+export default function ConversationsScreen({navigation}) {
+
   return (
-    <View>
-      <Text>ConversationScreen</Text>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Tela de Conversas</Text>
+      <Button
+        title="Ir para o Chat"
+        onPress={() => navigation.navigate('Chat')}
+      />
     </View>
-  )
+  );
 }
