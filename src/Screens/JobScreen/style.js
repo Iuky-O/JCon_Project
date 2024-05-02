@@ -11,55 +11,46 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10,
   },
-  iconBack:{
-    marginTop:35, 
-    color:Colors.BRANCO,
+  iconBack: {
+    marginTop: 35,
+    color: Colors.BRANCO,
   },
-  imgLogo:{
-    width: 50, 
-    height: 70, 
-    marginTop:35,
+  imgLogo: {
+    width: 50,
+    height: 70,
+    marginTop: 35,
   },
-  viewBusca:{
-    flexDirection:"row",
-    justifyContent:"center",
-    width:"90%",
-    margin:10,
-    paddingTop:20,
+  viewBusca: {
+    flexDirection: "row",
+    justifyContent: "center",
+    width: "90%",
+    margin: 10,
+    paddingTop: 20,
   },
-  inputBusca:{
-    flex:1,
-    backgroundColor:Colors.BRANCO,
-    borderRadius:25,
-    fontSize:20,
-    paddingHorizontal:15,
+  inputBusca: {
+    flex: 1,
+    backgroundColor: Colors.BRANCO,
+    borderRadius: 25,
+    fontSize: 20,
+    paddingHorizontal: 15,
   },
   boxTitle: {
     flexDirection: "row",
-    justifyContent:"space-between",
-    paddingTop:50,
-    marginLeft:20,
-    marginRight:30,
+    justifyContent: "space-between",
+    paddingTop: 50,
+    marginLeft: 20,
+    marginRight: 30,
     /*padding: 10,
     */
   },
   textTitle: {
     color: Colors.MALTE,
     fontSize: 30,
-    marginBottom:10,
+    marginBottom: 10,
   },
   textFiltrar: {
-    marginTop:20,
-    color:Colors.AZUL_PACIFICO,
-  },
-  container: {
-    width: "100%",
-    height: "100%",
-    backgroundColor: Colors.TURQUESA_CLARO,
-    alignItems: "center",
-    marginTop: 100,
-    borderTopLeftRadius: 50,
-    borderTopRightRadius: 50,
+    marginTop: 20,
+    color: Colors.AZUL_PACIFICO,
   },
   boxVaga: {
     /*justifyContent: "space-between",*/
@@ -69,19 +60,43 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     //padding: 20,
   },
-  imgVagas:{
-    width: 150, 
+  imgVagas: {
+    width: 150,
     height: "50%",
-    borderRadius:10,
-    justifyContent:"center",
+    borderRadius: 10,
+    justifyContent: "center",
   },
-  viewTitle:{
-    width:"50%",
+  viewTitle: {
+    width: "50%",
     padding: 2,
-    marginHorizontal:150,
-    backgroundColor:Colors.AZUL_CELESTE,
-    
-  }
-});
+    marginHorizontal: 150,
+    backgroundColor: Colors.AZUL_CELESTE,
 
+  },
+  item: {
+    flexDirection: 'row',
+    margin: 10,
+    backgroundColor: Colors.MALTE,
+    width:"95%",
+    padding: 25,
+    borderRadius:30,
+  },
+  image: {
+    width: 100,
+    height: 100,
+    borderRadius: 10,
+  },
+  textContainer: {
+    marginLeft: 25,
+  },
+  title: {
+    fontSize: 18,
+    color:Colors.BRANCO,
+  },
+  subtitle: {
+    marginTop:10,
+    fontSize: 12,
+    color:Colors.BRANCO,
+  },
+});
 export default styles

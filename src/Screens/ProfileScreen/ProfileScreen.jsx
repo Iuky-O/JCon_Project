@@ -1,9 +1,21 @@
-import { View, Text, SafeAreaView } from 'react-native'
-import React from 'react'
-
+import { View, Image, Text, SafeAreaView, ScrollView, Animated, Dimensions } from 'react-native'
+import React, { useState } from 'react'
+import { Ionicons } from 'react-native-vector-icons';
+import styles from './style';
 export default function ProfileScreen() {
+  const [scrollY, setSrollY] = useState(new Animated.Value(0));
+
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{ height: Dimensions.get('window').height }}>
+      <ScrollView 
+        scrollEventThrottle={16}
+        onScroll={Animated.event([{
+          nativeEvent: {
+            contentOffset: { y: scrollY }
+          },
+        }],
+          { useNativeDriver: false })}
+      >
       <View style={styles.header}>
         <Ionicons style={styles.iconBack}
           name="chevron-back"
@@ -16,7 +28,10 @@ export default function ProfileScreen() {
           resizeMode='contain'
         />
       </View>
-      
+        <View style={styles.container} >
+        <Text> teste</Text>
+        </View>
+      </ScrollView >
     </SafeAreaView>
   )
 }
