@@ -1,11 +1,17 @@
-import { View, Text, Image, Button} from 'react-native';
-import React from 'react';
+import { View, Text, Image, Button, SafeAreaView, ScrollView,  Animated} from 'react-native';
+import React, { useState } from 'react';
 import Carousel from 'react-native-snap-carousel';
 import styles from './../HomeScreen/styles';
 import Colors from '../../Utils/Colors';
 
+import { FontAwesome6 } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
+
 
 export default function HomeScreen({navigation}) {
+  const [scrollY,setSrollY] = useState (new Animated.Value(0));
+  const [text, setText] = useState("");
+
   /** Carrosel para ranking */
   const carouselItemsRanking = [
     {
@@ -122,7 +128,7 @@ export default function HomeScreen({navigation}) {
     title2: 'Cuidado',
     image2: 'https://pplware.sapo.pt/wp-content/uploads/2020/07/cuidador_00.jpg',
 
-    title3: 'Comunicação e atendimento',
+    title3: 'Comunicação',
     image3: 'https://blog.milvus.com.br/wp-content/uploads/148857-como-o-atendimento-ao-cliente-pode-ser-uma-ferramenta-estrategica-de-negocio.jpg',
   
   },
@@ -137,18 +143,81 @@ function renderItemsCategories({item}){
         <View style={styles.ContainerImagesCategories}>
 
           <View style={styles.subContainerCategories}>
-            <Image style={styles.CarouselCategoriasImage1} source={{uri:`${item.image}`}}/>
+            <Image style={styles.CarouselCategoriasImage} source={{uri:`${item.image}`}}/>
             <Text style={styles.CarouselTitleCategorie}>{item.title}</Text>
           </View>
 
           <View style={styles.subContainerCategories}>
-            <Image style={styles.CarouselCategoriasImage2} source={{uri:`${item.image2}`}}/>
-            <Text style={styles.CarouselTitleCategorie2}>{item.title2}</Text>
+            <Image style={styles.CarouselCategoriasImage} source={{uri:`${item.image2}`}}/>
+            <Text style={styles.CarouselTitleCategorie}>{item.title2}</Text>
           </View>
 
           <View style={styles.subContainerCategories}>
-            <Image style={styles.CarouselCategoriasImage3} source={{uri:`${item.image3}`}}/>
-            <Text style={styles.CarouselTitleCategorie3}>{item.title3}</Text>
+            <Image style={styles.CarouselCategoriasImage} source={{uri:`${item.image3}`}}/>
+            <Text style={styles.CarouselTitleCategorie}>{item.title3}</Text>
+          </View>
+
+        </View>
+      
+
+      </View>
+    </View>
+  );
+}
+
+ /** Carrosel para vagas*/
+ const carouselItemsJobs = [
+  {
+    title: 'Serviço de Faxina',
+    local: ' 1901 Thornridge Cir. Shiloh, Hawaii 81063',
+    date: ' 01/01/2024',
+
+  },
+
+  {
+    title: 'Manuntenção de Computadores',
+    local: ' Castanhal, PA, n° 144',
+    date: ' 02/05/2024',
+  },
+
+  {
+    title: 'Babá',
+    local: ' Castanhal, PA, n° 144',
+    date: ' 30/04/2024',
+  },
+
+  {
+    title: 'Contabilidade',
+    local: ' Castanhal, PA, n° 144',
+    date: ' 30/04/2024',
+  },
+
+];
+
+function renderItemsJobs({item}){
+  return(
+    <View>
+      <View style={styles.CarouselContainerItemJobs}>
+
+        <View>
+
+          <View style={styles.subContainerJobs}>
+
+            <Text style={styles.CarouselTitleJobs}>{item.title}</Text>
+
+            <Text style={styles.CarouselSubTitleJobs}>
+              <FontAwesome6 name="location-dot" size={15} color={Colors.MALTE}/>
+              {item.local}
+            </Text>
+
+            <Text style={styles.CarouselSubTitleJobs}>
+              <FontAwesome name="calendar" size={15} color={Colors.MALTE}/>
+              {item.date}
+            </Text>
+
+            <View style={styles.buttomJob}>
+              <Text style={styles.buttomText} onPress={() => navigation.navigate('Jobs')}>Mais</Text>
+            </View>
           </View>
 
         </View>
@@ -162,42 +231,56 @@ function renderItemsCategories({item}){
 
 
   return (
-    <View>
-      <View style={styles.header}>
-        <Image style={styles.logoImage} source={require('../../../assets/images/logo-azul-claro.jpg')}/>
-      </View>
-      
-      <Text style={styles.textTopic}>Ranking</Text> 
-      <Carousel 
-        layout={''}
-        layoutCardOffset={30}
-        data={carouselItemsRanking} 
-        sliderWidth={360}
-        itemWidth={370}
-        renderItem={renderItemsRanking}
+      <ScrollView>
+        <View style={styles.header}>
+          <Image style={styles.logoImage} source={require('../../../assets/images/logo-azul-claro.jpg')}/>
+        </View>
 
-      />
+        <SafeAreaView style={styles.container}>
 
-      <View style={styles.Button}>
-      <Button
-        title="Ver mais"
-        color={Colors.AZURE} 
-        onPress={() => navigation.navigate('Ranking')}
-      />
-      </View>
+          <View style={{width: '100%', justifyContent: 'center'}}>
+            <Text style={styles.textTopic}>Ranking</Text> 
+            <Carousel 
+              layout={''}
+              layoutCardOffset={30}
+              data={carouselItemsRanking} 
+              sliderWidth={''}
+              itemWidth={370}
+              renderItem={renderItemsRanking}
+            />
 
-      <Text style={styles.textTopic}>Categorias</Text> 
-      <Carousel 
-        layout={''}
-        layoutCardOffset={30}
-        data={carouselItemsCategories} 
-        sliderWidth={360}
-        itemWidth={370}
-        renderItem={renderItemsCategories}
-      />
+            <View style={styles.Button}>
+              <Text style={styles.buttomText} onPress={() => navigation.navigate('Ranking')}> Ver Mais </Text>
+            </View>
 
-      <Text style={styles.textTopic}>Vagas</Text> 
+          </View>
 
-    </View>
+
+          <View style={{width: '100%'}}>
+            <Text style={styles.textTopic}>Categorias</Text> 
+            <Carousel 
+              layout={''}
+              layoutCardOffset={30}
+              data={carouselItemsCategories} 
+              sliderWidth={''}
+              itemWidth={380}
+              renderItem={renderItemsCategories}
+            />
+          </View>
+
+          <View style={{width: '100%'}}>
+            <Text style={styles.textTopic}>Vagas</Text>
+            <Carousel 
+              layout={''}
+              layoutCardOffset={30}
+              data={carouselItemsJobs} 
+              sliderWidth={''}
+              itemWidth={380}
+              renderItem={renderItemsJobs}
+            /> 
+          </View>
+
+        </SafeAreaView>
+      </ScrollView>
   )
 } 
