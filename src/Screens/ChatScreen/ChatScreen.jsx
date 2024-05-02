@@ -1,8 +1,9 @@
 import React, { useState, useCallback } from 'react';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { GiftedChat } from 'react-native-gifted-chat';
-import { View, StyleSheet, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+import styles from './styles';
 
 export default function ChatScreen() {
   const [messages, setMessages] = useState([]);
@@ -66,67 +67,4 @@ export default function ChatScreen() {
       />
     </View>
   );
-}
-
-const styles = StyleSheet.create({
-  chat: {
-    flex: 1,
-    backgroundColor: '#CAF0F8', 
-  },
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#fff',
-    padding: 10,
-    paddingTop: 40,
-  },
-  titleContainer: {
-    flexDirection: 'column',
-    alignItems: 'center',
-    flex: 2,
-  },
-  backButton: {
-    position: 'absolute',
-    left: 5,
-    top: -10,
-  },
-  titulo: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#03045E',
-  },
-  onlineStatus: {
-    width: 10,
-    height: 10,
-    borderRadius: 5,
-    backgroundColor: 'green', 
-    marginLeft: 1,
-    justifyContent: 'center',
-  },
-  onlineText: {
-    textAlign: 'center',
-    color: '#0077',
-    paddingRight: 10, 
-  },
-  inputToolbar: {
-    backgroundColor: '#fff',
-    flexDirection: 'row',
-    borderRadius: 15,
-    width: '90%',
-    alignSelf: 'center',
-    padding: 10,
-    top: -10,
-    borderWidth: 0.5,
-    borderColor: '#C0C0C0',
-  },
-  textInput: {
-    flex: 1,
-    color: 'black',
-    fontSize: 16,
-  },
-  sendButton: {
-    marginLeft: 10,
-  },
-});
-
+};
