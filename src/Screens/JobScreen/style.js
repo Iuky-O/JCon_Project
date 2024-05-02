@@ -50,27 +50,22 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   textFiltrar: {
-    marginTop:20,
-    color:Colors.AZUL_PACIFICO,
+    marginTop: 20,
+    color: Colors.AZUL_PACIFICO,
   },
-   viewTitle:{
-    width:"50%",
+  viewTitle: {
+    width: "50%",
     padding: 2,
-    marginHorizontal:150,
-    backgroundColor:Colors.AZUL_CELESTE,
-    
-  }
-});
-
-
+    marginHorizontal: 150,
+    backgroundColor: Colors.AZUL_CELESTE,
   },
   item: {
     flexDirection: 'row',
     margin: 10,
     backgroundColor: Colors.MALTE,
-    width:"95%",
+    width: "95%",
     padding: 25,
-    borderRadius:30,
+    borderRadius: 30,
   },
   image: {
     width: 100,
@@ -82,12 +77,12 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
-    color:Colors.BRANCO,
+    color: Colors.BRANCO,
   },
   subtitle: {
-    marginTop:10,
+    marginTop: 10,
     fontSize: 12,
-    color:Colors.BRANCO,
+    color: Colors.BRANCO,
   },
 });
 export default styles
