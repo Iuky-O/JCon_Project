@@ -22,8 +22,6 @@ const styles = StyleSheet.create({
   },
   container: {
     width: "100%",
-  container: {
-    width: "100%",
     height: "100%",
     backgroundColor: Colors.TURQUESA_CLARO,
     alignItems: "center",
@@ -31,11 +29,11 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
   },
-  lineSeparator:{
-     height: 1,
-     width: "100%",
-     backgroundColor:Colors.AZUL_IRIS,
-  }
+  lineSeparator: {
+    height: 1,
+    width: "100%",
+    backgroundColor: Colors.AZUL_IRIS,
+  },
 });
 export default styles
 

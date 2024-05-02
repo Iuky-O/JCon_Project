@@ -31,7 +31,7 @@ export default function ProfileScreen() {
         />
       </View>
                   
-        <View style={styles.container} >
+      <View style={styles.container} >
         <Text> teste</Text>
         </View>
       </ScrollView >
