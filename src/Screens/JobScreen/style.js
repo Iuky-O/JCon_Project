@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     fontSize: 20,
     paddingHorizontal: 15,
+
   },
   boxTitle: {
     flexDirection: "row",
@@ -49,28 +50,18 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   textFiltrar: {
-    marginTop: 20,
-    color: Colors.AZUL_PACIFICO,
+    marginTop:20,
+    color:Colors.AZUL_PACIFICO,
   },
-  boxVaga: {
-    /*justifyContent: "space-between",*/
-    height: 200,
-    backgroundColor: Colors.MALTE,
-    margin: 7,
-    borderRadius: 30,
-    //padding: 20,
-  },
-  imgVagas: {
-    width: 150,
-    height: "50%",
-    borderRadius: 10,
-    justifyContent: "center",
-  },
-  viewTitle: {
-    width: "50%",
+   viewTitle:{
+    width:"50%",
     padding: 2,
-    marginHorizontal: 150,
-    backgroundColor: Colors.AZUL_CELESTE,
+    marginHorizontal:150,
+    backgroundColor:Colors.AZUL_CELESTE,
+    
+  }
+});
+
 
   },
   item: {

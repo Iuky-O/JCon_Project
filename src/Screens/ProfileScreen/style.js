@@ -22,6 +22,9 @@ const styles = StyleSheet.create({
   },
   container: {
     width: "100%",
+  container: {
+    width: "100%",
+    height: "100%",
     backgroundColor: Colors.TURQUESA_CLARO,
     alignItems: "center",
     marginTop: 100,
@@ -35,3 +38,4 @@ const styles = StyleSheet.create({
   }
 });
 export default styles
+

@@ -41,7 +41,6 @@ export default function JobScreen() {
         />
         <Image style={styles.imgLogo}
           source={require('../../../assets/images/logo-azul.jpg')}
-
           resizeMode='contain'
         />
       </View>
@@ -53,21 +52,22 @@ export default function JobScreen() {
           size={40}
           color={Colors.AZUL_MARINHO}
           onPress={() => { }}
-        />
-        <TextInput style={styles.inputBusca} placeholder="Pesquisar"
-          autoCapitalize='none'
-          autoCorrect={false}
-          value={text}
-          onChangeText={(value) => setText(value)}
-        />
-      </View>
+        />      
+          <TextInput style={styles.inputBusca} placeholder="Pesquisar"
+           autoCapitalize='none'
+           autoCorrect={false}
+           value={text}
+           onChangeText={(value) => setText(value)}
+          />
 
-      <View style={styles.boxTitle}>
+        </View>
 
-        <Text style={styles.textTitle}>Vagas</Text>
-        <Text style={styles.textFiltrar}>Filtrar</Text>
+        <View style={styles.boxTitle}>
 
-      </View>
+          <Text style={styles.textTitle}>Vagas</Text>
+          <Text style={styles.textFiltrar}>Filtrar</Text>
+
+        </View>
       <FlatList
         data={data}
         renderItem={({ item }) => <Item {...item} />}
@@ -76,6 +76,7 @@ export default function JobScreen() {
     </SafeAreaView >
   )
 }
+
 /*
   const [scrollY, setSrollY] = useState(new Animated.Value(0));
 <ScrollView
@@ -90,3 +91,5 @@ export default function JobScreen() {
   </ScrollView>
 
 */
+
+

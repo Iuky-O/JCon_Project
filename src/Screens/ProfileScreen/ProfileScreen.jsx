@@ -1,7 +1,9 @@
+
 import { View, Image, Text, SafeAreaView, ScrollView, Animated, Dimensions } from 'react-native'
 import React, { useState } from 'react'
 import { Ionicons } from 'react-native-vector-icons';
 import styles from './style';
+
 export default function ProfileScreen() {
   const [scrollY, setSrollY] = useState(new Animated.Value(0));
 
@@ -28,10 +30,12 @@ export default function ProfileScreen() {
           resizeMode='contain'
         />
       </View>
+                  
         <View style={styles.container} >
         <Text> teste</Text>
         </View>
       </ScrollView >
+
     </SafeAreaView>
   )
 }

@@ -5,6 +5,7 @@ import ConversationsScreen from '../Screens/ConversationScreen/ConversationScree
 import ChatScreen from '../Screens/ChatScreen/ChatScreen'
 import TabNavigation from '../Navigations/TabNavigation'
 import RankingScreen from '../Screens/RankingScreen/RankingScreen'
+import JobScreen from '../Screens/JobScreen/JobScreen'
 
 const Stack = createStackNavigator();
 export default function StackNavigation() {
@@ -16,6 +17,7 @@ export default function StackNavigation() {
         <Stack.Screen name='Conversations' component={ConversationsScreen}/>
         <Stack.Screen name='Chat' component={ChatScreen}/>
         <Stack.Screen name='Ranking' component={RankingScreen}/>
+        <Stack.Screen name='Jobs' component={JobScreen}/>
 
     </Stack.Navigator>
   )
