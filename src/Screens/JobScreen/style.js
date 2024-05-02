@@ -52,20 +52,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
     color: Colors.AZUL_PACIFICO,
   },
-  boxVaga: {
-    /*justifyContent: "space-between",*/
-    height: 200,
-    backgroundColor: Colors.MALTE,
-    margin: 7,
-    borderRadius: 30,
-    //padding: 20,
-  },
-  imgVagas: {
-    width: 150,
-    height: "50%",
-    borderRadius: 10,
-    justifyContent: "center",
-  },
   viewTitle: {
     width: "50%",
     padding: 2,
