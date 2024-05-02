@@ -1,5 +1,7 @@
-import { View, Text, SafeAreaView } from 'react-native'
+import { View, Text, SafeAreaView, Image } from 'react-native'
 import React from 'react'
+import styles from '../ProfileScreen/style'
+import { Ionicons } from 'react-native-vector-icons'
 
 export default function ProfileScreen() {
   return (
