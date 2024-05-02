@@ -9,7 +9,6 @@ export const styles = StyleSheet.create({
     },
     container: {
       flex: 1,
-      backgroundColor: Colors.BRANCO,
       alignItems: 'center',
       justifyContent: 'center',
     },
@@ -58,6 +57,7 @@ export const styles = StyleSheet.create({
       height: 200,
       padding: 20,
       
+      flex: 1,
       alignItems: 'center',
       justifyContent: 'center'
   
@@ -154,73 +154,98 @@ export const styles = StyleSheet.create({
 
   /** CARROSEL DE CATEGORIAS */
   CarouselContainerItemCategories:{
-    borderRadius: 0,
     height: 150,
     padding: 20,
     
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
 
   },
+
   subContainerCategories:{
     alignItems: 'center',
-    alignContent: 'space-between'
+    alignContent: 'space-between',
+
   },
+
   ContainerImagesCategories:{
+
     flex: 1,
-    justifyContent: "space-between",
-    flexDirection: "row",
+    justifyContent: 'space-around',
+    alignContent: 'center',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    columnGap: 20,
     marginTop: -10,
+    alignItems: 'center',
+    marginLeft: -10
+ 
   },
 
-  CarouselCategoriasImage1:{
-    width: '100%',
+  CarouselCategoriasImage:{
+    flex: 1,
     height: 100,
     width: 100,
     borderRadius: 10,
     borderColor: Colors.AZUL_IRIS,
     borderWidth: 2,
     resizeMode: 'cover',
-    marginLeft: -10,
-
-  },
-  CarouselCategoriasImage2:{
-    width: '100%',
-    height: 100,
-    width: 100,
-    borderRadius: 10,
-    borderColor: Colors.AZUL_IRIS,
-    borderWidth: 2,
-    resizeMode: 'cover',
-    marginLeft: 15,
-
-  },
-  CarouselCategoriasImage3:{
-    width: '100%',
-    height: 100,
-    width: 100,
-    borderRadius: 10,
-    borderColor: Colors.AZUL_IRIS,
-    borderWidth: 2,
-    resizeMode: 'cover',
-    marginLeft: 15,
-
   },
 
   CarouselTitleCategorie:{
     color: Colors.MALTE,
-    marginLeft: -10,
     maxWidth: 90
   },
-  CarouselTitleCategorie2:{
-    color: Colors.MALTE,
-    marginLeft: 10,
-    maxWidth: 90
+
+
+  /** CARROSEL DE VAGAS */
+  CarouselContainerItemJobs:{
+    padding: 60,
+    height: 130,
+    
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  CarouselTitleCategorie3:{
+
+  subContainerJobs:{
+    backgroundColor: Colors.TURQUESA_CLARO,
+    width: '100%',
+    width: 300,
+    height: 80,
+    maxWidth: 300,
+    alignContent: 'space-between',
+    borderRadius: 20,
+
+  },
+
+  buttomJob:{
+    width: 60, 
+    height: 20, 
+    backgroundColor: Colors.MALTE,
+    borderRadius: 40,
+    alignItems: 'center',
+    marginLeft: 210,
+    marginTop: -5,
+    
+  },
+
+  buttomText:{
+    color: Colors.BRANCO,
+  },
+
+  CarouselTitleJobs:{
+    fontSize: 15,
+    color: Colors.MALTE,
+    fontStyle: 'italic',
+    fontWeight: 'bold',
+    marginLeft: 10,
+  },
+  CarouselSubTitleJobs:{
+    fontSize: 13,
     color: Colors.MALTE,
     marginLeft: 10,
-    maxWidth: 90
+    marginTop: 2
+
   },
 
   });
