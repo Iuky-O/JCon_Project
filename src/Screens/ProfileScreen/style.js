@@ -42,6 +42,14 @@ const styles = StyleSheet.create({
   imgProfile:{
     flex:1,
   },
+<<<<<<< HEAD
+=======
+  lineSeparator: {
+    height: 1,
+    width: "100%",
+    backgroundColor: Colors.AZUL_IRIS,
+  },
+>>>>>>> master
 });
 export default styles
 

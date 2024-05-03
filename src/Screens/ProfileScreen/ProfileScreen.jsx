@@ -35,7 +35,9 @@ export default function ProfileScreen() {
         source={require('../../../assets/images/profile.jpg')}
         style={styles.imgProfile}
       ></ImageBackground>
-      </View> 
+      </View>                   
+      <View style={styles.container} >
+        </View>
       </ScrollView >
 
     </SafeAreaView>
