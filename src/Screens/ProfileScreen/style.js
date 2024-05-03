@@ -16,26 +16,32 @@ const styles = StyleSheet.create({
     color: Colors.BRANCO,
   },
   imgLogo: {
-    width: 50,
+    width: 70,
     height: 70,
     marginTop: 35,
   },
   container: {
     width: "100%",
-  container: {
-    width: "100%",
     height: "100%",
     backgroundColor: Colors.TURQUESA_CLARO,
     alignItems: "center",
-    marginTop: 100,
-    borderTopLeftRadius: 50,
-    borderTopRightRadius: 50,
+    marginTop: 0,
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
+    
   },
-  lineSeparator:{
-     height: 1,
-     width: "100%",
-     backgroundColor:Colors.AZUL_IRIS,
-  }
+  lineSeparator: {
+    height: 1,
+    width: "100%",
+    backgroundColor: Colors.AZUL_IRIS,
+  },
+  containerImg:{
+    flex: 1,
+    flexDirection:"column"
+  },
+  imgProfile:{
+    flex:1,
+  },
 });
 export default styles
 

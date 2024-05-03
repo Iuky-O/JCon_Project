@@ -1,5 +1,5 @@
 
-import { View, Image, Text, SafeAreaView, ScrollView, Animated, Dimensions } from 'react-native'
+import { View, Image, Text, SafeAreaView, ScrollView, Animated, Dimensions, ImageBackground } from 'react-native'
 import React, { useState } from 'react'
 import { Ionicons } from 'react-native-vector-icons';
 import styles from './style';
@@ -17,7 +17,7 @@ export default function ProfileScreen() {
           },
         }],
           { useNativeDriver: false })}
-      >
+      > 
       <View style={styles.header}>
         <Ionicons style={styles.iconBack}
           name="chevron-back"
@@ -30,10 +30,12 @@ export default function ProfileScreen() {
           resizeMode='contain'
         />
       </View>
-                  
-        <View style={styles.container} >
-        <Text> teste</Text>
-        </View>
+      <View style={styles.containerImg}>
+        <ImageBackground
+        source={require('../../../assets/images/profile.jpg')}
+        style={styles.imgProfile}
+      ></ImageBackground>
+      </View> 
       </ScrollView >
 
     </SafeAreaView>

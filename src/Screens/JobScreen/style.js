@@ -41,8 +41,6 @@ const styles = StyleSheet.create({
     paddingTop: 50,
     marginLeft: 20,
     marginRight: 30,
-    /*padding: 10,
-    */
   },
   textTitle: {
     color: Colors.MALTE,
@@ -73,7 +71,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   textContainer: {
-    marginLeft: 25,
+    marginLeft: 15,
+    width:"50%",
   },
   title: {
     fontSize: 18,
@@ -84,5 +83,12 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: Colors.BRANCO,
   },
+  Button:{
+    margin:0,
+    borderRadius:10,
+    maxWidth:80,
+    justifyContent:"flex-end",
+
+  }
 });
 export default styles
