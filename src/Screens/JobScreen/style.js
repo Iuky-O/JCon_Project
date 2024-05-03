@@ -77,18 +77,33 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     color: Colors.BRANCO,
+    maxWidth: 200
   },
   subtitle: {
     marginTop: 10,
     fontSize: 12,
     color: Colors.BRANCO,
+    maxWidth: 300,
   },
   Button:{
-    margin:0,
-    borderRadius:10,
-    maxWidth:80,
-    justifyContent:"flex-end",
+    backgroundColor: Colors.AZUL_PACIFICO,
+    maxWidth: 80,
+    width: 50,
+    height: 20,
+    borderRadius: 20,
+    alignItems: 'center',
+    marginTop: 95,
+    marginLeft: -20,
+  },
+  buttomText:{
+    color: Colors.BRANCO,
+  },
+  NameSu:{
+    color: Colors.BRANCO
+  },
+  ContainerImage:{
+    alignItems: 'center'
 
-  }
+  },
 });
 export default styles

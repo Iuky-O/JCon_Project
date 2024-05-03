@@ -17,42 +17,42 @@ export default function HomeScreen({navigation}) {
     {
       categorie: 'Bom atendimento',
 
-      title: 'Flor laranja',
-      image: 'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027-1024x683.jpg',
+      title: 'Juliana Trindade',
+      image: 'https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/08/ed5d55c8-3966-4114-8ce4-9b9d0d25effd.png',
 
-      title2: 'Flor branca',
-      image2: 'https://s2-casavogue.glbimg.com/tZPbYNnBG8vItsVBL3zRLyShvtQ=/0x0:2121x1414/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_d72fd4bf0af74c0c89d27a5a226dbbf8/internal_photos/bs/2023/x/F/Bl0O2SQAib1h38yryioA/copo-de-leite.jpg',
+      title2: 'Marcos M.',
+      image2: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTry3-HbJ7pnlj3fF8U4Eii8Ul47Wn6BKOP0HuL3-ES91H1SgiHCi2DHRBlvc6ljfy8qVs&usqp=CAU',
 
-      title3: 'Flor azul',
-      image3: 'https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2022/10/24/1832201343-20-flores-azuis-que-nem-parecem-de-verdade-dimitrios-pikros-eyeem-getty-images.jpg',
+      title3: 'Aline Palha',
+      image3: 'https://img.freepik.com/fotos-gratis/feliz-bonito-mulher-jovem-posar-camera-em-parque-cidade_1262-19158.jpg',
     
     },
 
     {
       categorie: 'Educação',
 
-      title: 'Flor rosa',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKUBdmlQWesXBRSGVg1xa5av8CVOedNbjfLr52-OvgmQ&s',
+      title: 'Flora Arruda',
+      image: 'https://static.vecteezy.com/ti/fotos-gratis/t2/3542373-garota-sorridente-em-um-fundo-branco-gratis-foto.JPG',
     
-      title2: 'Flor branca',
-      image2: 'https://s2-casavogue.glbimg.com/tZPbYNnBG8vItsVBL3zRLyShvtQ=/0x0:2121x1414/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_d72fd4bf0af74c0c89d27a5a226dbbf8/internal_photos/bs/2023/x/F/Bl0O2SQAib1h38yryioA/copo-de-leite.jpg',
+      title2: 'Juliano Cunha',
+      image2: 'https://www.otempo.com.br/image/contentid/policy:1.2503902:1624581759/image.jpg?f=3x2&q=0.6&w=1200&$p$f$q$w=4633e5f',
 
-      title3: 'Flor azul',
-      image3: 'https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2022/10/24/1832201343-20-flores-azuis-que-nem-parecem-de-verdade-dimitrios-pikros-eyeem-getty-images.jpg',
+      title3: 'Marcos M.',
+      image3: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTry3-HbJ7pnlj3fF8U4Eii8Ul47Wn6BKOP0HuL3-ES91H1SgiHCi2DHRBlvc6ljfy8qVs&usqp=CAU',
     
     },
 
     {
       categorie: 'Responsabilidade',
 
-      title: 'Flor azul',
-      image: 'https://s2-casaejardim.glbimg.com/igJHNcW-nU_4DXByYyvwDvcEfzM=/0x0:1280x853/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_a0b7e59562ef42049f4e191fe476fe7d/internal_photos/bs/2023/z/J/qCwpURTI2FbVpOjNqBAg/flor-azul-bela-emilia-plumbago-auriculata-pixabay.jpg',
+      title: 'Aline Palha',
+      image: 'https://img.freepik.com/fotos-gratis/feliz-bonito-mulher-jovem-posar-camera-em-parque-cidade_1262-19158.jpg',
     
-      title2: 'Flor branca',
-      image2: 'https://s2-casavogue.glbimg.com/tZPbYNnBG8vItsVBL3zRLyShvtQ=/0x0:2121x1414/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_d72fd4bf0af74c0c89d27a5a226dbbf8/internal_photos/bs/2023/x/F/Bl0O2SQAib1h38yryioA/copo-de-leite.jpg',
+      title2: 'Juliana Trindade',
+      image2: 'https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/08/ed5d55c8-3966-4114-8ce4-9b9d0d25effd.png',
 
-      title3: 'Flor azul',
-      image3: 'https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2022/10/24/1832201343-20-flores-azuis-que-nem-parecem-de-verdade-dimitrios-pikros-eyeem-getty-images.jpg',
+      title3: 'Flora Arruda',
+      image3: 'https://static.vecteezy.com/ti/fotos-gratis/t2/3542373-garota-sorridente-em-um-fundo-branco-gratis-foto.JPG',
     
     },
 
@@ -168,28 +168,46 @@ function renderItemsCategories({item}){
  /** Carrosel para vagas*/
  const carouselItemsJobs = [
   {
-    title: 'Serviço de Faxina',
+    titleJob: ' Serviço de Faxina',
     local: ' 1901 Thornridge Cir. Shiloh, Hawaii 81063',
     date: ' 01/01/2024',
+    description: 'Estamos à procura de um profissional de limpeza dedicado e experiente para se juntar à nossa equipe. O candidato ideal será responsável por manter nossas instalações limpas e organizadas, garantindo um ambiente seguro e higienizado para funcionários e clientes.',
+    requisite: 'Ser pontual, limpo e ter organização',
+    money: '100 hora',
+    sub: ' Antônio Marcos',
 
   },
 
   {
-    title: 'Manuntenção de Computadores',
+    titleJob: ' Manuntenção de Computadores',
     local: ' Castanhal, PA, n° 144',
     date: ' 02/05/2024',
+    description: 'Estamos em busca de um técnico em manutenção de computadores talentoso e dedicado para se juntar à nossa equipe. O candidato ideal será responsável por diagnosticar, reparar e realizar a manutenção preventiva em computadores e sistemas relacionados, garantindo o bom funcionamento e desempenho dos equipamentos.',
+    request: 'Ser Tec. Informática',
+    money: '100 hora',
+    sub: ' Maria Sena',
   },
 
   {
-    title: 'Babá',
+    titleJob: ' Babá',
     local: ' Castanhal, PA, n° 144',
     date: ' 30/04/2024',
+    description: 'Estamos buscando uma babá amorosa e confiável para cuidar de nossos filhos. O candidato ideal será alguém que adore crianças, tenha experiência em cuidar delas e esteja comprometido em proporcionar um ambiente seguro, acolhedor e estimulante.',
+    request: 'Gostar de crianças, ser gentil, saber cozinhar.',
+    money: '100 hora',
+    sub: ' Antônio Marcos',
+
   },
 
   {
-    title: 'Contabilidade',
+    titleJob: ' Contabilidade',
     local: ' Castanhal, PA, n° 144',
     date: ' 30/04/2024',
+    description: 'Estamos à procura de um assistente de contabilidade dedicado e organizado para se juntar à nossa equipe. O candidato ideal será responsável por auxiliar nas atividades contábeis e financeiras da empresa, garantindo a precisão e integridade dos registros contábeis.',
+    request: 'Ter ensino médio completo',
+    money: '100 hora',
+    sub: ' Andreia Luana',
+
   },
 
 ];
@@ -203,7 +221,7 @@ function renderItemsJobs({item}){
 
           <View style={styles.subContainerJobs}>
 
-            <Text style={styles.CarouselTitleJobs}>{item.title}</Text>
+            <Text style={styles.CarouselTitleJobs}>{item.titleJob}</Text>
 
             <Text style={styles.CarouselSubTitleJobs}>
               <FontAwesome6 name="location-dot" size={15} color={Colors.MALTE}/>
@@ -216,7 +234,14 @@ function renderItemsJobs({item}){
             </Text>
 
             <View style={styles.buttomJob}>
-              <Text style={styles.buttomText} onPress={() => navigation.navigate('Jobs')}>Mais</Text>
+              <Text style={styles.buttomText} 
+                    onPress={() => navigation.navigate('JobsDesc', {JobTitle: item.titleJob, 
+                                                                    JobLocal: item.local, 
+                                                                    JobDate: item.date,
+                                                                    JobDesc: item.description,
+                                                                    JobRequisite: item.requisite,
+                                                                    JobMoney: item.money,
+                                                                    JobSub: item.sub})}>Mais</Text>
             </View>
           </View>
 
