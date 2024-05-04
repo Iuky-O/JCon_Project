@@ -21,32 +21,45 @@ const styles = StyleSheet.create({
     marginTop: 35,
   },
   container: {
-    width: "100%",
-    height: "100%",
+   flex:1,
     backgroundColor: Colors.TURQUESA_CLARO,
-    alignItems: "center",
-    marginTop: 0,
-    borderTopLeftRadius: 40,
-    borderTopRightRadius: 40,
-    
+    height:700,
+    borderRadius:30,
+
   },
   lineSeparator: {
     height: 1,
     width: "100%",
     backgroundColor: Colors.AZUL_IRIS,
   },
-  containerImg:{
+  containerImg: {
     flex: 1,
-    flexDirection:"column"
+    flexDirection: "column",
+    height: 400,
   },
-  imgProfile:{
-    flex:1,
+  textTitle:{
+    fontSize:40,
+    justifyContent:"center",
+    color: Colors.AZUL_MARINHO
   },
-  
+  Button:{
+    backgroundColor: Colors.MALTE,
+    maxWidth: 300,
+    width: 200,
+    height: 50,
+    borderRadius: 20,
+    alignItems: 'center',
+  },
   lineSeparator: {
     height: 1,
     width: "100%",
     backgroundColor: Colors.AZUL_IRIS,
+  },
+  buttomText:{
+    margin:10,
+    color: Colors.BRANCO,
+    fontStyle:"bold",
+    fontSize:20,
   },
 
 });
