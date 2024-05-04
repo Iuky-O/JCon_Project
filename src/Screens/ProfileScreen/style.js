@@ -50,12 +50,18 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignItems: 'center',
   },
+  lineSeparator: {
+    height: 1,
+    width: "100%",
+    backgroundColor: Colors.AZUL_IRIS,
+  },
   buttomText:{
     margin:10,
     color: Colors.BRANCO,
     fontStyle:"bold",
     fontSize:20,
   },
+
 });
 export default styles
 

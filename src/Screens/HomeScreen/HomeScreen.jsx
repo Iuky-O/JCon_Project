@@ -1,16 +1,15 @@
-import { View, Text, Image, Button, SafeAreaView, ScrollView,  Animated} from 'react-native';
+import { View, Text, Image, Button, SafeAreaView, ScrollView,  Animated, Dimensions} from 'react-native';
 import React, { useState } from 'react';
-import Carousel from 'react-native-snap-carousel';
+import Carousel,{ Pagination } from 'react-native-snap-carousel';
 import styles from './../HomeScreen/styles';
 import Colors from '../../Utils/Colors';
 
 import { FontAwesome6 } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
+import { StatusBar } from 'react-native';
 
 
 export default function HomeScreen({navigation}) {
-  const [scrollY,setSrollY] = useState (new Animated.Value(0));
-  const [text, setText] = useState("");
 
   /** Carrosel para ranking */
   const carouselItemsRanking = [
@@ -60,7 +59,7 @@ export default function HomeScreen({navigation}) {
 
   function renderItemsRanking({item}){
     return(
-      <View>
+      <View style={{}}>
         <Text style={styles.textSubTopic}>{item.categorie}</Text>
 
         <View style={styles.CarouselContainerItem}>
@@ -254,6 +253,9 @@ function renderItemsJobs({item}){
   );
 }
 
+const windowWidth = Dimensions.get('window').width;
+const [index, setIndex] = React.useState(0)
+const isCarousel = React.useRef(null)
 
   return (
       <ScrollView>
@@ -263,44 +265,63 @@ function renderItemsJobs({item}){
 
         <SafeAreaView style={styles.container}>
 
-          <View style={{width: '100%', justifyContent: 'center'}}>
+          <View style={{width: '100%', flex:1}}>
             <Text style={styles.textTopic}>Ranking</Text> 
             <Carousel 
               layout={''}
               layoutCardOffset={30}
               data={carouselItemsRanking} 
-              sliderWidth={''}
-              itemWidth={370}
+              sliderWidth={windowWidth}
+              itemWidth={windowWidth}
               renderItem={renderItemsRanking}
-            />
+              onSnapToItem ={( index ) => setIndex ( index )} 
+              useScrollView ={ true } />  
 
-            <View style={styles.Button}>
-              <Text style={styles.buttomText} onPress={() => navigation.navigate('Ranking')}> Ver Mais </Text>
+              <Pagination
+              dotsLength ={ carouselItemsRanking.length } 
+              activeDotIndex ={ index } 
+              carouselRef ={ isCarousel } 
+              dotStyle ={{ 
+                width: 20,
+                height: 10,
+                borderRadius: 5,
+                marginHorizontal: 0, 
+                backgroundColor : Colors.AZUL_PACIFICO}} 
+              inactiveDotOpacity ={ 0.4 } 
+              inactiveDotScale ={ 0.6 } 
+              tappableDots ={ true }
+              />
+
+
+            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+              <View style={styles.Button}>
+                <Text style={styles.buttomText} onPress={() => navigation.navigate('Ranking')}> Ver Mais </Text>
+              </View>
             </View>
 
           </View>
 
 
-          <View style={{width: '100%'}}>
+          <View style={{width: '100%', flex:1}}>
             <Text style={styles.textTopic}>Categorias</Text> 
             <Carousel 
               layout={''}
               layoutCardOffset={30}
               data={carouselItemsCategories} 
-              sliderWidth={''}
+              sliderWidth={windowWidth}
               itemWidth={380}
               renderItem={renderItemsCategories}
             />
           </View>
 
-          <View style={{width: '100%'}}>
+          <View style={{width: '100%', flex:1}}>
             <Text style={styles.textTopic}>Vagas</Text>
             <Carousel 
               layout={''}
               layoutCardOffset={30}
               data={carouselItemsJobs} 
-              sliderWidth={''}
-              itemWidth={380}
+              sliderWidth={windowWidth}
+              itemWidth={windowWidth}
               renderItem={renderItemsJobs}
             /> 
           </View>
