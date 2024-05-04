@@ -3,8 +3,14 @@ import Colors from '../../Utils/Colors';
 
 const styles = StyleSheet.create({
 header: {
-    height: 100,
-    backgroundColor: Colors.MALTE,
+  height: 100,
+  backgroundColor: Colors.MALTE,
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  paddingLeft: 10,
+  paddingRight: 10,
+  flexDirection: "row",
+    
 },
 logoImage:{
     height: 60,
@@ -39,9 +45,8 @@ textSubTopic:{
 
   /** CARROSEL DE RANKING */
   CarouselContainerItem:{
-    borderRadius: 0,
-    height: 200,
-    padding: 20,
+    marginTop: 5,
+    width: '100%',
     
     flex: 1,
     alignItems: 'center',
@@ -163,6 +168,11 @@ textSubTopic:{
     paddingVertical: 10,
     paddingHorizontal: 10,
   },
+  itemId:{
+    color: Colors.AZUL_IRIS,
+    padding: 5
+
+  },
   textContainer: {
     flex: 1,
     marginLeft: 20,
@@ -171,6 +181,8 @@ textSubTopic:{
     width: 60,
     height: 60,
     borderRadius: 30,
+    borderColor: Colors.AZUL_PACIFICO,
+    borderWidth: 2,
   },
   contactName: {
     fontSize: 18,

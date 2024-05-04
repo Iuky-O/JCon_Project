@@ -121,6 +121,7 @@ const Item = ({ imageUrl, title, local, data, description, requisite, navigation
 
 export default function JobScreen({navigation}) {
   const [text, setText] = useState("");
+  const [searchWord, setSearchWord] = useState('');
 
   return (
     <SafeAreaView style={{ height: Dimensions.get('window').height }}>
