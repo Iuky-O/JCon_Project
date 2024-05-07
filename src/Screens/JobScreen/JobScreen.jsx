@@ -1,10 +1,11 @@
-import 
-{ View, Text, SafeAreaView, Image, TextInput, FlatList, Dimensions, Button} 
-from 'react-native'
+import { View, Text, SafeAreaView, Image, TextInput, FlatList, Dimensions }
+  from 'react-native'
 import React, { useState } from 'react'
 import styles from './style';
 import { Ionicons } from 'react-native-vector-icons';
 import Colors from '../../Utils/Colors';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 const data = [
   {
@@ -56,7 +57,7 @@ const data = [
     id: '5',
     imageUrl: 'https://images.unsplash.com/photo-1642257859842-c95f9fa8121d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     title: 'Serviço de Contabilidade',
-    local:'  1901 Thornridge Cir. Shiloh, Hawaii 81063',
+    local: '  1901 Thornridge Cir. Shiloh, Hawaii 81063',
     data: '  02/03/2024',
     NameSub: 'Rubens',
     description: 'Estamos buscando um assistente de serviço de contabilidade comprometido e organizado para se juntar à nossa equipe. O candidato selecionado será responsável por auxiliar nas operações diárias do departamento contábil, garantindo a precisão e integridade dos registros financeiros da empresa.',
@@ -75,27 +76,29 @@ const data = [
     money: '200 dia',
   },
 ];
-function btn(){
+function btn() {
 
 }
 const Item = ({ imageUrl, title, local, data, description, requisite, navigation, money, NameSub }) => (
-  
+
   <View style={styles.item}>
     <View style={styles.ContainerImage}>
       <Image source={{ uri: imageUrl }} style={styles.image} />
       <Text style={styles.NameSu}>{NameSub}</Text>
     </View>
     <View style={styles.textContainer}>
-      <Text style={styles.title} onPress={() => navigation.navigate('JobsDesc', {JobTitle: title, 
-                                                                            JobLocal: local, 
-                                                                            JobDate: data, 
-                                                                            JobDesc: description, 
-                                                                            JobRequisite: requisite, 
-                                                                            JobMoney: money, 
-                                                                            JobSub: NameSub})}>
-                                                                              {title}</Text>
+      <Text style={styles.title} onPress={() => navigation.navigate('JobsDesc', {
+        JobTitle: title,
+        JobLocal: local,
+        JobDate: data,
+        JobDesc: description,
+        JobRequisite: requisite,
+        JobMoney: money,
+        JobSub: NameSub
+      })}>
+        {title}</Text>
       <Text style={styles.subtitle}>
-      <Ionicons
+        <Ionicons
           name="map-outline"
           size={10}
           color="write"
@@ -103,7 +106,7 @@ const Item = ({ imageUrl, title, local, data, description, requisite, navigation
         />
         {local}</Text>
       <Text style={styles.subtitle}>
-      <Ionicons
+        <Ionicons
           name="calendar-outline"
           size={10}
           color="write"
@@ -113,26 +116,30 @@ const Item = ({ imageUrl, title, local, data, description, requisite, navigation
     </View>
 
     <View style={styles.Button}>
-      <Text style={styles.buttomText} onPress={() => navigation.navigate('Chat', {contactName: NameSub})}> Chat </Text>
+      <Text style={styles.buttomText} onPress={() => navigation.navigate('Chat', { contactName: NameSub })}> Chat </Text>
     </View>
   </View>
-  
+
 );
 
-export default function JobScreen({navigation}) {
+export default function JobScreen() {
   const [text, setText] = useState("");
+  const navigation = useNavigation();
   const [searchWord, setSearchWord] = useState('');
 
   return (
     <SafeAreaView style={{ height: Dimensions.get('window').height }}>
 
       <View style={styles.header}>
-        <Ionicons style={styles.iconBack}
-          name="chevron-back"
-          size={40}
-          color="write"
-          onPress={() => { }}
-        />
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}>
+          <Ionicons style={styles.iconBack}
+            name="chevron-back"
+            size={40}
+            color="write"
+            onPress={() => { }}
+          />
+        </TouchableOpacity>
         <Image style={styles.imgLogo}
           source={require('../../../assets/images/logo-azul.jpg')}
           resizeMode='contain'
@@ -165,7 +172,7 @@ export default function JobScreen({navigation}) {
 
       <FlatList
         data={data}
-        renderItem={({ item }) => <Item {...item}  navigation={navigation} />}
+        renderItem={({ item }) => <Item {...item} navigation={navigation} />}
         keyExtractor={item => item.id}
       />
     </SafeAreaView >
