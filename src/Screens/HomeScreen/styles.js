@@ -14,11 +14,11 @@ export const styles = StyleSheet.create({
     },
     Button:{
       backgroundColor: Colors.AZURE,
-      justifyContent: 'center', 
       alignItems: 'center',
-      maxWidth: 90,
-      marginLeft: 140,
       borderRadius: 10,
+      height: 20,
+      width: 90,
+      marginTop: -15
     },
     image: {
         width: 230,
@@ -53,14 +53,14 @@ export const styles = StyleSheet.create({
   
   /** CARROSEL DE RANKING */
     CarouselContainerItem:{
-      borderRadius: 0,
-      height: 200,
-      padding: 20,
+      marginTop: 5,
+      width: '100%',
       
       flex: 1,
       alignItems: 'center',
-      justifyContent: 'center'
-  
+      justifyContent: 'center',
+      alignSelf: 'center',
+      
     },
   
     CarouselTitle1:{
@@ -175,7 +175,7 @@ export const styles = StyleSheet.create({
     alignContent: 'center',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    columnGap: 20,
+    columnGap: 15,
     marginTop: -10,
     alignItems: 'center',
     marginLeft: -10
@@ -200,6 +200,7 @@ export const styles = StyleSheet.create({
 
   /** CARROSEL DE VAGAS */
   CarouselContainerItemJobs:{
+
     padding: 60,
     height: 130,
     
@@ -215,7 +216,6 @@ export const styles = StyleSheet.create({
     maxWidth: 300,
     alignContent: 'space-between',
     borderRadius: 20,
-
   },
 
   buttomJob:{
