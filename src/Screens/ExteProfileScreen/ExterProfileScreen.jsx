@@ -1,38 +1,14 @@
 
 import { View, Image, Text, SafeAreaView, ScrollView, Animated, Dimensions, Alert } from 'react-native'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Ionicons } from 'react-native-vector-icons';
 import styles from './style';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 
-import "firebase/firestore";
-import { firebase } from '../../Firebase/firebaseConfig';
-import { getFirestore, collection, getDocs, query, where} from "firebase/firestore";
-
 export default function ProfileScreen() {
-  const [userData, setUserData] = useState(null);
   const [scrollY, setSrollY] = useState(new Animated.Value(0));
   const navigation = useNavigation();
-
-    useEffect(() => {
-      async function fetchUserData() {
-        try {
-          const db = getFirestore();
-          const usersCollection = collection(db, "usuarios");
-          const q = query(usersCollection, where("Name", "==", "Jenny Cooper")); // Substitua "Jane Cooper" pelo nome do usuário que você deseja buscar
-  
-          const querySnapshot = await getDocs(q);
-          const userDataArray = querySnapshot.docs.map(doc => doc.data());
-          setUserData(userDataArray[0]); // Se houver apenas um usuário com o nome fornecido, você pode acessá-lo diretamente pelo índice 0
-        } catch (error) {
-          console.error("Erro ao buscar dados do usuário:", error);
-        }
-      }
-  
-      fetchUserData();
-    }, []);
-   
 
   return (
 
@@ -67,12 +43,16 @@ export default function ProfileScreen() {
             source={require('../../../assets/images/profile.jpg')}
           />
         </View>
-        {userData && (
+
         <View style={styles.container}>
 
           <Text>
-            <Text style={styles.textTitle}>{userData.Name}</Text>
+            <Text style={styles.textTitle}>Jane Cooper </Text>
           </Text>
+
+          <View style={styles.Button}>
+            <Text style={styles.buttomText} onPress={() => Alert.alert('Proposta feita!')}> Oferecer Proposta </Text>
+          </View>
 
           <Text style={styles.textSubtitle}>SERVIÇOS</Text>
           <Text style={styles.lineSeparator}></Text>
@@ -106,7 +86,6 @@ export default function ProfileScreen() {
           </View>
 
         </View>
-        )}
 
       </ScrollView>
     </SafeAreaView>
