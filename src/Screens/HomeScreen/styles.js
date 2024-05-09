@@ -4,8 +4,13 @@ import Colors from '../../Utils/Colors';
 
 export const styles = StyleSheet.create({
     header: {
-      height: 100,
+      flexDirection: "row",
+      height: 110,
       backgroundColor: Colors.MALTE,
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      paddingLeft: 10,
+      paddingRight: 10,
     },
     container: {
       flex: 1,
@@ -29,11 +34,10 @@ export const styles = StyleSheet.create({
         borderRadius: 15,
     },
     logoImage:{
-      height: 60,
-      width: 60,
+      height: 50,
+      width: 70,
       marginTop: 35,
       marginLeft: 270,
-      
       
     },
     textTopic:{

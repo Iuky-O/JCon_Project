@@ -67,15 +67,7 @@ export default function ProfileScreen() {
   return (
 
     <SafeAreaView style={{ height: Dimensions.get('window').height }}>
-      <ScrollView
-        scrollEventThrottle={16}
-        onScroll={Animated.event([{
-          nativeEvent: {
-            contentOffset: { y: scrollY }
-          },
-        }],
-          { useNativeDriver: false })}
-      >
+
         <View style={styles.header}>
           <TouchableOpacity
           onPress = {() => navigation.goBack()}>
@@ -87,11 +79,20 @@ export default function ProfileScreen() {
           />          
           </TouchableOpacity>
           <Image style={styles.imgLogo}
-            source={require('../../../assets/images/logo-azul.jpg')}
+            source={require('../../../assets/images/logo-azul-claro.jpg')}
             resizeMode='contain'
           />
         </View>
-
+        
+      <ScrollView
+        scrollEventThrottle={16}
+        onScroll={Animated.event([{
+          nativeEvent: {
+            contentOffset: { y: scrollY }
+          },
+        }],
+          { useNativeDriver: false })}
+      >
         <View style={styles.containerImg}>
           <Image
             source={require('../../../assets/images/profile.jpg')}

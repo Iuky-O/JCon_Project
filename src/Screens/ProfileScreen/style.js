@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     height: 110,
-    backgroundColor: Colors.AZUL_MARINHO,
+    backgroundColor: Colors.MALTE,
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingLeft: 10,

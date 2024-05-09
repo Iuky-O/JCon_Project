@@ -3,14 +3,14 @@ import Colors from '../../Utils/Colors';
 
 const styles = StyleSheet.create({
 header: {
-  height: 100,
+  flexDirection: "row",
+  height: 110,
   backgroundColor: Colors.MALTE,
   alignItems: 'center',
   justifyContent: 'space-between',
   paddingLeft: 10,
   paddingRight: 10,
-  flexDirection: "row",
-    
+  
 },
 logoImage:{
     height: 60,
