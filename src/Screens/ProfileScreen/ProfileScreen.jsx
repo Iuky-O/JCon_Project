@@ -1,5 +1,5 @@
 
-import { View, Image, Text, SafeAreaView, ScrollView, Animated, Dimensions, Alert } from 'react-native'
+import { View, Image, Text, SafeAreaView, ScrollView, Animated, Dimensions, Alert, TextInput } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import { Ionicons } from 'react-native-vector-icons';
 import styles from './style';
@@ -11,6 +11,7 @@ import { firebase } from '../../Firebase/firebaseConfig';
 import { getFirestore, collection, getDocs, query, where} from "firebase/firestore";
 
 export default function ProfileScreen() {
+
   const [userData, setUserData] = useState(null);
   const [scrollY, setSrollY] = useState(new Animated.Value(0));
   const navigation = useNavigation();
@@ -32,7 +33,36 @@ export default function ProfileScreen() {
   
       fetchUserData();
     }, []);
-   
+
+    async function saveAboutMe() {
+      try {
+        const db = getFirestore();
+        const usersCollection = collection(db, "usuarios");
+  
+        // Verificar se o usuário já tem uma descrição
+        if (userData && userData.id) {
+          // Atualizar a descrição existente
+          const userDoc = doc(db, "usuarios", userData.id);
+          await setDoc(userDoc, { aboutMe: newAboutMe }, { merge: true });
+          console.log("Descrição do usuário atualizada com sucesso!");
+        } else {
+          // Criar um novo documento com a descrição
+          await setDoc(doc(usersCollection), { aboutMe: newAboutMe });
+          console.log("Nova descrição do usuário criada com sucesso!");
+        }
+      } catch (error) {
+        console.error("Erro ao salvar descrição do usuário:", error);
+      }
+    }
+
+    function createAboutMe(){
+      <TouchableOpacity onPress={() => navigation.navigate("EditAboutMe", { currentAboutMe: userData.aboutMe })}>
+              <View style={{ margin: 20, padding: 10 }}>
+                <Text> Adicionar Descrição </Text>
+              </View>
+          </TouchableOpacity>
+    }
+
 
   return (
 
@@ -86,10 +116,9 @@ export default function ProfileScreen() {
           <Text style={styles.textSubtitle}>SOBRE MIM</Text>
           <Text style={styles.lineSeparator}></Text>
 
-          <Text style={{ margin: 20, }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima est sit iure id totam suscipit maiores. Id fugiat culpa quisquam molestiae esse repudiandae. Adipisci cumque possimus, consectetur perferendis similique itaque.
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam porro saepe, soluta necessitatibus libero quo inventore adipisci. Doloribus, minima quasi harum eius possimus suscipit quaerat dolor minus laudantium ratione libero?
-          </Text>
+          <View style={{ margin: 20, padding: 10 }}>
+            <Text style={{fontSize: 15}}>{userData.aboutMe ? userData.aboutMe : createAboutMe()}</Text>
+          </View>
 
           <Text style={styles.textSubtitle}>POSTAGENS</Text>
 

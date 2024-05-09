@@ -6,7 +6,12 @@ import { getDatabase } from "firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  {/** aqui fica as configurações do Firebase*/}
+  apiKey: "",
+  authDomain: "jcon-project.firebaseapp.com",
+  projectId: "jcon-project",
+  storageBucket: "jcon-project.appspot.com",
+  messagingSenderId: "28582866836",
+  appId: "1:28582866836:web:0d0493ce61bb4abbbf2981"
 };
 
 // Initialize Firebase

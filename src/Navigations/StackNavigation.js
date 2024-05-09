@@ -12,6 +12,7 @@ import JobsDescScreen from '../Screens/JobsDescScreen/JobsDescScreen'
 import ProfileScreen from '../Screens/ProfileScreen/ProfileScreen'
 import LoginScreen from '../Screens/LoginScreen/LoginScreen'
 import RegisterScreen from '../Screens/RegisterScreen/RegisterScreen'
+import EditAboutMeScreen from '../Screens/EditAboutMeScreen/EditAboutMeScreen'
 
 const Stack = createStackNavigator();
 export default function StackNavigation() {
@@ -31,6 +32,8 @@ export default function StackNavigation() {
           <Stack.Screen name='Profile' component={ProfileScreen}/>
           <Stack.Screen name='Login' component={LoginScreen}/>
           <Stack.Screen name='Register' component={RegisterScreen}/>
+
+          <Stack.Screen name='EditAboutMe' component={EditAboutMeScreen}/>
 
       </Stack.Navigator>
    
