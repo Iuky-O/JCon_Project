@@ -281,12 +281,12 @@ const [currentRankingIndex, setCurrentRankingIndex] = React.useState(0);
   return (
     
     <SafeAreaView style={styles.container}>
-      <ScrollView>
-    
+  
         <View style={styles.header}>
           <Image style={styles.logoImage} source={require('../../../assets/images/logo-azul-claro.jpg')}/>
         </View>
 
+      <ScrollView>
         <View style={{width: '100%', justifyContent: 'center'}}>
           <Text style={styles.textTopic}>Ranking</Text> 
             <Carousel 

@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 
 import { auth } from '../../Firebase/firebaseConfig';
 import { getFirestore, collection, addDoc } from "firebase/firestore";
-import { name } from '../LoginScreen/LoginScreen';
 
 export default function CreateJobsScreen() {
   const [jobName, setJobName] = useState('');
@@ -13,6 +12,7 @@ export default function CreateJobsScreen() {
   const [jobRequisite, setJobRequisite] = useState('');
   const [jobCategory, setJobCategory] = useState('');
   const [jobLimit, setJobLimit] = useState('');
+  
   const [jobCreate, setJobCreate] = useState('');
 
   async function addJob(){

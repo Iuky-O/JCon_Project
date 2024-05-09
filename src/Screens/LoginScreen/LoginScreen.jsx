@@ -7,13 +7,16 @@ import { useNavigation } from '@react-navigation/native';
 import "firebase/firestore";
 import { firebase } from '../../Firebase/firebaseConfig';
 import { getFirestore, collection, getDocs, query, where} from "firebase/firestore";
+import { useUser } from '../../Scripts/userName';
 
-export const name = userData.Name;
+
 
 export default function LoginScreen() {
+  const {setUserName} = useUser();
     const [userData, setUserData] = useState(null);
     const [userEmail, setUserEmail] = useState('');
     const [userPassword, setUserPassword] = useState('');
+    
     const navigation = useNavigation(); 
 
     useEffect(() => {
@@ -22,12 +25,13 @@ export default function LoginScreen() {
         try {
           const db = getFirestore();
           const usersCollection = collection(db, "usuarios");
-          const q = query(usersCollection, where("Email", "==", {userEmail})); // Substitua "Jane Cooper" pelo nome do usuário que você deseja buscar
+          const q = query(usersCollection, where("Email", "==", {userEmail})); 
   
           const querySnapshot = await getDocs(q);
           const userDataArray = querySnapshot.docs.map(doc => doc.data());
-          setUserData(userDataArray[0]); // Se houver apenas um usuário com o nome fornecido, você pode acessá-lo diretamente pelo índice 0
+          setUserData(userDataArray[0]);
           
+          setUserName(userData.Name);
         } catch (error) {
           console.error("Erro ao buscar dados do usuário:", error);
         }
