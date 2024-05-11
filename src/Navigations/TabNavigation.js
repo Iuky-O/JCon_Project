@@ -11,6 +11,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 /** Importação de telas */
 import HomeScreen from '../Screens/HomeScreen/HomeScreen';
+import CreateJobsScreen from '../Screens/CreateJobsScreen/CreateJobsScreen';
 import JobScreen from '../Screens/JobScreen/JobScreen';
 import ProfileScreen from '../Screens/ProfileScreen/ProfileScreen';
 import ConversationScreen from '../Screens/ConversationScreen/ConversationScreen';
