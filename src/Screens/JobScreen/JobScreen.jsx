@@ -1,13 +1,11 @@
-import { View, Text, SafeAreaView, Image, TextInput, FlatList, Dimensions, }
-  from 'react-native'
-import React, { useState } from 'react'
-import styles from './style';
-import { Ionicons } from 'react-native-vector-icons';
-import Colors from '../../Utils/Colors';
+import { View, Text, SafeAreaView, Image, TextInput, FlatList, Dimensions, onPress } from 'react-native'
+import React, { useState} from 'react'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import { Picker } from '@react-native-picker/picker';
-
+import styles from './style';
+import Colors from '../../Utils/Colors';
+import { Ionicons } from 'react-native-vector-icons';
 
 const data = [
   {
@@ -125,6 +123,7 @@ const Item = ({ imageUrl, title, local, data, description, requisite, navigation
 export default function JobScreen() {
   const [Filter, setFilter] = useState(['Pessoas','Empresas','Cargo']);
   const [useFilter, setUseFilter] = useState([]);
+  const [Options, setOptions] = useState();
   const [pickerVisible, setPickerVisible] = useState(false);
   const [text, setText] = useState("");
   const navigation = useNavigation();
@@ -143,10 +142,13 @@ export default function JobScreen() {
             onPress={() => { }}
           />
         </TouchableOpacity>
+        
         <Image style={styles.imgLogo}
           source={require('../../../assets/images/logo-azul-claro.jpg')}
           resizeMode='contain'
+          onPress={() => navigation.navigate('CreateJobs')}
         />
+        
       </View>
 
       <View style={styles.viewBusca}>
@@ -198,19 +200,5 @@ export default function JobScreen() {
   )
 }
 
-/*
-  const [scrollY, setSrollY] = useState(new Animated.Value(0));
-<ScrollView
-  scrollEventThrottle={16}
-  onScroll={Animated.event([{
-    nativeEvent: {
-      contentOffset: { y: scrollY }
-    },
-  }],
-    { useNativeDriver: false })}
-  >
-  </ScrollView>
-
-*/
 
 

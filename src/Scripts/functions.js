@@ -1,8 +1,6 @@
 
-export default function Functions(){
-    const [userData, setUserData] = useState(null);
-    
-    function getUser(){
+
+    export const [userData, setUserData] = useState(null);
 
         useEffect(() => {
             async function fetchUserData() {
@@ -21,6 +19,3 @@ export default function Functions(){
         
             fetchUserData();
           }, []);
-
-    };
-}
