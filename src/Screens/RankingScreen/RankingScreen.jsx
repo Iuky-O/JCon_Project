@@ -85,20 +85,20 @@ export default function RankingScreen({navigation}) {
     listAtendimento:[
     {
       id: 4,
-      title: 'Juliana Trindade',
-      image: 'https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/08/ed5d55c8-3966-4114-8ce4-9b9d0d25effd.png',
+      title: 'Ananda T.',
+      image: 'https://assets.propmark.com.br/uploads/2022/02/WhatsApp-Image-2022-02-18-at-08.52.06.jpeg',
       direction: 0
     },
     {
       id: 5,
-      title: 'Marcos M.',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTry3-HbJ7pnlj3fF8U4Eii8Ul47Wn6BKOP0HuL3-ES91H1SgiHCi2DHRBlvc6ljfy8qVs&usqp=CAU',
+      title: 'Juliano Lima',
+      image: 'https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2024/03/05/1663126779-homem-do-signo-de-aquario.jpg',
       direction: 1
     },
     {
       id: 6,
-      title: 'Aline Palha',
-      image: 'https://img.freepik.com/fotos-gratis/feliz-bonito-mulher-jovem-posar-camera-em-parque-cidade_1262-19158.jpg',
+      title: 'Aline Costa',
+      image: 'https://midias.correiobraziliense.com.br/_midias/jpg/2021/03/05/675x450/1_cbpfot020320212188-6556336.jpg',
       direction: -1
     },
     {
@@ -109,46 +109,34 @@ export default function RankingScreen({navigation}) {
     },
     {
       id: 8,
-      title: 'Juliano Cunha',
-      image: 'https://www.otempo.com.br/image/contentid/policy:1.2503902:1624581759/image.jpg?f=3x2&q=0.6&w=1200&$p$f$q$w=4633e5f',
+      title: 'Kevin V.',
+      image: 'https://media.istockphoto.com/id/1285124274/pt/foto/middle-age-man-portrait.jpg?s=170667a&w=0&k=20&c=AH3osfIGIk9uw9SQV5YWr9glq49DXaGhS1yO_9tdHv4=',
       direction: 0
     },
     {
       id: 9,
-      title: 'Marcos M.',
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTry3-HbJ7pnlj3fF8U4Eii8Ul47Wn6BKOP0HuL3-ES91H1SgiHCi2DHRBlvc6ljfy8qVs&usqp=CAU',
+      title: 'Wilson Kley',
+      image: 'https://media.istockphoto.com/id/1289461335/pt/foto/portrait-of-a-handsome-black-man.webp?b=1&s=170667a&w=0&k=20&c=RWxixQQ9h0PoUpppk1mO4aiRk58t_Ai8jh7W9z7OStE=',
       direction: 1
     },
     {
       id: 10,
       title: 'Aline Palha',
       image: 'https://img.freepik.com/fotos-gratis/feliz-bonito-mulher-jovem-posar-camera-em-parque-cidade_1262-19158.jpg',
-      direction: 1
-    },
-    {
-      id: 11,
-      title: 'Juliana Trindade',
-      image: 'https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/08/ed5d55c8-3966-4114-8ce4-9b9d0d25effd.png',
-      direction: -1
-    },
-    {
-      id: 12,
-      title: 'Flora Arruda',
-      image: 'https://static.vecteezy.com/ti/fotos-gratis/t2/3542373-garota-sorridente-em-um-fundo-branco-gratis-foto.JPG',
       direction: -1
     },
   ],
     listEducacao:[
       {
         id: 4,
-        title: 'esse',
-        image: 'https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/08/ed5d55c8-3966-4114-8ce4-9b9d0d25effd.png',
-        direction: 0
+        title: 'Wilson Kley',
+        image: 'https://media.istockphoto.com/id/1289461335/pt/foto/portrait-of-a-handsome-black-man.webp?b=1&s=170667a&w=0&k=20&c=RWxixQQ9h0PoUpppk1mO4aiRk58t_Ai8jh7W9z7OStE=',
+        direction: 1
       },
       {
         id: 5,
-        title: 'Marcos M.',
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTry3-HbJ7pnlj3fF8U4Eii8Ul47Wn6BKOP0HuL3-ES91H1SgiHCi2DHRBlvc6ljfy8qVs&usqp=CAU',
+        title: 'Juliana Trindade',
+        image: 'https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/08/ed5d55c8-3966-4114-8ce4-9b9d0d25effd.png',
         direction: 1
       },
       {
@@ -159,46 +147,34 @@ export default function RankingScreen({navigation}) {
       },
       {
         id: 7,
-        title: 'Flora Arruda',
-        image: 'https://static.vecteezy.com/ti/fotos-gratis/t2/3542373-garota-sorridente-em-um-fundo-branco-gratis-foto.JPG',
+        title: 'Katia Vasconcelos',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOJ6nB_jIYJ0jueSYgzhJP3BJWTgd6pZRPegHkoxjkuXgk7zIT1m21J8YXcYNu01Go9Jc&usqp=CAU',
         direction: 0
       },
       {
         id: 8,
-        title: 'Juliano Cunha',
-        image: 'https://www.otempo.com.br/image/contentid/policy:1.2503902:1624581759/image.jpg?f=3x2&q=0.6&w=1200&$p$f$q$w=4633e5f',
-        direction: 0
+        title: 'Ananda T.',
+        image: 'https://assets.propmark.com.br/uploads/2022/02/WhatsApp-Image-2022-02-18-at-08.52.06.jpeg',
+        direction: 1
       },
       {
         id: 9,
-        title: 'Marcos M.',
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTry3-HbJ7pnlj3fF8U4Eii8Ul47Wn6BKOP0HuL3-ES91H1SgiHCi2DHRBlvc6ljfy8qVs&usqp=CAU',
-        direction: 1
+        title: 'Aline Costa',
+        image: 'https://midias.correiobraziliense.com.br/_midias/jpg/2021/03/05/675x450/1_cbpfot020320212188-6556336.jpg',
+        direction: -1
       },
       {
         id: 10,
-        title: 'Aline Palha',
-        image: 'https://img.freepik.com/fotos-gratis/feliz-bonito-mulher-jovem-posar-camera-em-parque-cidade_1262-19158.jpg',
-        direction: 1
-      },
-      {
-        id: 11,
-        title: 'Juliana Trindade',
-        image: 'https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/08/ed5d55c8-3966-4114-8ce4-9b9d0d25effd.png',
-        direction: -1
-      },
-      {
-        id: 12,
-        title: 'Flora Arruda',
-        image: 'https://static.vecteezy.com/ti/fotos-gratis/t2/3542373-garota-sorridente-em-um-fundo-branco-gratis-foto.JPG',
-        direction: -1
+        title: 'Kevin V.',
+        image: 'https://media.istockphoto.com/id/1285124274/pt/foto/middle-age-man-portrait.jpg?s=170667a&w=0&k=20&c=AH3osfIGIk9uw9SQV5YWr9glq49DXaGhS1yO_9tdHv4=',
+        direction: 0
       },
     ],
     listResponsabilidade:[
         {
           id: 4,
-          title: 'aquele',
-          image: 'https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/08/ed5d55c8-3966-4114-8ce4-9b9d0d25effd.png',
+          title: 'Katia Vasconcelos',
+          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOJ6nB_jIYJ0jueSYgzhJP3BJWTgd6pZRPegHkoxjkuXgk7zIT1m21J8YXcYNu01Go9Jc&usqp=CAU',
           direction: 0
         },
         {
@@ -209,14 +185,14 @@ export default function RankingScreen({navigation}) {
         },
         {
           id: 6,
-          title: 'Aline Palha',
-          image: 'https://img.freepik.com/fotos-gratis/feliz-bonito-mulher-jovem-posar-camera-em-parque-cidade_1262-19158.jpg',
+          title: 'Aline Costa',
+          image: 'https://midias.correiobraziliense.com.br/_midias/jpg/2021/03/05/675x450/1_cbpfot020320212188-6556336.jpg',
           direction: -1
         },
         {
           id: 7,
-          title: 'Flora Arruda',
-          image: 'https://static.vecteezy.com/ti/fotos-gratis/t2/3542373-garota-sorridente-em-um-fundo-branco-gratis-foto.JPG',
+          title: 'Ananda T.',
+          image: 'https://assets.propmark.com.br/uploads/2022/02/WhatsApp-Image-2022-02-18-at-08.52.06.jpeg',
           direction: 0
         },
         {
@@ -227,28 +203,17 @@ export default function RankingScreen({navigation}) {
         },
         {
           id: 9,
-          title: 'Marcos M.',
-          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTry3-HbJ7pnlj3fF8U4Eii8Ul47Wn6BKOP0HuL3-ES91H1SgiHCi2DHRBlvc6ljfy8qVs&usqp=CAU',
+          title: 'Juliano Lima',
+          image: 'https://p2.trrsf.com/image/fget/cf/1200/1600/middle/images.terra.com/2024/03/05/1663126779-homem-do-signo-de-aquario.jpg',
           direction: 1
         },
         {
           id: 10,
-          title: 'Aline Palha',
-          image: 'https://img.freepik.com/fotos-gratis/feliz-bonito-mulher-jovem-posar-camera-em-parque-cidade_1262-19158.jpg',
-          direction: 1
-        },
-        {
-          id: 11,
-          title: 'Juliana Trindade',
-          image: 'https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/08/ed5d55c8-3966-4114-8ce4-9b9d0d25effd.png',
+          title: 'Kevin V.',
+          image: 'https://media.istockphoto.com/id/1285124274/pt/foto/middle-age-man-portrait.jpg?s=170667a&w=0&k=20&c=AH3osfIGIk9uw9SQV5YWr9glq49DXaGhS1yO_9tdHv4=',
           direction: -1
         },
-        {
-          id: 12,
-          title: 'Flora Arruda',
-          image: 'https://static.vecteezy.com/ti/fotos-gratis/t2/3542373-garota-sorridente-em-um-fundo-branco-gratis-foto.JPG',
-          direction: -1
-        },
+
       ]
     };
 
@@ -256,7 +221,7 @@ export default function RankingScreen({navigation}) {
   const renderSubRankingItem = ({ item}) => (
     <TouchableOpacity
       style={styles.item}
-      onPress={() => navigation.navigate('Profile')}
+      onPress={() => navigation.navigate('ExteProfile', { Nome: item.title, Imagem: item.image})}
     >
       <Text style={styles.itemId}>{item.id}</Text>
       <Image style={styles.avatar} source={{uri:`${item.image}`}}/>
@@ -277,7 +242,6 @@ const isCarousel = React.useRef(null)
 
 const [currentRankingIndex, setCurrentRankingIndex] = React.useState(0);
 
-/**<ScrollView stickyHeaderIndices={[1]}> */
   return (
     
     <SafeAreaView style={styles.container}>

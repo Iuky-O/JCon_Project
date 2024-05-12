@@ -14,6 +14,7 @@ import LoginScreen from '../Screens/LoginScreen/LoginScreen'
 import RegisterScreen from '../Screens/RegisterScreen/RegisterScreen'
 import EditAboutMeScreen from '../Screens/EditAboutMeScreen/EditAboutMeScreen'
 import CreateJobsScreen from '../Screens/CreateJobsScreen/CreateJobsScreen'
+import ExteProfileScreen from '../Screens/ExteProfileScreen/ExterProfileScreen'
 
 const Stack = createStackNavigator();
 export default function StackNavigation() {
@@ -21,7 +22,6 @@ export default function StackNavigation() {
     
       <Stack.Navigator screenOptions={{
         headerShown: false,}}>
-
           
           <Stack.Screen name='Tab' component={TabNavigation}/>
           <Stack.Screen name='Home' component={HomeScreen}/>
@@ -35,6 +35,7 @@ export default function StackNavigation() {
           <Stack.Screen name='Register' component={RegisterScreen}/>
 
           <Stack.Screen name='EditAboutMe' component={EditAboutMeScreen}/>
+          <Stack.Screen name='ExteProfile' component={ExteProfileScreen}/>
           <Stack.Screen name='CreateJobs' component={CreateJobsScreen}/>
 
       </Stack.Navigator>
