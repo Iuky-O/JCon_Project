@@ -5,6 +5,7 @@ import { Ionicons } from 'react-native-vector-icons';
 import styles from './style';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
+import ButtonFloat from '../../Components/ButtonFloat';
 
 import "firebase/firestore";
 import { firebase } from '../../Firebase/firebaseConfig';
@@ -87,12 +88,18 @@ export default function ProfileScreen() {
           />
         </View>
     {userData && (
-      <ScrollView> 
+      <ScrollView>             
+        <View style={{alignItems: 'center', marginTop: 100, position: 'absolute', right: 40, top: -50}}>
+          <ButtonFloat/>
+        </View>
         <View style={styles.containerProfile}>
 
-          <Image style={styles.containerImg}
-            source={require('../../../assets/images/profile.jpg')}
-          />
+
+
+            <Image style={styles.containerImg}
+              source={require('../../../assets/images/profile.jpg')}
+            />
+        
           <Text style={styles.textTitle}>{userData.Name}</Text>
 
           <View style={styles.containerAval}>
@@ -102,7 +109,7 @@ export default function ProfileScreen() {
               <FontAwesome name="star" size={20} color={Colors.MALTE} />
               <FontAwesome name="star-half-o" size={20} color={Colors.MALTE} />
               <FontAwesome name="star-o" size={20} color={Colors.MALTE} />
-              <Text style={{opacity: 0.5, color: Colors.MALTE}}> 4.5 </Text>
+              <Text style={{opacity: 0.5, color: Colors.MALTE}}> 3.5 </Text>
             </View>
 
             <View style={styles.containerTopics}>
