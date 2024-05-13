@@ -3,13 +3,40 @@ import React, {useState} from 'react'
 import { auth } from '../../Firebase/firebaseConfig';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigation } from '@react-navigation/native';
-import styles from './styles'; // Importa os estilos do arquivo styles.js
-import Colors from '../../Utils/Colors'; // Importa as cores do arquivo Colors.js
+
+import "firebase/firestore";
+import { firebase } from '../../Firebase/firebaseConfig';
+import { getFirestore, collection, getDocs, query, where} from "firebase/firestore";
+import { useUser } from '../../Scripts/userName';
 
 export default function LoginScreen() {
-    const [userEmail, setUserEmail] = useState(''); // Estado para o email do usuário
-    const [userPassword, setUserPassword] = useState(''); // Estado para a senha do usuário
-    const navigation = useNavigation(); // Navegação do React Navigation
+  const {setUserName} = useUser();
+    const [userData, setUserData] = useState(null);
+    const [userEmail, setUserEmail] = useState('');
+    const [userPassword, setUserPassword] = useState('');
+    
+    const navigation = useNavigation(); 
+
+    useEffect(() => {
+    
+      async function fetchUserData() {
+        try {
+          const db = getFirestore();
+          const usersCollection = collection(db, "usuarios");
+          const q = query(usersCollection, where("Email", "==", {userEmail})); 
+  
+          const querySnapshot = await getDocs(q);
+          const userDataArray = querySnapshot.docs.map(doc => doc.data());
+          setUserData(userDataArray[0]);
+          
+          setUserName(userData.Name);
+        } catch (error) {
+          console.error("Erro ao buscar dados do usuário:", error);
+        }
+      }
+  
+      fetchUserData();
+    }, []);
 
     function newUser(){
       navigation.navigate('Register'); // Função para navegar para a tela de registro

@@ -258,13 +258,14 @@ const [index, setIndex] = React.useState(0)
 const isCarousel = React.useRef(null)
 
   return (
-      <ScrollView>
+    <SafeAreaView style={{ height: Dimensions.get('window').height }}>
+      
         <View style={styles.header}>
           <Image style={styles.logoImage} source={require('../../../assets/images/logo-azul-claro.jpg')}/>
         </View>
 
-        <SafeAreaView style={styles.container}>
-
+       
+      <ScrollView>
           <View style={{width: '100%', flex:1}}>
             <Text style={styles.textTopic}>Ranking</Text> 
             <Carousel 
@@ -325,8 +326,8 @@ const isCarousel = React.useRef(null)
               renderItem={renderItemsJobs}
             /> 
           </View>
-
-        </SafeAreaView>
       </ScrollView>
+    </SafeAreaView>
+     
   )
 } 

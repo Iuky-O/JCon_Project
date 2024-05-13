@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     height: 110,
-    backgroundColor: Colors.AZUL_MARINHO,
+    backgroundColor: Colors.MALTE,
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingLeft: 10,
@@ -21,9 +21,8 @@ const styles = StyleSheet.create({
     marginTop: 35,
   },
   container: {
-   //flex:1,
+    flex:1,
     backgroundColor: Colors.TURQUESA_CLARO,
-    height:700,
     borderRadius:30,
     alignItems:"center",
 
@@ -33,14 +32,58 @@ const styles = StyleSheet.create({
     width: "100%",
     backgroundColor: Colors.AZUL_IRIS,
   },
-  containerImg: {
+  containerProfile:{
     flex: 1,
     flexDirection: "column",
-    height: 400,
+    height: 300,
+    alignItems: 'center',
+    alignContent: 'center'
+
+  },
+  containerAval:{
+    flex:1, 
+    flexDirection: 'column', 
+    alignItems: 'center', 
+    gap: -20
+  },
+  stars:{
+    flex: 1, 
+    flexDirection:'row', 
+    gap: 10, 
+    marginTop: 5,
+    alignItems: 'center',
+    maxHeight: 30,
+  },
+  containerImg: {
+    height: 90, 
+    width:90, 
+    borderRadius: 50, 
+    marginTop: 20
+  },
+  containerTopics:{
+    flex: 1, 
+    flexDirection: 'row', 
+    gap: 17,
+    alignItems: 'center',
+  },
+  TextTopics:{
+    color: Colors.MALTE,
+    fontWeight: 'bold',
+    fontSize: 15
+  },
+  TextSubTopics:{
+    color: Colors.MALTE,
+    fontSize: 15,
+    opacity: 0.5
+  },
+  lineSeparatorColumn:{
+    height: '50%', 
+    width: 1, 
+    backgroundColor: Colors.AZUL_IRIS,
   },
   textTitle:{
-    fontSize:40,
-    color: Colors.AZUL_MARINHO
+    fontSize:30,
+    color: Colors.AZUL_MARINHO,
   },
   textSubtitle:{
     fontSize:20,
@@ -82,14 +125,19 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.MALTE,
   },
   post:{
+    flex: 1,
     flexDirection: 'row',
+    alignContent: 'space-around',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
     margin: 0,
     width: "100%",
-    padding: 15,
+    padding: 20,
+    marginTop: 10
   },
   postImage:{
-    margin:5,
-    height:140,
+    margin:10,
+    height:130,
     width:130,
   },
 });

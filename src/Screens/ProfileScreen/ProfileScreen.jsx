@@ -10,6 +10,9 @@ import "firebase/firestore";
 import { firebase } from '../../Firebase/firebaseConfig';
 import { getFirestore, collection, getDocs, query, where} from "firebase/firestore";
 
+import Colors from '../../Utils/Colors';
+import { FontAwesome } from '@expo/vector-icons';
+
 export default function ProfileScreen() {
 
   const [userData, setUserData] = useState(null);
@@ -21,11 +24,11 @@ export default function ProfileScreen() {
         try {
           const db = getFirestore();
           const usersCollection = collection(db, "usuarios");
-          const q = query(usersCollection, where("Name", "==", "Jenny Cooper")); // Substitua "Jane Cooper" pelo nome do usuário que você deseja buscar
+          const q = query(usersCollection, where("Name", "==", "Jenny Cooper")); 
   
           const querySnapshot = await getDocs(q);
           const userDataArray = querySnapshot.docs.map(doc => doc.data());
-          setUserData(userDataArray[0]); // Se houver apenas um usuário com o nome fornecido, você pode acessá-lo diretamente pelo índice 0
+          setUserData(userDataArray[0]);
         } catch (error) {
           console.error("Erro ao buscar dados do usuário:", error);
         }
@@ -39,14 +42,14 @@ export default function ProfileScreen() {
         const db = getFirestore();
         const usersCollection = collection(db, "usuarios");
   
-        // Verificar se o usuário já tem uma descrição
+        
         if (userData && userData.id) {
-          // Atualizar a descrição existente
+          
           const userDoc = doc(db, "usuarios", userData.id);
           await setDoc(userDoc, { aboutMe: newAboutMe }, { merge: true });
           console.log("Descrição do usuário atualizada com sucesso!");
         } else {
-          // Criar um novo documento com a descrição
+          
           await setDoc(doc(usersCollection), { aboutMe: newAboutMe });
           console.log("Nova descrição do usuário criada com sucesso!");
         }
@@ -67,15 +70,7 @@ export default function ProfileScreen() {
   return (
 
     <SafeAreaView style={{ height: Dimensions.get('window').height }}>
-      <ScrollView
-        scrollEventThrottle={16}
-        onScroll={Animated.event([{
-          nativeEvent: {
-            contentOffset: { y: scrollY }
-          },
-        }],
-          { useNativeDriver: false })}
-      >
+
         <View style={styles.header}>
           <TouchableOpacity
           onPress = {() => navigation.goBack()}>
@@ -87,22 +82,52 @@ export default function ProfileScreen() {
           />          
           </TouchableOpacity>
           <Image style={styles.imgLogo}
-            source={require('../../../assets/images/logo-azul.jpg')}
+            source={require('../../../assets/images/logo-azul-claro.jpg')}
             resizeMode='contain'
           />
         </View>
+    {userData && (
+      <ScrollView> 
+        <View style={styles.containerProfile}>
 
-        <View style={styles.containerImg}>
-          <Image
+          <Image style={styles.containerImg}
             source={require('../../../assets/images/profile.jpg')}
           />
-        </View>
-        {userData && (
-        <View style={styles.container}>
+          <Text style={styles.textTitle}>{userData.Name}</Text>
 
-          <Text>
-            <Text style={styles.textTitle}>{userData.Name}</Text>
-          </Text>
+          <View style={styles.containerAval}>
+            <View style={styles.stars}>
+              <FontAwesome name="star" size={20} color={Colors.MALTE} />
+              <FontAwesome name="star" size={20} color={Colors.MALTE} />
+              <FontAwesome name="star" size={20} color={Colors.MALTE} />
+              <FontAwesome name="star-half-o" size={20} color={Colors.MALTE} />
+              <FontAwesome name="star-o" size={20} color={Colors.MALTE} />
+              <Text style={{opacity: 0.5, color: Colors.MALTE}}> 4.5 </Text>
+            </View>
+
+            <View style={styles.containerTopics}>
+              <View style={{alignItems: 'center'}}>
+                <Text style={styles.TextTopics}>100</Text>
+                <Text style={styles.TextSubTopics}>   Ações   </Text>
+              </View>
+
+              <Text style={styles.lineSeparatorColumn}></Text>
+
+              <View style={{alignItems: 'center'}}>
+                <Text style={styles.TextTopics}>100</Text>
+                <Text style={styles.TextSubTopics}>Comentários</Text>
+              </View>
+
+              <Text style={styles.lineSeparatorColumn}></Text>
+
+              <View style={{alignItems: 'center'}}>
+                <Text style={styles.TextTopics}>80</Text>
+                <Text style={styles.TextSubTopics}> Indicações </Text>
+              </View>
+          </View>
+        </View>
+        </View>
+        <View style={styles.container}>
 
           <Text style={styles.textSubtitle}>SERVIÇOS</Text>
           <Text style={styles.lineSeparator}></Text>
@@ -121,6 +146,7 @@ export default function ProfileScreen() {
           </View>
 
           <Text style={styles.textSubtitle}>POSTAGENS</Text>
+          <Text style={styles.lineSeparator}></Text>
 
           <View style={styles.post}>
             <Image style={styles.postImage}
@@ -135,9 +161,9 @@ export default function ProfileScreen() {
           </View>
 
         </View>
-        )}
 
       </ScrollView>
+    )}
     </SafeAreaView>
   )
 }
