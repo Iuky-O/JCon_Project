@@ -58,7 +58,7 @@ export default function StackNavigation() {
           <Stack.Screen name='CreateJobs' component={CreateJobsScreen} options={{ headerTitle: 'Crie uma vaga' }}/>
 
       </Stack.Navigator>
-   
+  
   )
 }
 
