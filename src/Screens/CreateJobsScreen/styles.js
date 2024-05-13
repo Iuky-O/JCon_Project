@@ -13,9 +13,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         gap: 10,
-        borderBottomWidth: 1, 
-        borderBottomColor: 
-        Colors.AZUL_MARINHO, 
         width: '100%',
         maxWidth: 300,
         height: 50,        
@@ -24,14 +21,14 @@ const styles = StyleSheet.create({
         flex: 1, 
         flexDirection: 'row', 
         gap: 50,
-        marginBottom: 15,
+        marginBottom: 20,
     },
     button1:{
         backgroundColor: '#b0110a',
         alignItems: 'center',
         borderRadius: 20,
-        height: 20,
-        width: 100,
+        height: 30,
+        width: '30%',
         marginTop: -15,
         marginTop: 10,
     },
@@ -39,8 +36,8 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.AZURE,
         alignItems: 'center',
         borderRadius: 20,
-        height: 20,
-        width: 100,
+        height: 30,
+        width: '30%',
         marginTop: -15,
         marginTop: 10,
     },
@@ -53,9 +50,23 @@ const styles = StyleSheet.create({
     containerText:{
         flex: 1, 
         flexDirection: 'row', 
+        alignItems: 'center',
         alignSelf:'flex-start', 
         marginLeft: 30, 
         marginBottom: -10
+    },
+    entrada: {
+        backgroundColor: Colors.BRANCO,
+        borderRadius: 10,
+        borderColor: Colors.AZUL_PACIFICO,
+        borderWidth: 1,
+        width: '90%', 
+        height: '90%',
+        paddingHorizontal: 10, 
+    },
+    text:{
+        color: Colors.MALTE,
+        paddingHorizontal: 10,
     },
 })
 

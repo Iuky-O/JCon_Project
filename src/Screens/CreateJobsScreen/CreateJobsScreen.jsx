@@ -92,8 +92,10 @@ export default function CreateJobsScreen({navigation}) {
           <Text style={{fontSize: 30, color: Colors.MALTE}}>Cadastro de Vaga</Text>
 
           <View style={styles.containerInput}>
-            <FontAwesome5 name="pen" size={20} color={Colors.MALTE} />
-            <TextInput placeholder='Nome da Vaga' 
+            <FontAwesome5 name="pen" size={22} color={Colors.MALTE}  />
+            <TextInput 
+                    style={styles.entrada} 
+                    placeholder='Nome da Vaga' 
                     autoCapitalize='none' 
                     value={jobName} 
                     onChangeText={setJobName}   
@@ -101,8 +103,10 @@ export default function CreateJobsScreen({navigation}) {
           </View>
 
           <View style={styles.containerInput}>
-            <FontAwesome6 name="location-dot" size={20} color={Colors.MALTE}/>
-            <TextInput placeholder='Local' 
+            <FontAwesome6 name="location-dot" size={25} color={Colors.MALTE}/>
+            <TextInput 
+                    style={styles.entrada} 
+                    placeholder='Local' 
                     autoCapitalize='none' 
                     value={jobLocal} 
                     onChangeText={setJobLocal}
@@ -110,8 +114,10 @@ export default function CreateJobsScreen({navigation}) {
           </View>
 
           <View style={styles.containerInput}>
-            <FontAwesome name="calendar" size={20} color={Colors.MALTE}/>
-            <TextInput placeholder='Data' 
+            <FontAwesome name="calendar" size={22} color={Colors.MALTE}/>
+            <TextInput 
+                    style={styles.entrada} 
+                    placeholder='Data' 
                     autoCapitalize='none' 
                     value={jobDate} 
                     onChangeText={setJobDate}
@@ -119,8 +125,10 @@ export default function CreateJobsScreen({navigation}) {
           </View>
 
           <View style={styles.containerInput}>
-            <MaterialCommunityIcons name="text" size={20} color={Colors.MALTE}/>
-            <TextInput placeholder='Descrição' 
+            <MaterialCommunityIcons name="text" size={22} color={Colors.MALTE}/>
+            <TextInput 
+                    style={styles.entrada} 
+                    placeholder='Descrição' 
                     autoCapitalize='none' 
                     value={jobInformations} 
                     onChangeText={setJobInformations}
@@ -128,8 +136,10 @@ export default function CreateJobsScreen({navigation}) {
           </View>
 
           <View style={styles.containerInput}>
-            <Entypo name="pin" size={20} color={Colors.MALTE}/>
-            <TextInput placeholder='Requisitos' 
+            <Entypo name="pin" size={22} color={Colors.MALTE}/>
+            <TextInput 
+                    style={styles.entrada} 
+                    placeholder='Requisitos' 
                     autoCapitalize='none' 
                     value={jobRequisite} 
                     onChangeText={setJobRequisite}
@@ -137,8 +147,10 @@ export default function CreateJobsScreen({navigation}) {
           </View>
 
           <View style={styles.containerInput}>
-            <AntDesign name="tag" size={20} color={Colors.MALTE}/>
-            <TextInput placeholder='Categoria' 
+            <AntDesign name="tag" size={22} color={Colors.MALTE}/>
+            <TextInput
+                    style={styles.entrada}  
+                    placeholder='Categoria' 
                     autoCapitalize='none' 
                     value={jobCategory} 
                     onChangeText={setJobCategory}
@@ -147,19 +159,19 @@ export default function CreateJobsScreen({navigation}) {
           </View>
           
           <View style={styles.containerText}>
-            <MaterialIcons name="attach-money" size={20} color={Colors.MALTE} />
-            <Text>Valor do Serviço</Text>
+            <FontAwesome5 name="money-bill-alt" size={20} color={Colors.MALTE}/>
+            <Text style={styles.text}>Valor do Serviço</Text>
           </View>
 
           <View style={styles.containerInput}>
             <View style={styles.containerLimit}>
               <Slider
-                  style={{width: 200, height: 40}}
+                  style={{width: 250, height: 40}}
                   minimumValue={0}
                   maximumValue={3000}
                   minimumTrackTintColor={Colors.MALTE}
                   maximumTrackTintColor={Colors.MALTE}
-                  thumbTintColor="#000000"
+                  thumbTintColor={Colors.MALTE}
                   step={1}
                   value={jobValue}
                   onValueChange={(value) => setJobValue(value)}
@@ -169,8 +181,8 @@ export default function CreateJobsScreen({navigation}) {
 
           </View>
           <View style={styles.containerText}>
-            <Text>Deseja limitar suas candidaturas?</Text>
-            <TouchableOpacity style={{marginTop:-13, marginLeft: 10}} >
+            <Text style={styles.text}>Deseja limitar suas candidaturas?</Text>
+            <TouchableOpacity>
               <Switch trackColor={{false: '#767577', true: '#81b0ff'}}
                       thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
                       ios_backgroundColor="#3e3e3e"
@@ -185,12 +197,12 @@ export default function CreateJobsScreen({navigation}) {
             <View style={styles.containerInput}>
               <View style={styles.containerLimit}>
               <Slider
-                  style={{width: 200, height: 40}}
+                  style={{width: 250, height: 40}}
                   minimumValue={0}
                   maximumValue={2000}
                   minimumTrackTintColor={Colors.MALTE}
                   maximumTrackTintColor={Colors.MALTE}
-                  thumbTintColor="#000000"
+                  thumbTintColor={Colors.MALTE}
                   step={1}
                   value={jobLimit}
                   onValueChange={(value) => setJobLimit(value)}
@@ -201,10 +213,10 @@ export default function CreateJobsScreen({navigation}) {
           )}
           <View style={styles.buttonContainer}>
             <View style={styles.button1}>
-              <Text style={{color: 'white'}} onPress={() => navigation.navigate('Jobs')}> Cancelar </Text>
+              <Text style={{color: 'white', fontSize: 17}} onPress={() => navigation.navigate('Jobs')}> Cancelar </Text>
             </View>
             <View style={styles.button2}>
-              <Text style={{color: 'white'}} onPress={newJob}> Cadastar </Text>
+              <Text style={{color: 'white', fontSize: 17}} onPress={newJob}> Cadastar </Text>
             </View>
           </View>
         </View>
