@@ -21,22 +21,7 @@ export default function ProfileScreen() {
 
   return (
         
-    <SafeAreaView style={{ height: Dimensions.get('window').height }}>
-        
-      <View style={styles.header}>
-        <TouchableOpacity onPress = {() => navigation.goBack()}>
-            <Ionicons style={styles.iconBack}
-                    name="chevron-back"
-                    size={40}
-                    color="write"
-                    onPress={() => { }}
-            />          
-        </TouchableOpacity>
-        <Image style={styles.imgLogo}
-                source={require('../../../assets/images/logo-azul-claro.jpg')}
-                resizeMode='contain'
-        />
-      </View>
+    <SafeAreaView>
 
       <ScrollView> 
           <View style={styles.containerProfile}>

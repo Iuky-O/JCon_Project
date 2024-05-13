@@ -82,17 +82,21 @@ const Item = ({ imageUrl, title, local, data, description, requisite, navigation
   <View style={styles.item}>
     <View style={styles.ContainerImage}>
       <Image source={{ uri: imageUrl }} style={styles.image} />
-      <Text style={styles.NameSu}>{NameSub}</Text>
+      <Text style={styles.NameSu} onPress={() => navigation.navigate('ExteProfile', { 
+                                                                                            Nome: NameSub, 
+                                                                                            Imagem: imageUrl})}>
+                                                                                            {NameSub}
+      </Text>
     </View>
     <View style={styles.textContainer}>
       <Text style={styles.title} onPress={() => navigation.navigate('JobsDesc', {
-        JobTitle: title,
-        JobLocal: local,
-        JobDate: data,
-        JobDesc: description,
-        JobRequisite: requisite,
-        JobMoney: money,
-        JobSub: NameSub
+                                                                                  JobTitle: title,
+                                                                                  JobLocal: local,
+                                                                                  JobDate: data,
+                                                                                  JobDesc: description,
+                                                                                  JobRequisite: requisite,
+                                                                                  JobMoney: money,
+                                                                                  JobSub: NameSub
       })}>
         {title}</Text>
       <Text style={styles.subtitle}>
@@ -121,6 +125,7 @@ const Item = ({ imageUrl, title, local, data, description, requisite, navigation
 );
 
 export default function JobScreen() {
+
   const [Filter, setFilter] = useState(['Pessoas','Empresas','Cargo']);
   const [useFilter, setUseFilter] = useState([]);
   const [Options, setOptions] = useState();
@@ -130,26 +135,7 @@ export default function JobScreen() {
   const [searchWord, setSearchWord] = useState('');
 
   return (
-    <SafeAreaView style={{ height: Dimensions.get('window').height }}>
-
-      <View style={styles.header}>
-        <TouchableOpacity
-          onPress={() => navigation.goBack()}>
-          <Ionicons style={styles.iconBack}
-            name="chevron-back"
-            size={40}
-            color="write"
-            onPress={() => { }}
-          />
-        </TouchableOpacity>
-        
-        <Image style={styles.imgLogo}
-          source={require('../../../assets/images/logo-azul-claro.jpg')}
-          resizeMode='contain'
-          onPress={() => navigation.navigate('CreateJobs')}
-        />
-        
-      </View>
+    <SafeAreaView>
 
       <View style={styles.viewBusca}>
 

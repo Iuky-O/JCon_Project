@@ -2,12 +2,20 @@ import { View, Text, SafeAreaView, ScrollView, Image, TouchableOpacity, FlatList
 import React from 'react'
 import Carousel, { Pagination } from 'react-native-snap-carousel'
 import styles from '../RankingScreen/styles';
-
 import { AntDesign } from '@expo/vector-icons';
 import Colors from '../../Utils/Colors';
 
+
+
 export default function RankingScreen({navigation}) {
   /** Carrosel para ranking */
+
+const windowWidth = Dimensions.get('window').width;
+const [index, setIndex] = React.useState(0)
+const isCarousel = React.useRef(null)
+
+const [currentRankingIndex, setCurrentRankingIndex] = React.useState(0);
+
   const carouselItemsRanking = [
     {
       categorie: 'Bom atendimento',
@@ -69,9 +77,15 @@ export default function RankingScreen({navigation}) {
           <Image style={styles.CarouselImageBronze} source={{uri:`${item.image3}`}}/>
           <Image style={styles.ImageEmblema3} source={require('./../../../assets/images/icon-medalha-de-bronze.png/')}/>
 
-          <Text style={styles.CarouselTitle1}>{item.title}</Text>
-          <Text style={styles.CarouselTitle2}>{item.title2}</Text>
-          <Text style={styles.CarouselTitle3}>{item.title3}</Text>
+          <Text style={styles.CarouselTitle1} onPress={() => navigation.navigate('ExteProfile', { 
+                                                                                            Nome: item.title, 
+                                                                                            Imagem: item.image})}>{item.title}</Text>
+          <Text style={styles.CarouselTitle2} onPress={() => navigation.navigate('ExteProfile', { 
+                                                                                            Nome: item.title2, 
+                                                                                            Imagem: item.image2})}>{item.title2}</Text>
+          <Text style={styles.CarouselTitle3} onPress={() => navigation.navigate('ExteProfile', { 
+                                                                                            Nome: item.title3, 
+                                                                                            Imagem: item.image3})}>{item.title3}</Text>
 
         </View>
 
@@ -218,7 +232,7 @@ export default function RankingScreen({navigation}) {
     };
 
 
-  const renderSubRankingItem = ({ item}) => (
+  const renderSubRankingItem = ({item}) => (
     <TouchableOpacity
       style={styles.item}
       onPress={() => navigation.navigate('ExteProfile', { Nome: item.title, Imagem: item.image})}
@@ -236,19 +250,9 @@ export default function RankingScreen({navigation}) {
     </TouchableOpacity>
   );
 
-const windowWidth = Dimensions.get('window').width;
-const [index, setIndex] = React.useState(0)
-const isCarousel = React.useRef(null)
-
-const [currentRankingIndex, setCurrentRankingIndex] = React.useState(0);
-
   return (
     
     <SafeAreaView style={styles.container}>
-  
-        <View style={styles.header}>
-          <Image style={styles.logoImage} source={require('../../../assets/images/logo-azul-claro.jpg')}/>
-        </View>
 
       <ScrollView>
         <View style={{width: '100%', justifyContent: 'center'}}>

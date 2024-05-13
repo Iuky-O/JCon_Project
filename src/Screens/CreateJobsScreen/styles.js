@@ -4,7 +4,7 @@ import Colors from '../../Utils/Colors';
 const styles = StyleSheet.create({
     container:{
         alignItems:'center', 
-        marginTop: 100, 
+        marginTop: 30, 
         gap: 20,
         width: '100%'
     },
@@ -29,8 +29,6 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         height: 30,
         width: '30%',
-        marginTop: -15,
-        marginTop: 10,
     },
     button2:{
         backgroundColor: Colors.AZURE,
@@ -38,8 +36,6 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         height: 30,
         width: '30%',
-        marginTop: -15,
-        marginTop: 10,
     },
     containerLimit:{
         flex:1, 

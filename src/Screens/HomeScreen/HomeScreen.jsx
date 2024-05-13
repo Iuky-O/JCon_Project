@@ -73,9 +73,15 @@ export default function HomeScreen({navigation}) {
           <Image style={styles.CarouselImageBronze} source={{uri:`${item.image3}`}}/>
           <Image style={styles.ImageEmblema3} source={require('./../../../assets/images/icon-medalha-de-bronze.png/')}/>
 
-          <Text style={styles.CarouselTitle1}>{item.title}</Text>
-          <Text style={styles.CarouselTitle2}>{item.title2}</Text>
-          <Text style={styles.CarouselTitle3}>{item.title3}</Text>
+          <Text style={styles.CarouselTitle1} onPress={() => navigation.navigate('ExteProfile', { 
+                                                                                            Nome: item.title, 
+                                                                                            Imagem: item.image})}>{item.title}</Text>
+          <Text style={styles.CarouselTitle2} onPress={() => navigation.navigate('ExteProfile', { 
+                                                                                            Nome: item.title2, 
+                                                                                            Imagem: item.image2})}>{item.title2}</Text>
+          <Text style={styles.CarouselTitle3} onPress={() => navigation.navigate('ExteProfile', { 
+                                                                                            Nome: item.title3, 
+                                                                                            Imagem: item.image3})}>{item.title3}</Text>
 
         </View>
       </View>
@@ -258,12 +264,7 @@ const [index, setIndex] = React.useState(0)
 const isCarousel = React.useRef(null)
 
   return (
-    <SafeAreaView style={{ height: Dimensions.get('window').height }}>
-      
-        <View style={styles.header}>
-          <Image style={styles.logoImage} source={require('../../../assets/images/logo-azul-claro.jpg')}/>
-        </View>
-
+    <SafeAreaView >
        
       <ScrollView>
           <View style={{width: '100%', flex:1}}>
