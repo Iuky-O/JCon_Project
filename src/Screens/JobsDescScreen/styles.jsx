@@ -18,6 +18,7 @@ textTopic:{
     color: Colors.MALTE,
     marginLeft: 15,
     marginTop: 20,
+    marginBottom: 15,
   },
   textTitle:{
     maxWidth: 'auto',
@@ -28,21 +29,29 @@ textTopic:{
   textDesc:{
     maxWidth: 'auto',
     padding: 15,
+    fontSize: 15,
+    paddingHorizontal: 10,
   },
   textInfo:{
-    maxWidth: 'auto',
-    padding: 9,
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+    maxwidth: '90%',
+    maxWidth: 300,
+    height: 50,
+    paddingHorizontal: 10,
   },
   Button:{
     backgroundColor: Colors.AZURE,
-    maxWidth: 110,
-    marginLeft: 140,
-    borderRadius: 10,
-    marginTop: 30,
     alignItems: 'center',
+    borderRadius: 20,
+    height: 30,
+    width: '40%',
   },
   buttomText:{
-    color: Colors.BRANCO,
+    color: 'white', 
+    fontSize: 17
   },
 
 })

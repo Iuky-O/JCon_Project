@@ -15,32 +15,31 @@ export default function JobsDescScreen() {
 
   return (
     <ScrollView>
-        <View style={styles.header}>
-            <Image style={styles.logoImage} source={require('../../../assets/images/logo-azul-claro.jpg')}/>
-        </View>
         <SafeAreaView>
-            <View>
+            <View style={{margin: 10}}>
+                
                 <Text style={styles.textTopic}> Informações </Text>
-                <Text style={styles.textInfo}>
-                    <MaterialIcons name="work" size={15} color={Colors.MALTE}/>
-                    {JobTitle}
-                </Text>
-                <Text style={styles.textInfo}>
-                    <FontAwesome6 name="location-dot" size={15} color={Colors.MALTE}/>
-                    {JobLocal}
-                </Text>
-                <Text style={styles.textInfo}>
-                    <FontAwesome name="calendar" size={15} color={Colors.MALTE}/> 
-                    {JobDate}
-                </Text>
-                <Text style={styles.textInfo}>
-                    <MaterialIcons name="attach-money" size={15} color={Colors.MALTE} />
-                    {JobMoney}
-                </Text>
-                <Text style={styles.textInfo}>
-                    <FontAwesome6 name="user-large" size={15} color={Colors.MALTE}/>
-                    {JobSub}
-                </Text>
+
+                <View style={styles.textInfo}>
+                    <MaterialIcons name="work" size={20} color={Colors.MALTE}/>
+                    <Text style={styles.textDesc}>{JobTitle}</Text>
+                </View>
+                <View style={styles.textInfo}>
+                    <FontAwesome6 name="location-dot" size={20} color={Colors.MALTE}/>
+                    <Text style={styles.textDesc}>{JobLocal}</Text>
+                </View>
+                <View style={styles.textInfo}>
+                    <FontAwesome name="calendar" size={20} color={Colors.MALTE}/> 
+                    <Text style={styles.textDesc}>{JobDate}</Text>
+                </View>
+                <View style={styles.textInfo}>
+                    <MaterialIcons name="attach-money" size={20} color={Colors.MALTE} />
+                    <Text style={styles.textDesc}>{JobMoney}</Text>
+                </View>
+                <View style={styles.textInfo}>
+                    <FontAwesome6 name="user-large" size={20} color={Colors.MALTE}/>
+                    <Text style={styles.textDesc}>{JobSub}</Text>
+                </View>
                 
                 <Text style={styles.textTopic}> Descrição </Text>
                 <Text style={styles.textDesc}>{JobDesc}</Text>
@@ -48,8 +47,10 @@ export default function JobsDescScreen() {
                 <Text style={styles.textTopic}> Requisitos </Text>
                 <Text style={styles.textDesc}>{JobRequisite}</Text>
 
-                <View style={styles.Button}>
-                    <Text style={styles.buttomText} onPress={() => Alert.alert('Bubmissão enviada!')}> Candidatar-se </Text>
+                <View style={{alignItems: 'center'}}>
+                    <View style={styles.Button}>
+                        <Text style={styles.buttomText} onPress={() => Alert.alert('Bubmissão enviada!')}> Candidatar-se </Text>
+                    </View>
                 </View>
             </View>
         </SafeAreaView>

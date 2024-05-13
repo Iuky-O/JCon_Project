@@ -9,8 +9,9 @@ export const styles = StyleSheet.create({
     titulo: {
       textAlign: 'left',
       marginLeft: 10,
-      marginTop: 50,
+      marginTop: 30,
       fontSize: 30,
+      color: Colors.AZUL_MARINHO,
     },
     item: {
       flexDirection: 'row',

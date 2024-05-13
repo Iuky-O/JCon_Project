@@ -11,7 +11,6 @@ import { Ionicons } from '@expo/vector-icons';
 
 /** Importação de telas */
 import HomeScreen from '../Screens/HomeScreen/HomeScreen';
-import CreateJobsScreen from '../Screens/CreateJobsScreen/CreateJobsScreen';
 import JobScreen from '../Screens/JobScreen/JobScreen';
 import ProfileScreen from '../Screens/ProfileScreen/ProfileScreen';
 import ConversationScreen from '../Screens/ConversationScreen/ConversationScreen';
@@ -26,7 +25,6 @@ export default function TabNavigation(){
         
             <Tab.Navigator  screenOptions={{
                 headerShown: false,
-                
                 tabBarActiveTintColor: Colors.AZUL_PACIFICO,
                 tabBarInactiveTintColor: Colors.BRANCO,
                 tabBarActiveBackgroundColor: Colors.AZUL_PACIFICO,
@@ -42,7 +40,7 @@ export default function TabNavigation(){
                           ),
                           tabBarIcon:({size})=>(
                             <Entypo name="home" size={size} color={Colors.BRANCO}/>
-                          )
+                          ),
                     }}
                 />
 
