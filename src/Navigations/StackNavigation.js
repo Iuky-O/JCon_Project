@@ -21,7 +21,6 @@ export default function StackNavigation() {
       <Stack.Navigator screenOptions={{
         headerShown: false,}}>
 
-<Stack.Screen name='Login' component={LoginScreen}/>
           <Stack.Screen name='Tab' component={TabNavigation}/>
           <Stack.Screen name='Home' component={HomeScreen}/>
           <Stack.Screen name='Conversations' component={ConversationsScreen}/>
@@ -30,7 +29,7 @@ export default function StackNavigation() {
           <Stack.Screen name='Jobs' component={JobScreen}/>
           <Stack.Screen name='JobsDesc' component={JobsDescScreen}/>
           <Stack.Screen name='Profile' component={ProfileScreen}/>
-
+          <Stack.Screen name='Login' component={LoginScreen}/>
           <Stack.Screen name='Register' component={RegisterScreen}/>
 
           <Stack.Screen name='EditAboutMe' component={EditAboutMeScreen}/>
