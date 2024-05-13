@@ -9,56 +9,40 @@ export const styles = StyleSheet.create({
     titulo: {
         fontSize: 40,
         color: Colors.MALTE,
-        marginRight: 250, // Margem à direita
-        marginTop: 300, // Margem superior
-        marginLeft: 20, // Margem à esquerda
+        marginTop: 300,
+        marginLeft: 20,
     },
     subtitulo: {
         fontSize: 20,
         color: Colors.AZUL_IRIS,
-        marginLeft: 20, // Margem à esquerda
+        marginLeft: 20,
     },
-    iconemail: {
-        color: Colors.AZUL_IRIS,
-    },
-    iconsenha: {
-        color: Colors.AZUL_IRIS,
-    },
-    email: {
+    entrada: {
         backgroundColor: Colors.BRANCO,
-        borderRadius: 10, // Raio da borda
+        borderRadius: 10,
         borderColor: Colors.AZUL_PACIFICO,
-        borderWidth: 1, // Largura da borda
-        marginTop: 30, // Margem superior ******ATENÇÃO****** ALTERAR SE POR OS ICONES
-        width: '90%', // Largura
-        paddingHorizontal: 10, // Preenchimento horizontal
-    },
-    senha: {
-        backgroundColor: Colors.BRANCO,
-        borderRadius: 10, // Raio da borda
-        borderColor: Colors.AZUL_PACIFICO,
-        borderWidth: 1, // Largura da borda
-        marginTop: 30, // Margem superior ******ATENÇÃO****** ALTERAR SE POR OS ICONES
-        width: '90%', // Largura
-        paddingHorizontal: 10, // Preenchimento horizontal
+        borderWidth: 1, 
+        marginTop: 30, 
+        width: '90%', 
+        paddingHorizontal: 10, 
     },
     redefinirsenha: {
         color: Colors.AZUL_IRIS,
-        marginTop: 20, // Margem superior
+        marginTop: 20, 
     },
     botao: {
         backgroundColor: Colors.MALTE,
-        borderRadius: 10, // Raio da borda
-        padding: 10, // Preenchimento
-        width: '60%', // Largura
+        borderRadius: 10, 
+        padding: 10, 
+        width: '60%', 
         alignItems: 'center',
-        marginTop: 60, // Margem superior
+        marginTop: 60, 
     },
     botaotxt : {
         color: Colors.BRANCO,
     },
     naotemconta: {
-        marginTop: 10, // Margem superior
+        marginTop: 10, 
         color: Colors.AZUL_IRIS,
     },
     cadastrar: {
