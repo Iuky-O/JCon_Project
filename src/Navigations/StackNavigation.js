@@ -22,7 +22,6 @@ export default function StackNavigation() {
     
       <Stack.Navigator screenOptions={{
         headerShown: false,}}>
-          
           <Stack.Screen name='Tab' component={TabNavigation}/>
           <Stack.Screen name='Home' component={HomeScreen}/>
           <Stack.Screen name='Conversations' component={ConversationsScreen}/>
