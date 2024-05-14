@@ -1,5 +1,4 @@
-import { View, Text, TextInput, TouchableOpacity, Button } from 'react-native'
-import { FontAwesome5 } from '@expo/vector-icons';
+import { View, Text, TextInput, TouchableOpacity, ScrollView, SafeAreaView} from 'react-native'
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 import * as ImagePicker from 'expo-image-picker';
@@ -8,7 +7,6 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../Firebase/firebaseConfig';
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import styles from './styles';
-import Colors from '../../Utils/Colors';
 
 export default function RegisterScreen() {
 
@@ -96,79 +94,88 @@ export default function RegisterScreen() {
   };
 
   return (
-    <View style={styles.corpo}>
-      <Text style={styles.Title}>Cadastro</Text>
-      <TextInput
-        style={styles.Input}
-        placeholder='Nome'
-        autoCapitalize='none'
-        value={userName}
-        onChangeText={setUserName}
-      />
-      <TextInput
-        style={styles.Input}
-        placeholder='Telefone'
-        autoCapitalize='none'
-        value={userTel}
-        onChangeText={setUserTel}
-      />
-      <TextInput
-        style={styles.Input}
-        placeholder='CPF ou CNPJ'
-        autoCapitalize='none'
-        value={userCpf_Cnpj}
-        onChangeText={setUserCpf_Cnpj}
-      />
-      <TextInput
-        style={styles.Input}
-        placeholder='Endereço'
-        autoCapitalize='none'
-        value={userEndereco}
-        onChangeText={setUserEndereco}
-      />
-      <TouchableOpacity style={styles.button}
-        onPress={pickImage}
-        value={userPhoto}
-        onChangeText={setUserPhoto}>
-        <Text style={styles.buttonTxt}>FOTO DE PERFIL</Text>
-      </TouchableOpacity>
+    <SafeAreaView>
+       
+    <ScrollView>
+        
+      <View style={styles.corpo}>
+        <Text style={styles.Title}>Cadastro</Text>
+        <TextInput
+          style={styles.Input}
+          placeholder='Nome'
+          autoCapitalize='none'
+          value={userName}
+          onChangeText={setUserName}
+        />
+        <TextInput
+          style={styles.Input}
+          placeholder='Telefone'
+          autoCapitalize='none'
+          value={userTel}
+          onChangeText={setUserTel}
+        />
+        <TextInput
+          style={styles.Input}
+          placeholder='CPF ou CNPJ'
+          autoCapitalize='none'
+          value={userCpf_Cnpj}
+          onChangeText={setUserCpf_Cnpj}
+        />
+        <TextInput
+          style={styles.Input}
+          placeholder='Endereço'
+          autoCapitalize='none'
+          value={userEndereco}
+          onChangeText={setUserEndereco}
+        />
+        <TouchableOpacity style={styles.button}
+          onPress={pickImage}
+          value={userPhoto}
+          onChangeText={setUserPhoto}>
+          <Text style={styles.buttonTxt}>FOTO DE PERFIL</Text>
+        </TouchableOpacity>
 
-      <TextInput
-        style={styles.Input}
-        placeholder='Escolha seu tipo de usuário'
-        autoCapitalize='none'
-        value={userType}
-        onChangeText={setUserType}
-      />
+        <TextInput
+          style={styles.Input}
+          placeholder='Escolha seu tipo de usuário'
+          autoCapitalize='none'
+          value={userType}
+          onChangeText={setUserType}
+        />
 
-      <TextInput
-        style={styles.Input}
-        placeholder='Informe seu email'
-        keyboardType='email-address'
-        autoCapitalize='none'
-        value={userEmail}
-        onChangeText={setUserEmail}
-      />
-      <TextInput
-        style={styles.Input}
-        placeholder='Informe uma senha'
-        autoCapitalize='none'
-        secureTextEntry
-        value={userPassword}
-        onChangeText={setUserPassword}
-      />
-      <TextInput
-        style={styles.Input}
-        placeholder='Confirme a senha'
-        autoCapitalize='none'
-        secureTextEntry
-        value={userRePassword}
-        onChangeText={setUserRePassword}
-      />
+        <TextInput
+          style={styles.Input}
+          placeholder='Informe seu email'
+          keyboardType='email-address'
+          autoCapitalize='none'
+          value={userEmail}
+          onChangeText={setUserEmail}
+        />
+        <TextInput
+          style={styles.Input}
+          placeholder='Informe uma senha'
+          autoCapitalize='none'
+          secureTextEntry
+          value={userPassword}
+          onChangeText={setUserPassword}
+        />
+        <TextInput
+          style={styles.Input}
+          placeholder='Confirme a senha'
+          autoCapitalize='none'
+          secureTextEntry
+          value={userRePassword}
+          onChangeText={setUserRePassword}
+        />
 
-      <TouchableOpacity style={styles.button} onPress={newUserLogin}>
-        <Text style={styles.buttonTxt}>CADASTRAR</Text>
-      </TouchableOpacity>
-    </View>
+        <TouchableOpacity style={styles.button} onPress={newUserLogin}>
+          <Text style={styles.buttonTxt}>CADASTRAR</Text>
+        </TouchableOpacity>
+      </View> 
+    </ScrollView>
+    
+  </SafeAreaView>
+       
+ 
   )
 }

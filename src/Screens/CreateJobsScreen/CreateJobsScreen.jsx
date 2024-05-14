@@ -205,7 +205,7 @@ export default function CreateJobsScreen({navigation}) {
           )}
           <View style={styles.buttonContainer}>
             <View style={styles.button1}>
-              <Text style={{color: 'white', fontSize: 17}} onPress={() => navigation.navigate('Jobs')}> Cancelar </Text>
+              <Text style={{color: 'white', fontSize: 17}} onPress={() => navigation.navigate('Tab')}> Cancelar </Text>
             </View>
             <View style={styles.button2}>
               <Text style={{color: 'white', fontSize: 17}} onPress={newJob}> Cadastar </Text>

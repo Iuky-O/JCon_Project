@@ -140,12 +140,8 @@ export default function JobScreen() {
 
       <View style={styles.viewBusca}>
 
-        <Ionicons style={{ margin: 8 }}
-          name="search"
-          size={40}
-          color={Colors.AZUL_MARINHO}
-          onPress={() => { }}
-        />
+        <Image source={require('../../../assets/images/icon-search.png')} style={{height: 30, width: 30, margin: 8 }}/>
+
         <TextInput style={styles.inputBusca} placeholder="Pesquisar"
           autoCapitalize='none'
           autoCorrect={false}

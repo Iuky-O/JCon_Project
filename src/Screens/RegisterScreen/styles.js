@@ -2,12 +2,11 @@ import { StyleSheet } from "react-native"
 import Colors from '../../Utils/Colors';
 
 const styles = StyleSheet.create({
-
     corpo: {
         alignContent: "center",
         alignItems: "center",
-        marginTop: 100,
-        gap: 16
+        marginTop: 50,
+        gap: 16,
     },
     Title: {
         fontSize: 30,

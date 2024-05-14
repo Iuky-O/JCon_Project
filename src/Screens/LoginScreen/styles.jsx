@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     titulo: {
         fontSize: 40,
         color: Colors.MALTE,
-        marginTop: 300,
+        marginTop: 170,
         marginLeft: 20,
     },
     subtitulo: {

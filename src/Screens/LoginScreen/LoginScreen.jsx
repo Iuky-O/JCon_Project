@@ -49,7 +49,7 @@ export default function LoginScreen() {
             alert("Login efetuado com sucesso!"); 
             console.log(user); 
 
-            navigation.navigate('Home'); 
+            navigation.navigate('Tab'); 
 
         })
         .catch((error) => { 
@@ -63,7 +63,7 @@ export default function LoginScreen() {
   return (
     <SafeAreaView style={{flex: 1 }}>
       <ScrollView>
-        <KeyboardAvoidingView style={{ flex: 1 }}>
+        <KeyboardAvoidingView>
         <View> 
           <Text style={styles.titulo}>Login</Text> 
           <Text style={styles.subtitulo}>Entre com sua conta</Text> 

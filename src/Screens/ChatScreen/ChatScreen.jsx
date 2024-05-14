@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { GiftedChat } from 'react-native-gifted-chat';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity,  Image } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import styles from './styles';
 
@@ -60,7 +60,7 @@ export default function ChatScreen() {
               onSubmitEditing={handleSend}
             />
             <TouchableOpacity onPress={handleSend}>
-              <MaterialIcons name="send" size={24} color="#0077B6" style={styles.sendButton} />
+            <Image source={require('../../../assets/images/icon-send.png')} style={{height: 20, width: 20, margin: 2,}}/>
             </TouchableOpacity>
           </View>
         )}
