@@ -270,7 +270,7 @@ const isCarousel = React.useRef(null)
           <View style={{width: '100%', flex:1}}>
             <Text style={styles.textTopic}>Ranking</Text> 
             <Carousel 
-              layout={''}
+              layout={'default'}
               layoutCardOffset={30}
               data={carouselItemsRanking} 
               sliderWidth={windowWidth}
@@ -307,7 +307,7 @@ const isCarousel = React.useRef(null)
           <View style={{width: '100%', flex:1}}>
             <Text style={styles.textTopic}>Categorias</Text> 
             <Carousel 
-              layout={''}
+              layout={'default'}
               layoutCardOffset={30}
               data={carouselItemsCategories} 
               sliderWidth={windowWidth}

@@ -33,11 +33,11 @@ export default function ProfileScreen() {
         
               <View style={styles.containerAval}>
                   <View style={styles.stars}>
-                    <FontAwesome name="star" size={20} color={Colors.MALTE} />
-                    <FontAwesome name="star" size={20} color={Colors.MALTE} />
-                    <FontAwesome name="star" size={20} color={Colors.MALTE} />
-                    <FontAwesome name="star-half-o" size={20} color={Colors.MALTE} />
-                    <FontAwesome name="star-o" size={20} color={Colors.MALTE} />
+                  <Image source={require('../../../assets/images/icon-star-max.png')} style={{height: 20, width: 20}}/>
+                  <Image source={require('../../../assets/images/icon-star-max.png')} style={{height: 20, width: 20}}/>
+                  <Image source={require('../../../assets/images/icon-star-max.png')} style={{height: 20, width: 20}}/>
+                  <Image source={require('../../../assets/images/icon-star-max.png')} style={{height: 20, width: 20}}/>
+                  <Image source={require('../../../assets/images/icon-star-medium.png')} style={{height: 20, width: 20}}/>
                     <Text style={{opacity: 0.5, color: Colors.MALTE}}> 4.5 </Text>
                   </View>
         

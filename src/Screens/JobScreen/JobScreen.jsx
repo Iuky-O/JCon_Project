@@ -135,6 +135,7 @@ export default function JobScreen() {
   const [searchWord, setSearchWord] = useState('');
 
   return (
+    
     <SafeAreaView>
 
       <View style={styles.viewBusca}>

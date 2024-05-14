@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
   buttomText:{
     marginTop:10,
     color: Colors.BRANCO,
-    fontStyle:"bold",
+    fontWeight:"bold",
     fontSize:20,
   },
   traco:{

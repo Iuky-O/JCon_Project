@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import {View, Text, StyleSheet, TouchableWithoutFeedback, Animated} from 'react-native'
+import {View, Image, Text, StyleSheet, TouchableWithoutFeedback, Animated} from 'react-native'
 import {Ionicons, FontAwesome6, MaterialIcons} from '@expo/vector-icons'
 import Colors from '../Utils/Colors'
 import { useNavigation } from '@react-navigation/native';
@@ -89,25 +89,25 @@ const ButtonFloat = props => {
 
             <TouchableWithoutFeedback onPress={() => navigation.navigate('CreateJobs')}>
                 <Animated.View style={[styles.button, styles.secondary, jobStyle]}>
-                    <MaterialIcons name="app-registration" size={25} color={Colors.BRANCO}/>
+                <Image source={require('../../assets/images/icon-create-jobs.png')} style={{height: 20, width: 20}}/>
                 </Animated.View> 
             </TouchableWithoutFeedback>
 
             <TouchableWithoutFeedback onPress={() => {}}>
                 <Animated.View style={[styles.button, styles.secondary, heartStyle]}>
-                    <Ionicons name='heart-outline' size={25} color={Colors.BRANCO} />
+                <Image source={require('../../assets/images/icon-heart.png')} style={{height: 20, width: 20}}/>
                 </Animated.View>
             </TouchableWithoutFeedback>
 
             <TouchableWithoutFeedback onPress={() => {}}>
                 <Animated.View style={[styles.button, styles.secondary, profileStyle]}>
-                    <FontAwesome6 name="user-pen" size={20} color={Colors.BRANCO}/>
+                <Image source={require('../../assets/images/icon-edit-profile.png')} style={{height: 20, width: 20}}/>
                 </Animated.View>
             </TouchableWithoutFeedback>
             
             <TouchableWithoutFeedback onPress={() => {Menu()}}>
                 <Animated.View style={[styles.button, styles.menu, rotation]}>
-                    <Ionicons name='add' size={25} color={Colors.BRANCO} />
+                <Image source={require('../../assets/images/icon-plus.png')} style={{height: 20, width: 20}}/>
                 </Animated.View>
             </TouchableWithoutFeedback>
         </View>

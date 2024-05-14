@@ -6,7 +6,6 @@ import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { ScrollView } from 'react-native-gesture-handler';
 import { TouchableOpacity } from 'react-native';
 import Colors from '../../Utils/Colors';
-import { FontAwesome, FontAwesome5, FontAwesome6, MaterialCommunityIcons, Entypo, AntDesign, MaterialIcons } from '@expo/vector-icons';
 
 
 export default function CreateJobsScreen({navigation}) {
@@ -92,7 +91,6 @@ export default function CreateJobsScreen({navigation}) {
           <Text style={{fontSize: 30, color: Colors.MALTE}}>Cadastro de Vaga</Text>
 
           <View style={styles.containerInput}>
-            <FontAwesome5 name="pen" size={22} color={Colors.MALTE}  />
             <TextInput 
                     style={styles.entrada} 
                     placeholder='Nome da Vaga' 
@@ -103,7 +101,6 @@ export default function CreateJobsScreen({navigation}) {
           </View>
 
           <View style={styles.containerInput}>
-            <FontAwesome6 name="location-dot" size={25} color={Colors.MALTE}/>
             <TextInput 
                     style={styles.entrada} 
                     placeholder='Local' 
@@ -114,7 +111,6 @@ export default function CreateJobsScreen({navigation}) {
           </View>
 
           <View style={styles.containerInput}>
-            <FontAwesome name="calendar" size={22} color={Colors.MALTE}/>
             <TextInput 
                     style={styles.entrada} 
                     placeholder='Data' 
@@ -125,7 +121,6 @@ export default function CreateJobsScreen({navigation}) {
           </View>
 
           <View style={styles.containerInput}>
-            <MaterialCommunityIcons name="text" size={22} color={Colors.MALTE}/>
             <TextInput 
                     style={styles.entrada} 
                     placeholder='Descrição' 
@@ -136,7 +131,6 @@ export default function CreateJobsScreen({navigation}) {
           </View>
 
           <View style={styles.containerInput}>
-            <Entypo name="pin" size={22} color={Colors.MALTE}/>
             <TextInput 
                     style={styles.entrada} 
                     placeholder='Requisitos' 
@@ -147,7 +141,6 @@ export default function CreateJobsScreen({navigation}) {
           </View>
 
           <View style={styles.containerInput}>
-            <AntDesign name="tag" size={22} color={Colors.MALTE}/>
             <TextInput
                     style={styles.entrada}  
                     placeholder='Categoria' 
@@ -159,7 +152,6 @@ export default function CreateJobsScreen({navigation}) {
           </View>
           
           <View style={styles.containerText}>
-            <FontAwesome5 name="money-bill-alt" size={20} color={Colors.MALTE}/>
             <Text style={styles.text}>Valor do Serviço</Text>
           </View>
 

@@ -3,11 +3,6 @@ import React from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { ScrollView } from 'react-native-gesture-handler';
 import styles from './styles';
-import Colors from '../../Utils/Colors';
-
-import { FontAwesome6 } from '@expo/vector-icons';
-import { FontAwesome } from '@expo/vector-icons';
-import { MaterialIcons } from '@expo/vector-icons';
 
 export default function JobsDescScreen() {
     const route = useRoute();
@@ -21,23 +16,23 @@ export default function JobsDescScreen() {
                 <Text style={styles.textTopic}> Informações </Text>
 
                 <View style={styles.textInfo}>
-                    <MaterialIcons name="work" size={20} color={Colors.MALTE}/>
+                    <Image source={require('../../../assets/images/icon-topic.png')} style={{height: 20, width: 20}}/>
                     <Text style={styles.textDesc}>{JobTitle}</Text>
                 </View>
                 <View style={styles.textInfo}>
-                    <FontAwesome6 name="location-dot" size={20} color={Colors.MALTE}/>
+                    <Image source={require('../../../assets/images/icon-topic.png')} style={{height: 20, width: 20}}/>
                     <Text style={styles.textDesc}>{JobLocal}</Text>
                 </View>
                 <View style={styles.textInfo}>
-                    <FontAwesome name="calendar" size={20} color={Colors.MALTE}/> 
+                    <Image source={require('../../../assets/images/icon-topic.png')} style={{height: 20, width: 20}}/> 
                     <Text style={styles.textDesc}>{JobDate}</Text>
                 </View>
                 <View style={styles.textInfo}>
-                    <MaterialIcons name="attach-money" size={20} color={Colors.MALTE} />
+                    <Image source={require('../../../assets/images/icon-topic.png')} style={{height: 20, width: 20}}/>
                     <Text style={styles.textDesc}>{JobMoney}</Text>
                 </View>
                 <View style={styles.textInfo}>
-                    <FontAwesome6 name="user-large" size={20} color={Colors.MALTE}/>
+                    <Image source={require('../../../assets/images/icon-topic.png')} style={{height: 20, width: 20}}/>
                     <Text style={styles.textDesc}>{JobSub}</Text>
                 </View>
                 

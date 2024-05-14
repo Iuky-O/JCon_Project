@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { Image, StyleSheet, Text } from 'react-native';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
@@ -38,8 +38,8 @@ export default function TabNavigation(){
                         tabBarLabel:()=>(
                             <Text style={Styles.Label}> Home </Text>
                           ),
-                          tabBarIcon:({size})=>(
-                            <Entypo name="home" size={size} color={Colors.BRANCO}/>
+                          tabBarIcon:()=>(
+                            <Image source={require('../../assets/images/icon-home.png')} style={{height: 20, width: 20}}/>
                           ),
                     }}
                 />
@@ -49,8 +49,8 @@ export default function TabNavigation(){
                         tabBarLabel:()=>(
                             <Text style={Styles.Label}> Jobs </Text>
                           ),
-                          tabBarIcon:({size})=>(
-                            <MaterialIcons name="work" size={size} color={Colors.BRANCO}/>
+                          tabBarIcon:()=>(
+                            <Image source={require('../../assets/images/icon-work.png')} style={{height: 20, width: 20}}/>
                           )
                     }}
                 />
@@ -60,8 +60,8 @@ export default function TabNavigation(){
                         tabBarLabel:()=>(
                             <Text style={Styles.Label}> Profile </Text>
                           ),
-                          tabBarIcon:({size})=>(
-                            <FontAwesome6 name="user-large" size={size} color={Colors.BRANCO}/>
+                          tabBarIcon:()=>(
+                            <Image source={require('../../assets/images/icon-user.png')} style={{height: 20, width: 20}}/>
                           )
                     }}
                 />
@@ -71,8 +71,8 @@ export default function TabNavigation(){
                         tabBarLabel:()=>(
                             <Text style={Styles.Label}> Chats </Text>
                           ),
-                          tabBarIcon:({size})=>(
-                            <Ionicons name="logo-wechat" size={size} color={Colors.BRANCO}/>
+                          tabBarIcon:()=>(
+                            <Image source={require('../../assets/images/icon-chat.png')} style={{height: 20, width: 20}}/>
                           )
                     }}
                 />
@@ -82,8 +82,8 @@ export default function TabNavigation(){
                         tabBarLabel:()=>(
                             <Text style={Styles.Label}> Ranking </Text>
                           ),
-                          tabBarIcon:({size})=>(
-                            <Ionicons name="podium" size={size} color={Colors.BRANCO}/>
+                          tabBarIcon:()=>(
+                            <Image source={require('../../assets/images/icon-ranking.png')} style={{height: 20, width: 20}}/>
                           )
                     }}
                 />

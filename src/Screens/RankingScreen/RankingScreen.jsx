@@ -258,7 +258,7 @@ const [currentRankingIndex, setCurrentRankingIndex] = React.useState(0);
         <View style={{width: '100%', justifyContent: 'center'}}>
           <Text style={styles.textTopic}>Ranking</Text> 
             <Carousel 
-              layout={''}
+              layout={'default'}
               layoutCardOffset={30}
               data={carouselItemsRanking} 
               sliderWidth={windowWidth}
