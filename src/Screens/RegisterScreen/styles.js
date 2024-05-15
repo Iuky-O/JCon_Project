@@ -19,7 +19,9 @@ const styles = StyleSheet.create({
         borderColor: Colors.AZUL_IRIS,
         borderWidth: 1,
         marginTop: 5,
+        marginLeft:5,
         width: '90%',
+        height:35,
         paddingHorizontal: 10,
 
     },
@@ -33,6 +35,10 @@ const styles = StyleSheet.create({
         color: Colors.BRANCO,
         textAlign: "center",
         fontSize: 12,
+    },
+    Icon:{
+        width:20,
+        height:20,
     }
 })
 export default styles;

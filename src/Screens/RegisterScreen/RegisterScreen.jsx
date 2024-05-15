@@ -1,4 +1,4 @@
-import { View, Text, TextInput, TouchableOpacity, ScrollView, SafeAreaView} from 'react-native'
+import { View, Text, TextInput, TouchableOpacity, ScrollView, SafeAreaView, Image} from 'react-native'
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 import * as ImagePicker from 'expo-image-picker';
@@ -101,9 +101,6 @@ export default function RegisterScreen() {
       <View style={styles.corpo}>
         <Text style={styles.Title}>Cadastro</Text>
 
-        <View style={{ flexDirection:"row", alignItems:'baseline',}}>
-        <Image style={styles.Icon} source={require('./../../../assets/images/icon-user.png')}/>
-
         <TextInput
           style={styles.Input}
           placeholder='Nome'
@@ -111,7 +108,6 @@ export default function RegisterScreen() {
           value={userName}
           onChangeText={setUserName}
         />
-        </View>
         <TextInput
           style={styles.Input}
           placeholder='Telefone'

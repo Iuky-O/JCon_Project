@@ -2,7 +2,6 @@ import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native'
 import { TouchableOpacity, View, Image, StyleSheet } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'; 
 
 import HomeScreen from '../Screens/HomeScreen/HomeScreen'
 import ConversationsScreen from '../Screens/ConversationScreen/ConversationScreen'
@@ -23,7 +22,7 @@ const Stack = createStackNavigator();
 export default function StackNavigation() {
   return (
     
-      <Stack.Navigator initialRouteName="Tab"
+      <Stack.Navigator initialRouteName="Login"
       screenOptions={{
         headerStyle: {
           backgroundColor: Colors.MALTE, 
