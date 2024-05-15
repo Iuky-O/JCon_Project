@@ -22,14 +22,14 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.iuky.JCon"
+      "package": "com.android.JCon"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
-        "projectId": "f27f8670-062d-497b-823f-faf40f0874df"
+        "projectId": "6a40d603-a05f-4dd8-9645-2fa99a12de41"
       }
     }
   }
