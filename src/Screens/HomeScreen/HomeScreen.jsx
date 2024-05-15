@@ -319,7 +319,7 @@ const isCarousel = React.useRef(null)
           <View style={{width: '100%', flex:1}}>
             <Text style={styles.textTopic}>Vagas</Text>
             <Carousel 
-              layout={''}
+              layout={'default'}
               layoutCardOffset={30}
               data={carouselItemsJobs} 
               sliderWidth={windowWidth}

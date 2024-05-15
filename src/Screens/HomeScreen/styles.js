@@ -92,7 +92,6 @@ export const styles = StyleSheet.create({
       color: Colors.AZURE,
       marginTop: -17,
       marginLeft: 200,
-      textAlign: 'rigth'
   
     },
   
@@ -136,14 +135,12 @@ export const styles = StyleSheet.create({
       width: 35,
       height: 35,
       marginTop: -20,
-      position: 'flex',
     },
   
     ImageEmblema2:{
       width: 35,
       height: 35,
       marginTop: -20,
-      position: 'flex',
       marginLeft: -200
     },
   
@@ -151,7 +148,6 @@ export const styles = StyleSheet.create({
       width: 35,
       height: 35,
       marginTop: -20,
-      position: 'flex',
       marginLeft: 200
     },
 

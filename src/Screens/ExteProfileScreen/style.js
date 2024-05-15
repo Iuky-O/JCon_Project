@@ -114,7 +114,6 @@ const styles = StyleSheet.create({
   },
   buttomText:{
     color: Colors.BRANCO,
-    fontStyle:"bold",
     fontSize:10,
   },
   traco:{

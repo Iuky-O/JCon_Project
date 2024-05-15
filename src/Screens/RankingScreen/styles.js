@@ -79,7 +79,6 @@ textSubTopic:{
     color: Colors.AZURE,
     marginTop: -17,
     marginLeft: 200,
-    textAlign: 'rigth'
 
   },
 
@@ -123,14 +122,12 @@ textSubTopic:{
     width: 35,
     height: 35,
     marginTop: -20,
-    position: 'flex',
   },
 
   ImageEmblema2:{
     width: 35,
     height: 35,
     marginTop: -20,
-    position: 'flex',
     marginLeft: -200
   },
 
@@ -138,7 +135,6 @@ textSubTopic:{
     width: 35,
     height: 35,
     marginTop: -20,
-    position: 'flex',
     marginLeft: 200
   },
 
