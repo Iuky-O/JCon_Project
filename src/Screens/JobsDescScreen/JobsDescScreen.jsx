@@ -44,7 +44,7 @@ export default function JobsDescScreen() {
 
                 <View style={{alignItems: 'center'}}>
                     <View style={styles.Button}>
-                        <Text style={styles.buttomText} onPress={() => Alert.alert('Bubmissão enviada!')}> Candidatar-se </Text>
+                        <Text style={styles.buttomText} onPress={() => Alert.alert('Submissão enviada!')}> Candidatar-se </Text>
                     </View>
                 </View>
             </View>
