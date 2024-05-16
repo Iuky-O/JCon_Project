@@ -1,24 +1,97 @@
 
 import { View, Image, Text, SafeAreaView, ScrollView, Animated, Dimensions, Alert, TextInput } from 'react-native'
 import React, { useState, useEffect } from 'react'
-import { Ionicons } from 'react-native-vector-icons';
 import styles from './style';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import ButtonFloat from '../../Components/ButtonFloat';
-
+import Colors from '../../Utils/Colors';
+import { Stars5, Stars4, Stars3, Stars2, Stars1, Stars0 } from '../../Scripts/functions'
 import "firebase/firestore";
 import { firebase } from '../../Firebase/firebaseConfig';
 import { getFirestore, collection, getDocs, query, where} from "firebase/firestore";
 
-import Colors from '../../Utils/Colors';
-import { FontAwesome } from '@expo/vector-icons';
+const avaliacoes = [
+  {
+    user: "Maria Cavalcante",
+    star: 5,
+    comentario: "Eu amei o serviço!",
+    recomendacao: "Sim"
+  },
+  {
+    user: "Judas R.",
+    star: 4,
+    comentario: "Gostei muito, mas poderia ser mais rápida!",
+    recomendacao: "Sim"
+  },
+  {
+    user: "Mariana Seline",
+    star: 5,
+    comentario: "Nunca vi alguem tão simpática, atendeu minhas expectativas",
+    recomendacao: "Sim"
+  },
+  {
+    user: "Reginaldo R.",
+    star: 0,
+    comentario: "Não gostei!",
+    recomendacao: "Não"
+  },
+  {
+    user: "J. Souza",
+    star: 3,
+    comentario: "Bem mais ou menos :(",
+    recomendacao: "Não"
+  },
+];
+
+
+function renderAvaliations(){
+  return(
+    <View style={styles.containerAvaliacao}>
+
+        <View style={{alignItems: 'center'}}>
+            <Text style={[styles.textSubtitle, ]}>AVALIAÇÕES</Text>
+            <Text style={styles.lineSeparator}></Text>
+        </View>
+
+            {avaliacoes.map((avaliacao, index) => (
+              <View style={{alignItems: 'center', marginTop: 10}}>
+                <View key={index} style={styles.avaliacaoFull} >
+                  
+                  <View style={styles.iconesAvaliacao}>
+                    {avaliacao.recomendacao === 'Sim' && <Image source={require('../../../assets/images/icon-like.png')} style={{width: 20, height: 20}}/>}
+                    {avaliacao.recomendacao !== 'Sim' && <Image source={require('../../../assets/images/icon-dislike.png')} style={{width: 20, height: 20}}/>}
+                  </View>
+
+                  <View style={{alignItems: 'center'}}>
+                    <Text style={styles.textUser}>{avaliacao.user}</Text>
+                  </View>  
+                    
+                  <View>
+                    {avaliacao.star === 5 && Stars5()}
+                    {avaliacao.star === 4 && Stars4()}
+                    {avaliacao.star === 3 && Stars3()}
+                    {avaliacao.star === 2 && Stars2()}
+                    {avaliacao.star === 1 && Stars1()}
+                    {avaliacao.star === 0 && Stars0()}
+                  </View>
+                  <Text style={styles.textAvaliacao}>{avaliacao.comentario}</Text>
+                  <Text>Recomendação: {avaliacao.recomendacao}</Text>
+                </View>
+              </View>
+            ))}
+    </View>
+  )
+};
+
+
 
 export default function ProfileScreen() {
 
   const [userData, setUserData] = useState(null);
   const [scrollY, setSrollY] = useState(new Animated.Value(0));
   const navigation = useNavigation();
+  const [controler, setControler] = useState(true);
 
     useEffect(() => {
       async function fetchUserData() {
@@ -64,7 +137,7 @@ export default function ProfileScreen() {
               <View style={{ margin: 20, padding: 10 }}>
                 <Text> Adicionar Descrição </Text>
               </View>
-          </TouchableOpacity>
+      </TouchableOpacity>
     }
 
 
@@ -74,7 +147,7 @@ export default function ProfileScreen() {
 
     {userData && (
       <ScrollView>             
-        <View style={{alignItems: 'center', marginTop: 100, position: 'absolute', right: 40, top: -50}}>
+        <View style={styles.buttonFloat}>
           <ButtonFloat/>
         </View>
         <View style={styles.containerProfile}>
@@ -119,6 +192,20 @@ export default function ProfileScreen() {
           </View>
         </View>
         </View>
+
+        <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginBottom: 10, marginTop: -30}}>
+
+          <TouchableOpacity onPress={() => setControler(true)}>
+              <Text style={[styles.textTopic, controler ? styles.topicButtomActive : null]}>INFORMAÇÕES</Text>
+          </TouchableOpacity>
+          
+          <TouchableOpacity onPress={() => setControler(false)}>
+            <Text style={[styles.textTopic, !controler ? styles.topicButtomActive : null]}>AVALIAÇÕES</Text>
+          </TouchableOpacity>
+
+        </View>
+
+        {controler ? (
         <View style={styles.container}>
 
           <Text style={styles.textSubtitle}>SERVIÇOS</Text>
@@ -153,7 +240,9 @@ export default function ProfileScreen() {
           </View>
 
         </View>
-
+        ) : (
+          renderAvaliations()
+        )}
       </ScrollView>
     )}
     </SafeAreaView>

@@ -91,6 +91,11 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color:Colors.MALTE,
   },
+  textTopic:{
+    fontSize: 17,
+    marginTop:30,
+    color:Colors.MALTE,
+  },
   textInfo:{
     flexDirection:"row",
     margin:15,
@@ -139,6 +144,50 @@ const styles = StyleSheet.create({
     margin:10,
     height:130,
     width:130,
+  },
+  buttonFloat:{
+    alignItems: 'center', 
+    marginTop: 100, 
+    position: 'absolute', 
+    right: 40, 
+    top: -50
+  },
+
+
+  containerAvaliacao:{
+    flex:1,
+    backgroundColor: Colors.TURQUESA_CLARO,
+    borderRadius:30,
+  },
+  avaliacaoFull:{
+    flex:1, 
+    flexDirection: 'column', 
+    gap: 10, 
+    padding: 10, 
+    backgroundColor: Colors.BRANCO, 
+    borderRadius: 10, 
+    marginBottom: 10, 
+    maxWidth: '90%',
+    width: '90%'
+  },
+  textAvaliacao:{
+    fontWeight: 'bold',
+  },
+  textUser:{
+    color: Colors.AZUL_MARINHO,
+    fontWeight: 'bold',
+  },
+  topicButtomActive:{
+    fontWeight: 'bold', 
+    borderBottomWidth: 1, 
+    borderColor: Colors.AZUL_IRIS
+  },
+  iconesAvaliacao:{
+    direction: 'rtl',
+    marginTop: 100, 
+    position: 'absolute', 
+    right: 10, 
+    bottom: 100,
   },
 });
 export default styles

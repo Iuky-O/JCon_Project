@@ -1,10 +1,9 @@
 import React, { useState, useRef } from 'react'
 import {View, Image, Text, StyleSheet, TouchableWithoutFeedback, Animated} from 'react-native'
-import {Ionicons, FontAwesome6, MaterialIcons} from '@expo/vector-icons'
 import Colors from '../Utils/Colors'
 import { useNavigation } from '@react-navigation/native';
 
-const ButtonFloat = props => {
+const ButtonFloat = () => {
 
     const navigation = useNavigation();
     const [showText, setShowText] = useState(false);
@@ -87,7 +86,7 @@ const ButtonFloat = props => {
         
         <View style={styles.screen}>
 
-            <TouchableWithoutFeedback onPress={() => navigation.navigate('CreateJobs')}>
+            <TouchableWithoutFeedback onPress={() => navigation.navigate('OptionsJobs')}>
                 <Animated.View style={[styles.button, styles.secondary, jobStyle]}>
                 <Image source={require('../../assets/images/icon-create-jobs.png')} style={{height: 20, width: 20}}/>
                 </Animated.View> 

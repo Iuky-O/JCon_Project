@@ -34,7 +34,7 @@ export default function HomeScreen({navigation}) {
       image: 'https://static.vecteezy.com/ti/fotos-gratis/t2/3542373-garota-sorridente-em-um-fundo-branco-gratis-foto.JPG',
     
       title2: 'Juliano Cunha',
-      image2: 'https://www.otempo.com.br/image/contentid/policy:1.2503902:1624581759/image.jpg?f=3x2&q=0.6&w=1200&$p$f$q$w=4633e5f',
+      image2: 'https://img.freepik.com/fotos-premium/homem-latino_62972-8908.jpg',
 
       title3: 'Marcos M.',
       image3: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTry3-HbJ7pnlj3fF8U4Eii8Ul47Wn6BKOP0HuL3-ES91H1SgiHCi2DHRBlvc6ljfy8qVs&usqp=CAU',

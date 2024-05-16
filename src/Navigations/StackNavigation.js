@@ -16,13 +16,14 @@ import RegisterScreen from '../Screens/RegisterScreen/RegisterScreen'
 import EditAboutMeScreen from '../Screens/EditAboutMeScreen/EditAboutMeScreen'
 import CreateJobsScreen from '../Screens/CreateJobsScreen/CreateJobsScreen'
 import ExteProfileScreen from '../Screens/ExteProfileScreen/ExterProfileScreen'
+import OptionsJobsScreen from '../Screens/OptionsJobs/OptionsJobsScreen';
 import Colors from '../Utils/Colors'
 
 const Stack = createStackNavigator();
 export default function StackNavigation() {
   return (
     
-      <Stack.Navigator initialRouteName="Login"
+      <Stack.Navigator initialRouteName="Tab"
       screenOptions={{
         headerStyle: {
           backgroundColor: Colors.MALTE, 
@@ -55,6 +56,7 @@ export default function StackNavigation() {
           <Stack.Screen name='EditAboutMe' component={EditAboutMeScreen} options={{ headerTitle: 'Sobre mim' }}/>
           <Stack.Screen name='ExteProfile' component={ExteProfileScreen} options={{ headerTitle: 'Perfil' }}/>
           <Stack.Screen name='CreateJobs' component={CreateJobsScreen} options={{ headerTitle: 'Crie uma vaga' }}/>
+          <Stack.Screen name='OptionsJobs' component={OptionsJobsScreen} options={{ headerTitle: 'Vagas e Submissões' }}/>
 
       </Stack.Navigator>
   

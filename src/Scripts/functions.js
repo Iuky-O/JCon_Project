@@ -1,21 +1,79 @@
+import { View, Image, StyleSheet } from 'react-native';
 
+export const Stars5 = () => {
+  return(
+    <View style={styles.stars}>
+      <Image source={require('../../assets/images/icon-star-max.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-max.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-max.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-max.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-max.png')} style={{height: 15, width: 15}}/>
+    </View>
+  )
+};
+export const Stars4 = () => {
+  return(
+    <View style={styles.stars}>
+      <Image source={require('../../assets/images/icon-star-max.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-max.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-max.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-max.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-min.png')} style={{height: 15, width: 15}}/>
+    </View>
+  )
+};
+export const Stars3 = () => {
+  return(
+    <View style={styles.stars}>
+      <Image source={require('../../assets/images/icon-star-max.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-max.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-max.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-min.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-min.png')} style={{height: 15, width: 15}}/>
+    </View>
+  )
+};
+export const Stars2 = () => {
+  return(
+    <View style={styles.stars}>
+      <Image source={require('../../assets/images/icon-star-max.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-max.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-min.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-min.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-min.png')} style={{height: 15, width: 15}}/>
+    </View>
+  )
+};
+export const Stars1 = () => {
+  return(
+    <View style={styles.stars}>
+      <Image source={require('../../assets/images/icon-star-max.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-min.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-min.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-min.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-min.png')} style={{height: 15, width: 15}}/>
+    </View>
+  )
+};
+export const Stars0 = () => {
+  return(
+    <View style={styles.stars}>
+      <Image source={require('../../assets/images/icon-star-min.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-min.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-min.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-min.png')} style={{height: 15, width: 15}}/>
+      <Image source={require('../../assets/images/icon-star-min.png')} style={{height: 15, width: 15}}/>
+    </View>
+  )
+};
 
-    export const [userData, setUserData] = useState(null);
-
-        useEffect(() => {
-            async function fetchUserData() {
-              try {
-                const db = getFirestore();
-                const usersCollection = collection(db, "usuarios");
-                const q = query(usersCollection, where("Name", "==", "Jenny Cooper")); // Substitua "Jane Cooper" pelo nome do usuário que você deseja buscar
-        
-                const querySnapshot = await getDocs(q);
-                const userDataArray = querySnapshot.docs.map(doc => doc.data());
-                setUserData(userDataArray[0]); // Se houver apenas um usuário com o nome fornecido, você pode acessá-lo diretamente pelo índice 0
-              } catch (error) {
-                console.error("Erro ao buscar dados do usuário:", error);
-              }
-            }
-        
-            fetchUserData();
-          }, []);
+const styles = StyleSheet.create({
+  stars:{
+    flex: 1, 
+    flexDirection:'row', 
+    gap: 10, 
+    marginTop: 5,
+    alignItems: 'center',
+    maxHeight: 30,
+  },
+})
