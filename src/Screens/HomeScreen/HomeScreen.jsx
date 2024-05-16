@@ -3,10 +3,9 @@ import React, { useState } from 'react';
 import Carousel,{ Pagination } from 'react-native-snap-carousel';
 import styles from './../HomeScreen/styles';
 import Colors from '../../Utils/Colors';
-
 import { FontAwesome6 } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
-import { StatusBar } from 'react-native';
+
 
 
 export default function HomeScreen({navigation}) {
