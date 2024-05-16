@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
   container: {
     flex:1,
     backgroundColor: Colors.TURQUESA_CLARO,
-    borderRadius:30,
+    borderTopRightRadius: 30,
+    borderTopLeftRadius: 30,
     alignItems:"center",
 
   },
@@ -157,7 +158,8 @@ const styles = StyleSheet.create({
   containerAvaliacao:{
     flex:1,
     backgroundColor: Colors.TURQUESA_CLARO,
-    borderRadius:30,
+    borderTopRightRadius: 30,
+    borderTopLeftRadius: 30,
   },
   avaliacaoFull:{
     flex:1, 
