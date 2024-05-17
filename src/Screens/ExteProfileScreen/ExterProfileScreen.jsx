@@ -1,14 +1,10 @@
-import { View, Image, Text, SafeAreaView, ScrollView, Animated, Dimensions, Alert} from 'react-native'
+import { View, Image, Text, SafeAreaView, ScrollView, Animated, Alert} from 'react-native'
 import React, { useState, useEffect } from 'react'
-import { Ionicons } from 'react-native-vector-icons';
 import styles from './style';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation, useRoute } from '@react-navigation/native';
-        
+import Colors from '../../Utils/Colors';       
 import "firebase/firestore";
         
-import Colors from '../../Utils/Colors';
-import { FontAwesome } from '@expo/vector-icons';
         
 export default function ProfileScreen() {
         
@@ -105,6 +101,6 @@ export default function ProfileScreen() {
         
       </ScrollView>
     </SafeAreaView>
-          )
-        }
+  )
+}
         

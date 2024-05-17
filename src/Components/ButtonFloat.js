@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import {View, Image, Text, StyleSheet, TouchableWithoutFeedback, Animated} from 'react-native'
+import {View, Image, StyleSheet, TouchableWithoutFeedback, Animated} from 'react-native'
 import Colors from '../Utils/Colors'
 import { useNavigation } from '@react-navigation/native';
 

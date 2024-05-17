@@ -1,5 +1,5 @@
 
-import { View, Image, Text, SafeAreaView, ScrollView, Animated, Dimensions, Alert, TextInput } from 'react-native'
+import { View, Image, Text, SafeAreaView, ScrollView, Animated} from 'react-native'
 import React, { useState, useEffect } from 'react'
 import styles from './style';
 import { TouchableOpacity } from 'react-native-gesture-handler';

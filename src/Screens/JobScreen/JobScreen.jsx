@@ -1,10 +1,9 @@
-import { View, Text, SafeAreaView, Image, TextInput, FlatList, Dimensions, onPress } from 'react-native'
+import { View, Text, SafeAreaView, Image, TextInput, FlatList } from 'react-native'
 import React, { useState} from 'react'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import { Picker } from '@react-native-picker/picker';
 import styles from './style';
-import Colors from '../../Utils/Colors';
 import { Ionicons } from 'react-native-vector-icons';
 
 const data = [

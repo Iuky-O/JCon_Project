@@ -1,7 +1,6 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-import { NavigationContainer } from '@react-navigation/native'
-import { TouchableOpacity, View, Image, StyleSheet } from 'react-native';
+import { TouchableOpacity, Image, StyleSheet } from 'react-native';
 
 import HomeScreen from '../Screens/HomeScreen/HomeScreen'
 import ConversationsScreen from '../Screens/ConversationScreen/ConversationScreen'

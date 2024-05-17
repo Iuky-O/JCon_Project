@@ -3,13 +3,6 @@ import { Image, StyleSheet, Text } from 'react-native';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-/** Icones do expo */
-import { Entypo } from '@expo/vector-icons';
-import { MaterialIcons } from '@expo/vector-icons';
-import { FontAwesome6 } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
-
-/** Importação de telas */
 import HomeScreen from '../Screens/HomeScreen/HomeScreen';
 import JobScreen from '../Screens/JobScreen/JobScreen';
 import ProfileScreen from '../Screens/ProfileScreen/ProfileScreen';
@@ -17,7 +10,6 @@ import ConversationScreen from '../Screens/ConversationScreen/ConversationScreen
 import RankingScreen from '../Screens/RankingScreen/RankingScreen';
 import Colors from '../Utils/Colors';
 
-/** isso tira a letra: tabBarShowLabel: false, */
 const Tab = createBottomTabNavigator();
 
 export default function TabNavigation(){

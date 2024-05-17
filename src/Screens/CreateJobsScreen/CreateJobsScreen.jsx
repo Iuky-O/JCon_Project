@@ -1,4 +1,4 @@
-import { View, Text, TextInput, SafeAreaView, Switch, Dimensions, KeyboardAvoidingView} from 'react-native'
+import { View, Text, TextInput, SafeAreaView, Switch, KeyboardAvoidingView} from 'react-native'
 import React, { useState, isEnabled } from 'react'
 import styles from './styles';
 import Slider from '@react-native-community/slider';

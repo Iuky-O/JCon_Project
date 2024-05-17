@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, ScrollView, Image, TouchableOpacity, FlatList, Dimensions, Alert } from 'react-native'
+import { View, Text, SafeAreaView, ScrollView, Image, TouchableOpacity, FlatList, Dimensions} from 'react-native'
 import React from 'react'
 import Carousel, { Pagination } from 'react-native-snap-carousel'
 import styles from '../RankingScreen/styles';
@@ -8,7 +8,6 @@ import Colors from '../../Utils/Colors';
 
 
 export default function RankingScreen({navigation}) {
-  /** Carrosel para ranking */
 
 const windowWidth = Dimensions.get('window').width;
 const [index, setIndex] = React.useState(0)
