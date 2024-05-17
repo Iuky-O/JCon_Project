@@ -13,30 +13,35 @@ import { getFirestore, collection, getDocs, query, where} from "firebase/firesto
 
 const avaliacoes = [
   {
+    id: 1,
     user: "Maria Cavalcante",
     star: 5,
     comentario: "Eu amei o serviço!",
     recomendacao: "Sim"
   },
   {
+    id: 2,
     user: "Judas R.",
     star: 4,
     comentario: "Gostei muito, mas poderia ser mais rápida!",
     recomendacao: "Sim"
   },
   {
+    id: 3,
     user: "Mariana Seline",
     star: 5,
     comentario: "Nunca vi alguem tão simpática, atendeu minhas expectativas",
     recomendacao: "Sim"
   },
   {
+    id: 4,
     user: "Reginaldo R.",
     star: 0,
     comentario: "Não gostei!",
     recomendacao: "Não"
   },
   {
+    id: 5,
     user: "J. Souza",
     star: 3,
     comentario: "Bem mais ou menos :(",
@@ -54,9 +59,9 @@ function renderAvaliations(){
             <Text style={styles.lineSeparator}></Text>
         </View>
 
-            {avaliacoes.map((avaliacao, index) => (
-              <View style={{alignItems: 'center', marginTop: 10}}>
-                <View key={index} style={styles.avaliacaoFull} >
+            {avaliacoes.map((avaliacao) => (
+              <View key={avaliacao.id} style={{alignItems: 'center', marginTop: 10}}>
+                <View style={styles.avaliacaoFull} >
                   
                   <View style={styles.iconesAvaliacao}>
                     {avaliacao.recomendacao === 'Sim' && <Image source={require('../../../assets/images/icon-like.png')} style={{width: 20, height: 20}}/>}

@@ -30,14 +30,8 @@ export default function ChatScreen() {
   return (
     <View style={styles.chat}>
       <View style={styles.header}>
-        <View style={styles.buttonContainer}>
-          <MaterialIcons
-            name="arrow-back-ios"
-            size={30}
-            color={'#0077B6'}
-            style={styles.backButton}
-            onPress={handleBackButton}
-          />
+        <View style={styles.buttonContainer} onPress={handleBackButton}>
+          <Image source={require('../../../assets/images/icon-return.png')} style={{height: 30, width:30}}/>
         </View>
         <View style={styles.titleContainer}>
           <Text style={styles.titulo}>{contactName}</Text>
