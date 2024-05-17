@@ -1,0 +1,56 @@
+diff --git a/node_modules/react-native/index.js b/node_modules/react-native/index.js
+index f087b70..bfe48ec 100644
+--- a/node_modules/react-native/index.js
++++ b/node_modules/react-native/index.js
+@@ -380,6 +380,38 @@ module.exports = {
+         'LogBox is enabled by default so there is no need to call unstable_enableLogBox() anymore. This is a no op and will be removed in the next version.',
+       );
+   },
++  get ColorPropType(): $FlowFixMe {
++    invariant(
++      false,
++      'ColorPropType has been removed from React Native. Migrate to ' +
++        "ColorPropType exported from 'deprecated-react-native-prop-types'.",
++    );
++    return require('deprecated-react-native-prop-types').ColorPropType
++   },
++   get EdgeInsetsPropType(): $FlowFixMe {
++    invariant(
++      false,
++      'EdgeInsetsPropType has been removed from React Native. Migrate to ' +
++        "EdgeInsetsPropType exported from 'deprecated-react-native-prop-types'.",
++    );
++    return require('deprecated-react-native-prop-types').EdgeInsetsPropType
++   },
++   get PointPropType(): $FlowFixMe {
++    invariant(
++      false,
++      'PointPropType has been removed from React Native. Migrate to ' +
++        "PointPropType exported from 'deprecated-react-native-prop-types'.",
++    );
++    return require('deprecated-react-native-prop-types').PointPropType
++   },
++   get ViewPropTypes(): $FlowFixMe {
++    invariant(
++      false,
++      'ViewPropTypes has been removed from React Native. Migrate to ' +
++        "ViewPropTypes exported from 'deprecated-react-native-prop-types'.",
++    );
++    return require('deprecated-react-native-prop-types').ViewPropTypes
++   },
+ };
+ 
+ if (__DEV__) {
+@@ -431,11 +463,11 @@ if (__DEV__) {
+       );
+     },
+   });
+-
+   /* $FlowFixMe[prop-missing] This is intentional: Flow will error when
+    * attempting to access WebView. */
+   /* $FlowFixMe[invalid-export] This is intentional: Flow will error when
+    * attempting to access WebView. */
++  // Deprecated Prop Types
+   Object.defineProperty(module.exports, 'WebView', {
+     configurable: true,
+     get() {

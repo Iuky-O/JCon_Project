@@ -253,7 +253,7 @@ const [currentRankingIndex, setCurrentRankingIndex] = React.useState(0);
     
     <SafeAreaView style={styles.container}>
 
-      <ScrollView>
+      <ScrollView style={{maxHeight: 300}}>
         <View style={{width: '100%', justifyContent: 'center'}}>
           <Text style={styles.textTopic}>Ranking</Text> 
             <Carousel 
@@ -284,7 +284,7 @@ const [currentRankingIndex, setCurrentRankingIndex] = React.useState(0);
               
         </View>
       
-
+</ScrollView>
         <View style={styles.containerList}>
         <FlatList
           data={carouselItemsRanking[index].categorie === 'Bom atendimento' ? subRanking.listAtendimento : 
@@ -296,7 +296,7 @@ const [currentRankingIndex, setCurrentRankingIndex] = React.useState(0);
         />
         </View>
       
-      </ScrollView>
+      
     </SafeAreaView>
     
 

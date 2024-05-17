@@ -19,17 +19,14 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.iuky.JCon"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      "package": "com.android.JCon"
     },
     "extra": {
       "eas": {
-        "projectId": "f27f8670-062d-497b-823f-faf40f0874df"
+        "projectId": "58fa9bf0-447a-400d-a36b-926d02830d49"
       }
     }
   }

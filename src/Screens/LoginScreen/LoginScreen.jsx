@@ -8,7 +8,6 @@ import Colors from '../../Utils/Colors';
 import { auth } from '../../Firebase/firebaseConfig';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import "firebase/firestore";
-import { firebase } from '../../Firebase/firebaseConfig';
 import { getFirestore, collection, getDocs, query, where} from "firebase/firestore";
 
 export default function LoginScreen() {
@@ -47,7 +46,7 @@ export default function LoginScreen() {
         .then((userCredential) => { 
             const user = userCredential.user;
             alert("Login efetuado com sucesso!"); 
-            console.log(user); 
+            //console.log(user); 
 
             navigation.navigate('Tab'); 
 
