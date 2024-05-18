@@ -59,7 +59,7 @@ textTopic:{
     margin:10,
   },
   Button2:{
-    backgroundColor: Colors.PRATA,
+    backgroundColor: Colors.AZUL_PACIFICO,
     alignItems: 'center',
     borderRadius: 10,
     height: 40,
