@@ -1,5 +1,5 @@
 import { View, Text, SafeAreaView, Image, TextInput, FlatList } from 'react-native'
-import React, { useState} from 'react'
+import React, { useState } from 'react'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import { Picker } from '@react-native-picker/picker';
@@ -16,7 +16,7 @@ const data = [
     NameSub: 'Mauro',
     description: 'Estamos à procura de um(a) talentoso(a) fotógrafo(a) para se juntar à nossa equipe de serviço de fotografia. O candidato selecionado terá a oportunidade de capturar momentos especiais, criar imagens impactantes e contribuir para a narrativa visual da nossa empresa.',
     requisite: 'Ser pontual.',
-    money: '300 dia',
+    money: 'R$300',
   },
   {
     id: '2',
@@ -27,7 +27,7 @@ const data = [
     NameSub: 'Yan',
     description: 'Estamos procurando um talentoso desenvolvedor de software para se juntar à nossa equipe de serviço de programação. O candidato selecionado terá a oportunidade de trabalhar em projetos desafiadores e inovadores, contribuindo para o desenvolvimento de soluções tecnológicas de ponta.',
     requisite: 'Ser pontual.',
-    money: '300 dia',
+    money: 'R$300',
   },
 
   {
@@ -50,7 +50,7 @@ const data = [
     NameSub: 'Regina',
     description: 'Estamos em busca de um talentoso designer gráfico para se juntar à nossa equipe de serviço de design. O candidato selecionado terá a oportunidade de trabalhar em uma variedade de projetos criativos, desde identidade visual de marca até materiais de marketing e design digital.',
     requisite: 'Ser pontual, saber de cores e banners',
-    money: '300 dia',
+    money: 'R$300',
   },
   {
     id: '5',
@@ -61,7 +61,7 @@ const data = [
     NameSub: 'Rubens',
     description: 'Estamos buscando um assistente de serviço de contabilidade comprometido e organizado para se juntar à nossa equipe. O candidato selecionado será responsável por auxiliar nas operações diárias do departamento contábil, garantindo a precisão e integridade dos registros financeiros da empresa.',
     requisite: 'Ser pontual.',
-    money: '300 dia',
+    money: 'R$300',
   },
   {
     id: '6',
@@ -81,21 +81,22 @@ const Item = ({ imageUrl, title, local, data, description, requisite, navigation
   <View style={styles.item}>
     <View style={styles.ContainerImage}>
       <Image source={{ uri: imageUrl }} style={styles.image} />
-      <Text style={styles.NameSu} onPress={() => navigation.navigate('ExteProfile', { 
-                                                                                            Nome: NameSub, 
-                                                                                            Imagem: imageUrl})}>
-                                                                                            {NameSub}
+      <Text style={styles.NameSu} onPress={() => navigation.navigate('ExteProfile', {
+        Nome: NameSub,
+        Imagem: imageUrl
+      })}>
+        {NameSub}
       </Text>
     </View>
     <View style={styles.textContainer}>
       <Text style={styles.title} onPress={() => navigation.navigate('JobsDesc', {
-                                                                                  JobTitle: title,
-                                                                                  JobLocal: local,
-                                                                                  JobDate: data,
-                                                                                  JobDesc: description,
-                                                                                  JobRequisite: requisite,
-                                                                                  JobMoney: money,
-                                                                                  JobSub: NameSub
+        JobTitle: title,
+        JobLocal: local,
+        JobDate: data,
+        JobDesc: description,
+        JobRequisite: requisite,
+        JobMoney: money,
+        JobSub: NameSub
       })}>
         {title}</Text>
       <Text style={styles.subtitle}>
@@ -125,7 +126,7 @@ const Item = ({ imageUrl, title, local, data, description, requisite, navigation
 
 export default function JobScreen() {
 
-  const [Filter, setFilter] = useState(['Pessoas','Empresas','Cargo']);
+  const [Filter, setFilter] = useState(['Pessoas', 'Empresas', 'Cargo']);
   const [useFilter, setUseFilter] = useState([]);
   const [Options, setOptions] = useState();
   const [pickerVisible, setPickerVisible] = useState(false);
@@ -134,12 +135,12 @@ export default function JobScreen() {
   const [searchWord, setSearchWord] = useState('');
 
   return (
-    
+
     <SafeAreaView>
 
       <View style={styles.viewBusca}>
 
-        <Image source={require('../../../assets/images/icon-search.png')} style={{height: 30, width: 30, margin: 8 }}/>
+        <Image source={require('../../../assets/images/icon-search.png')} style={{ height: 30, width: 30, margin: 8 }} />
 
         <TextInput style={styles.inputBusca} placeholder="Pesquisar"
           autoCapitalize='none'
@@ -154,21 +155,21 @@ export default function JobScreen() {
 
         <Text style={styles.textTitle}>Vagas</Text>
 
-        <TouchableOpacity onPress={() => setPickerVisible(!pickerVisible)}> 
-        <Text style={styles.textFiltrar}>Filtrar</Text>
+        <TouchableOpacity onPress={() => setPickerVisible(!pickerVisible)}>
+          <Text style={styles.textFiltrar}>Filtrar</Text>
         </TouchableOpacity>
-        {pickerVisible && ( 
+        {pickerVisible && (
           <Picker
-          selectedValue ={useFilter}
-          onValueChange={(itemValue) =>
-            setUseFilter(itemValue)
-          }>
-          {
-            Filter.map(fil =>{
-              return <Picker.Item label={fil} value={fil}/>
-            })
-          }
-        </Picker>
+            selectedValue={useFilter}
+            onValueChange={(itemValue) =>
+              setUseFilter(itemValue)
+            }>
+            {
+              Filter.map(fil => {
+                return <Picker.Item label={fil} value={fil} />
+              })
+            }
+          </Picker>
         )}
 
       </View>
