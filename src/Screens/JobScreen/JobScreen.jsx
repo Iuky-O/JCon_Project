@@ -6,7 +6,6 @@ import { Picker } from '@react-native-picker/picker';
 import styles from './style';
 import Colors from '../../Utils/Colors';
 import { Ionicons } from 'react-native-vector-icons';
-import Colors from '../../Utils/Colors';
 
 const dataPatrocinados = [
   {
