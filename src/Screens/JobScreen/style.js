@@ -100,8 +100,7 @@ const styles = StyleSheet.create({
   },
   NameSu:{
     color: Colors.BRANCO,
-    marginTop:8,
-
+    //marginTop:5,
   },
   ContainerImage:{
     alignItems: 'center'

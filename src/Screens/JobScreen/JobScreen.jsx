@@ -4,6 +4,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import { Picker } from '@react-native-picker/picker';
 import styles from './style';
+import Colors from '../../Utils/Colors';
 import { Ionicons } from 'react-native-vector-icons';
 
 const data = [
@@ -14,6 +15,7 @@ const data = [
     local: '  Nova Olinda, Castanhal - PA',
     data: '  01/02/2024',
     NameSub: 'Mauro',
+    NameSub2: 'Patrocinado',
     description: 'Estamos à procura de um(a) talentoso(a) fotógrafo(a) para se juntar à nossa equipe de serviço de fotografia. O candidato selecionado terá a oportunidade de capturar momentos especiais, criar imagens impactantes e contribuir para a narrativa visual da nossa empresa.',
     requisite: 'Ser pontual.',
     money: '$300 dia',
@@ -25,6 +27,7 @@ const data = [
     local: '  Imperador, Castanhal - PA',
     data: '  10/04/2024',
     NameSub: 'Yan',
+    NameSub2: 'Patrocinado',
     description: 'Estamos procurando um talentoso desenvolvedor de software para se juntar à nossa equipe de serviço de programação. O candidato selecionado terá a oportunidade de trabalhar em projetos desafiadores e inovadores, contribuindo para o desenvolvimento de soluções tecnológicas de ponta.',
     requisite: 'Ser pontual.',
     money: '$300 dia',
@@ -76,11 +79,12 @@ const data = [
   },
 ];
 
-const Item = ({ imageUrl, title, local, data, description, requisite, navigation, money, NameSub }) => (
+const Item = ({ imageUrl, title, local, data, description, requisite, navigation, money, NameSub,NameSub2 }) => (
 
   <View style={styles.item}>
     <View style={styles.ContainerImage}>
       <Image source={{ uri: imageUrl }} style={styles.image} />
+      <Text style={{color: Colors.OURO}}>{NameSub2}</Text>
       <Text style={styles.NameSu} onPress={() => navigation.navigate('ExteProfile', {
         Nome: NameSub,
         Imagem: imageUrl
