@@ -140,7 +140,7 @@ export default function JobScreen() {
 
       <View style={styles.viewBusca}>
 
-        <Image source={require('../../../assets/images/icon-search.png')} style={{ height: 30, width: 30, margin: 8 }} />
+        <Image source={require('../../../assets/images/icon-search.png')} style={{ height: 25, width: 25, margin: 8 }} />
 
         <TextInput style={styles.inputBusca} placeholder="Pesquisar"
           autoCapitalize='none'

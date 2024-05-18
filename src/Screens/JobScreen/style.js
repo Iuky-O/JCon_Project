@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     paddingRight: 10,
   },
   iconBack: {
-    marginTop: 35,
+    marginTop: 30,
     color: Colors.BRANCO,
   },
   imgLogo: {
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.BRANCO,
     borderRadius: 25,
-    fontSize: 20,
+    fontSize: 15,
     paddingHorizontal: 15,
 
   },
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   },
   textTitle: {
     color: Colors.MALTE,
-    fontSize: 30,
+    fontSize: 25,
     marginBottom: 10,
   },
   textFiltrar: {
@@ -61,13 +61,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     margin: 10,
     backgroundColor: Colors.MALTE,
-    width: "95%",
-    padding: 25,
-    borderRadius: 30,
+    width: "90%",
+    padding: 15,
+    borderRadius: 25,
   },
   image: {
     width: 100,
-    height: 100,
+    height: 90,
     borderRadius: 10,
   },
   textContainer: {
@@ -75,13 +75,13 @@ const styles = StyleSheet.create({
     width:"50%",
   },
   title: {
-    fontSize: 18,
+    fontSize: 15,
     color: Colors.BRANCO,
     maxWidth: 200
   },
   subtitle: {
     marginTop: 10,
-    fontSize: 12,
+    fontSize: 10,
     color: Colors.BRANCO,
     maxWidth: 300,
   },
@@ -99,7 +99,9 @@ const styles = StyleSheet.create({
     color: Colors.BRANCO,
   },
   NameSu:{
-    color: Colors.BRANCO
+    color: Colors.BRANCO,
+    marginTop:8,
+
   },
   ContainerImage:{
     alignItems: 'center'
