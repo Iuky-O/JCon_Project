@@ -1,12 +1,50 @@
-import { View, Text, SafeAreaView, Image, TextInput, FlatList } from 'react-native'
+import { View, Text, SafeAreaView, Image, TextInput, FlatList, SectionList } from 'react-native'
 import React, { useState} from 'react'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import { Picker } from '@react-native-picker/picker';
 import styles from './style';
 import { Ionicons } from 'react-native-vector-icons';
+import Colors from '../../Utils/Colors';
 
-const data = [
+const dataPatrocinados = [
+  {
+    id: '1',
+    imageUrl: 'https://marketplace.canva.com/EAE-O4SYB1I/3/0/1600w/canva-logotipo-circular-floral-monograma-elegante-rosa-gold-Uv8mbLqwWZ4.jpg',
+    title: 'Seviço de Fotografia',
+    local: '  Nova Olinda, Castanhal - PA',
+    data: '  01/02/2024',
+    NameSub: 'Designer Da Mari',
+    description: 'Estamos à procura de um(a) talentoso(a) fotógrafo(a). O candidato selecionado terá a oportunidade de capturar as imagens dos trabalhos, criar imagens impactantes e contribuir para a narrativa visual da nossa empresa.',
+    requisite: 'Ser pontual.',
+    money: '300 por dia',
+  },
+  {
+    id: '2',
+    imageUrl: 'https://st.depositphotos.com/29038680/54142/i/450/depositphotos_541429162-stock-photo-chicken-vector-design-logo-company.jpg',
+    title: 'Serviço de Programação',
+    local: '  Imperador, Castanhal - PA',
+    data: '  10/04/2024',
+    NameSub: 'Ariel Lima - Nail Designer',
+    description: 'Estamos procurando um talentoso desenvolvedor de software para se juntar à nossa equipe de serviço de programação. O candidato selecionado terá que desenvolver um site de e-commerce para a empresa.',
+    requisite: 'Ser pontual.',
+    money: '300 por dia',
+  },
+
+  {
+    id: '3',
+    imageUrl: 'https://img.freepik.com/vetores-premium/design-de-logotipo-de-forca-de-letras-douradas_529200-203.jpg',
+    title: 'Serviço de Faxina',
+    local: '  Castanheira, Belém - PA',
+    data: '  31/04/2024',
+    NameSub: 'Carros',
+    description: 'Estamos em busca de um profissional dedicado e confiável para se juntar à nossa equipe de serviço de faxina. O candidato selecionado será responsável por realizar limpeza e organização em residências ou ambientes comerciais, garantindo um espaço limpo e acolhedor para nossos clientes.',
+    requisite: 'Ser pontual.',
+    money: '50 por hora',
+  },
+];
+
+const dataNaoPatrocinados = [
   {
     id: '1',
     imageUrl: 'https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -80,12 +118,9 @@ const Item = ({ imageUrl, title, local, data, description, requisite, navigation
 
   <View style={styles.item}>
     <View style={styles.ContainerImage}>
-      <Image source={{ uri: imageUrl }} style={styles.image} />
-      <Text style={styles.NameSu} onPress={() => navigation.navigate('ExteProfile', { 
-                                                                                            Nome: NameSub, 
-                                                                                            Imagem: imageUrl})}>
-                                                                                            {NameSub}
-      </Text>
+      <TouchableOpacity onPress={() => navigation.navigate('ExteProfile', { Nome: NameSub, Imagem: imageUrl})}>
+        <Image source={{ uri: imageUrl }} style={styles.image} />
+      </TouchableOpacity>
     </View>
     <View style={styles.textContainer}>
       <Text style={styles.title} onPress={() => navigation.navigate('JobsDesc', {
@@ -123,9 +158,19 @@ const Item = ({ imageUrl, title, local, data, description, requisite, navigation
 
 );
 
+const Filter = [
+  { id: 1, name: "Empresas" },
+  { id: 2, name: "Pessoas" },
+  { id: 3, name: "Cargos" }
+];
+
+const sections = [
+  { title: "Patrocinados", data: dataPatrocinados },
+  { title: "Não patrocinados", data: dataNaoPatrocinados }
+];
+
 export default function JobScreen() {
 
-  const [Filter, setFilter] = useState(['Pessoas','Empresas','Cargo']);
   const [useFilter, setUseFilter] = useState([]);
   const [Options, setOptions] = useState();
   const [pickerVisible, setPickerVisible] = useState(false);
@@ -137,19 +182,23 @@ export default function JobScreen() {
     
     <SafeAreaView>
 
-      <View style={styles.viewBusca}>
 
-        <Image source={require('../../../assets/images/icon-search.png')} style={{height: 30, width: 30, margin: 8 }}/>
+      <View style={{backgroundColor: Colors.MALTE, height: 100}}>
+        <View style={styles.viewBusca}>
 
-        <TextInput style={styles.inputBusca} placeholder="Pesquisar"
-          autoCapitalize='none'
-          autoCorrect={false}
-          value={text}
-          onChangeText={(value) => setText(value)}
-        />
+          <TextInput style={styles.inputBusca} placeholder="Pesquisar"
+            autoCapitalize='none'
+            autoCorrect={false}
+            value={text}
+            onChangeText={(value) => setText(value)}
+          />
 
+         <TouchableOpacity style={{margin: 10}}>
+            <Image source={require('../../../assets/images/icon-search.png')} style={{height: 20, width: 20 }}/>
+        </TouchableOpacity> 
+
+        </View>
       </View>
-
       <View style={styles.boxTitle}>
 
         <Text style={styles.textTitle}>Vagas</Text>
@@ -164,19 +213,21 @@ export default function JobScreen() {
             setUseFilter(itemValue)
           }>
           {
-            Filter.map(fil =>{
-              return <Picker.Item label={fil} value={fil}/>
+            Filter.map((fil) =>{
+              <Picker.Item key={fil.id} label={fil.name} value={fil.name}/>
             })
           }
         </Picker>
         )}
 
       </View>
-
-      <FlatList
-        data={data}
+      <SectionList
+        sections={sections}
+        keyExtractor={(item, index) => item.id + index}
         renderItem={({ item }) => <Item {...item} navigation={navigation} />}
-        keyExtractor={item => item.id}
+        renderSectionHeader={({ section: { title } }) => (
+          <Text style={styles.sectionHeader}>{title}</Text>
+        )}
       />
     </SafeAreaView >
   )

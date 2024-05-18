@@ -54,7 +54,7 @@ export default function ChatScreen() {
               onSubmitEditing={handleSend}
             />
             <TouchableOpacity onPress={handleSend}>
-            <Image source={require('../../../assets/images/icon-send.png')} style={{height: 20, width: 20, margin: 2,}}/>
+              <Image source={require('../../../assets/images/icon-send.png')} style={{height: 20, width: 20, margin: 2,}}/>
             </TouchableOpacity>
           </View>
         )}
