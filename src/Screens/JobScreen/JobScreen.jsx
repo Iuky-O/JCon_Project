@@ -4,6 +4,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import { Picker } from '@react-native-picker/picker';
 import styles from './style';
+import Colors from '../../Utils/Colors';
 import { Ionicons } from 'react-native-vector-icons';
 
 const data = [
@@ -14,9 +15,10 @@ const data = [
     local: '  Nova Olinda, Castanhal - PA',
     data: '  01/02/2024',
     NameSub: 'Mauro',
+    NameSub2: 'Patrocinado',
     description: 'Estamos à procura de um(a) talentoso(a) fotógrafo(a) para se juntar à nossa equipe de serviço de fotografia. O candidato selecionado terá a oportunidade de capturar momentos especiais, criar imagens impactantes e contribuir para a narrativa visual da nossa empresa.',
     requisite: 'Ser pontual.',
-    money: 'R$300',
+    money: '$300 dia',
   },
   {
     id: '2',
@@ -25,9 +27,10 @@ const data = [
     local: '  Imperador, Castanhal - PA',
     data: '  10/04/2024',
     NameSub: 'Yan',
+    NameSub2: 'Patrocinado',
     description: 'Estamos procurando um talentoso desenvolvedor de software para se juntar à nossa equipe de serviço de programação. O candidato selecionado terá a oportunidade de trabalhar em projetos desafiadores e inovadores, contribuindo para o desenvolvimento de soluções tecnológicas de ponta.',
     requisite: 'Ser pontual.',
-    money: 'R$300',
+    money: '$300 dia',
   },
 
   {
@@ -39,7 +42,7 @@ const data = [
     NameSub: 'Biatriz',
     description: 'Estamos em busca de um profissional dedicado e confiável para se juntar à nossa equipe de serviço de faxina. O candidato selecionado será responsável por realizar limpeza e organização em residências ou ambientes comerciais, garantindo um espaço limpo e acolhedor para nossos clientes.',
     requisite: 'Ser pontual.',
-    money: '50 hora',
+    money: '$50 hora',
   },
   {
     id: '4',
@@ -50,7 +53,7 @@ const data = [
     NameSub: 'Regina',
     description: 'Estamos em busca de um talentoso designer gráfico para se juntar à nossa equipe de serviço de design. O candidato selecionado terá a oportunidade de trabalhar em uma variedade de projetos criativos, desde identidade visual de marca até materiais de marketing e design digital.',
     requisite: 'Ser pontual, saber de cores e banners',
-    money: 'R$300',
+    money: '$300 dia',
   },
   {
     id: '5',
@@ -61,7 +64,7 @@ const data = [
     NameSub: 'Rubens',
     description: 'Estamos buscando um assistente de serviço de contabilidade comprometido e organizado para se juntar à nossa equipe. O candidato selecionado será responsável por auxiliar nas operações diárias do departamento contábil, garantindo a precisão e integridade dos registros financeiros da empresa.',
     requisite: 'Ser pontual.',
-    money: 'R$300',
+    money: '$300 dia',
   },
   {
     id: '6',
@@ -72,15 +75,16 @@ const data = [
     NameSub: 'Mariana',
     description: 'Estamos em busca de um analista de serviço de tributação proativo e habilidoso para integrar nossa equipe. O candidato ideal será responsável por auxiliar na gestão e conformidade das obrigações tributárias da empresa, garantindo o cumprimento das leis fiscais e regulamentações aplicáveis.',
     requisite: 'Ser pontual.',
-    money: '200 dia',
+    money: '$200 dia',
   },
 ];
 
-const Item = ({ imageUrl, title, local, data, description, requisite, navigation, money, NameSub }) => (
+const Item = ({ imageUrl, title, local, data, description, requisite, navigation, money, NameSub,NameSub2 }) => (
 
   <View style={styles.item}>
     <View style={styles.ContainerImage}>
       <Image source={{ uri: imageUrl }} style={styles.image} />
+      <Text style={{color: Colors.OURO}}>{NameSub2}</Text>
       <Text style={styles.NameSu} onPress={() => navigation.navigate('ExteProfile', {
         Nome: NameSub,
         Imagem: imageUrl
@@ -140,7 +144,7 @@ export default function JobScreen() {
 
       <View style={styles.viewBusca}>
 
-        <Image source={require('../../../assets/images/icon-search.png')} style={{ height: 30, width: 30, margin: 8 }} />
+        <Image source={require('../../../assets/images/icon-search.png')} style={{ height: 25, width: 25, margin: 8 }} />
 
         <TextInput style={styles.inputBusca} placeholder="Pesquisar"
           autoCapitalize='none'
