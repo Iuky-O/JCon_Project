@@ -3,6 +3,14 @@ import { StyleSheet} from 'react-native';
 import Colors from '../../Utils/Colors';
 
 export const styles = StyleSheet.create({
+    anuncio: {
+        alignItems: 'center',
+        backgroundColor: Colors.BRANCO,
+        padding: 10,
+    },
+    textAnuncio: {
+
+    },
     header: {
       flexDirection: "row",
       height: 110,
@@ -154,7 +162,7 @@ export const styles = StyleSheet.create({
 
   /** CARROSEL DE CATEGORIAS */
   CarouselContainerItemCategories:{
-    height: 150,
+    height: '100%',
     padding: 20,
     
     alignItems: 'center',
@@ -178,7 +186,7 @@ export const styles = StyleSheet.create({
     columnGap: 15,
     marginTop: -10,
     alignItems: 'center',
-    marginLeft: -10
+    marginLeft: -10,
  
   },
 
@@ -203,7 +211,6 @@ export const styles = StyleSheet.create({
 
     padding: 60,
     height: 130,
-    
     alignItems: 'center',
     justifyContent: 'center',
   },

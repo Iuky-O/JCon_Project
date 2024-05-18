@@ -1,4 +1,4 @@
-import { View, TouchableOpacity, Text, TextInput, KeyboardAvoidingView, SafeAreaView} from 'react-native'
+import { View,Image, TouchableOpacity, Text, TextInput, KeyboardAvoidingView, SafeAreaView} from 'react-native'
 import React, {useState, useEffect} from 'react'
 import { ScrollView } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
@@ -63,7 +63,11 @@ export default function LoginScreen() {
     <SafeAreaView style={{flex: 1 }}>
       <ScrollView>
         <KeyboardAvoidingView>
-        <View> 
+        <View>
+        <View style={styles.logoContainer}>
+          <Image source={require('../../../assets/images/logo.png')} style={styles.logo}/>
+        </View>
+         
           <Text style={styles.titulo}>Login</Text> 
           <Text style={styles.subtitulo}>Entre com sua conta</Text> 
 

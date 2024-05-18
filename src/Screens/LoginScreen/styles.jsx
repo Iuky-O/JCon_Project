@@ -2,6 +2,17 @@ import { StyleSheet } from 'react-native';
 import Colors from '../../Utils/Colors';
 
 export const styles = StyleSheet.create({
+    logoContainer: {   
+      display: 'flex',
+      alignItems: 'center', 
+      marginTop: 50, 
+    },
+    logo: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: 200,
+        height: 200,
+    },
     corpo: { 
         justifyContent: 'center',
         alignItems: 'center',
@@ -9,7 +20,7 @@ export const styles = StyleSheet.create({
     titulo: {
         fontSize: 40,
         color: Colors.MALTE,
-        marginTop: 170,
+        marginTop: 70,
         marginLeft: 20,
     },
     subtitulo: {
@@ -43,6 +54,7 @@ export const styles = StyleSheet.create({
     },
     naotemconta: {
         marginTop: 10, 
+        marginBottom: 50,
         color: Colors.AZUL_IRIS,
     },
     cadastrar: {
