@@ -178,7 +178,7 @@ export default function JobScreen() {
         renderItem={({ item }) => <Item {...item} navigation={navigation} />}
         keyExtractor={item => item.id}
       />
-    </SafeAreaView >
+    </SafeAreaView>
   )
 }
 
