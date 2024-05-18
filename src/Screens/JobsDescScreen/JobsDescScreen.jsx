@@ -19,7 +19,6 @@ export default function JobsDescScreen() {
                     <Text style={styles.textDesc}>{JobTitle}</Text>
                     <Text style={styles.subText}>{JobLocal}</Text>
                     <Text style={styles.subText}>{JobDate}</Text>
-                    <Text style={{maxWidth: 'auto',fontSize: 12, paddingHorizontal: 10, marginLeft:5}}>$dia</Text>
                 </View>
                 <View style={{ flexDirection: 'row-reverse', margin:20, }}>
                     <Text style={styles.textDesc}>{JobMoney}</Text>
