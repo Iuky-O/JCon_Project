@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const submissoes = [
     {
+      id: 1,
       user: "Anna Maria",
       date: "17/05/2024",
       local: "Castanhal/PA",
@@ -12,6 +13,7 @@ const submissoes = [
       servico: "Design de Logotipos"
     },
     {
+        id: 2,
         user: "Critiano J.",
         date: "18/05/2024",
         local: "Sant. Isabel/PA",
@@ -19,6 +21,7 @@ const submissoes = [
         servico: "Design Games"
     },
     {
+        id: 3,
         user: "J. Carlos",
         date: "19/07/2024",
         local: "Castanhal/PA",
@@ -26,6 +29,7 @@ const submissoes = [
         servico: "Design de Logotipos"
     },
     {
+        id: 4,
         user: "Aline M.",
         date: "19/06/2024",
         local: "Castanhal/PA",
@@ -33,6 +37,7 @@ const submissoes = [
         servico: "Site para mercadinho"
     },
     {
+        id: 5,
         user: "L. Cunha",
         date: "17/07/2024",
         local: "Castanhal/PA",
@@ -51,9 +56,9 @@ function renderSubmissoes(){
               <Text style={styles.lineSeparator}></Text>
           </View>
   
-              {submissoes.map((subs, index) => (
-                <View style={{alignItems: 'center', marginTop: 10}}>
-                  <View key={index} style={styles.avaliacaoFull} >
+              {submissoes.map((subs) => (
+                <View key={subs.id} style={{alignItems: 'center', marginTop: 10}}>
+                  <View style={styles.avaliacaoFull} >
   
                       <View style={{alignItems: 'center'}}>
                           <Text style={styles.textUser}>{subs.user}</Text>
@@ -93,6 +98,7 @@ function renderSubmissoes(){
 
 const acoes = [
     {
+      id: 1,
       user: "Maria Cavalcante",
       date: "11/04/2024",
       local: "Castanhal/PA",
@@ -100,6 +106,7 @@ const acoes = [
       receita: "300 R$"
     },
     {
+      id: 2,
       user: "Judas R.",
       date: "10/04/2024",
       local: "Santa Isabel/PA",
@@ -107,6 +114,7 @@ const acoes = [
       receita: "400 R$"
     },
     {
+      id: 3,
       user: "Mariana Seline",
       date: "08/04/2024",
       local: "Castanhal/PA",
@@ -114,6 +122,7 @@ const acoes = [
       receita: "500 R$"
     },
     {
+      id: 4,
       user: "Reginaldo R.",
       date: "02/04/2024",
       local: "Castanhal/PA",
@@ -121,6 +130,7 @@ const acoes = [
       receita: "200 R$"
     },
     {
+      id: 5,
       user: "J. Souza",
       date: "28/03/2024",
       local: "Vigia/PA",
@@ -139,9 +149,9 @@ function renderAcoes(){
             <Text style={styles.lineSeparator}></Text>
         </View>
 
-            {acoes.map((acao, index) => (
-              <View style={{alignItems: 'center', marginTop: 10}}>
-                <View key={index} style={styles.avaliacaoFull} >
+            {acoes.map((acao) => (
+              <View key={acao.id} style={{alignItems: 'center', marginTop: 10}}>
+                <View style={styles.avaliacaoFull} >
 
                     <View style={{alignItems: 'center'}}>
                         <Text style={styles.textUser}>{acao.user}</Text>

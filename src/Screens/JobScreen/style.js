@@ -20,16 +20,43 @@ const styles = StyleSheet.create({
     height: 70,
     marginTop: 35,
   },
+  constainerBusca:{
+    height: 100, 
+    alignItems: 'center',
+    alignContent: 'center', 
+    backgroundColor: Colors.MALTE,
+    borderBottomRightRadius: -30,
+    borderBottomLeftRadius: -30,
+  },
   viewBusca: {
     flexDirection: "row",
     justifyContent: "center",
+    alignSelf: 'center',
+    backgroundColor: Colors.BRANCO,
     width: "90%",
+    height: 40,
     margin: 10,
-    paddingTop: 20,
+    borderRadius: 20,
+    marginTop: 20
+  },
+  sectionHeader:{
+    fontSize: 15,
+    fontWeight: 'bold',
+    marginLeft: 15,
+    color: Colors.AZUL_MARINHO
+  },
+  containerJobs: {
+    borderTopRightRadius: 30,
+    borderTopLeftRadius: 30,
+  },
+  
+  lineSeparator: {
+    height: 1,
+    width: "90%",
+    backgroundColor: Colors.MALTE,
   },
   inputBusca: {
     flex: 1,
-    backgroundColor: Colors.BRANCO,
     borderRadius: 25,
     fontSize: 15,
     paddingHorizontal: 15,
@@ -38,7 +65,7 @@ const styles = StyleSheet.create({
   boxTitle: {
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingTop: 50,
+    paddingTop: 10,
     marginLeft: 20,
     marginRight: 30,
   },
@@ -60,13 +87,13 @@ const styles = StyleSheet.create({
   item: {
     flexDirection: 'row',
     margin: 10,
-    backgroundColor: Colors.MALTE,
-    width: "90%",
+    backgroundColor: Colors.BRANCO,
+    width: "95%",
     padding: 15,
-    borderRadius: 25,
+    borderRadius: 20,
   },
   image: {
-    width: 100,
+    width: 90,
     height: 90,
     borderRadius: 10,
   },
@@ -75,32 +102,31 @@ const styles = StyleSheet.create({
     width:"50%",
   },
   title: {
-    fontSize: 15,
-    color: Colors.BRANCO,
-    maxWidth: 200
+    fontSize: 16,
+    color: Colors.MALTE,
+    maxWidth: "100%",
+    fontWeight: 'bold',
   },
   subtitle: {
     marginTop: 10,
-    fontSize: 10,
-    color: Colors.BRANCO,
-    maxWidth: 300,
+    fontSize: 12,
+    color: Colors.MALTE,
+    maxWidth: "100%",
   },
   Button:{
-    backgroundColor: Colors.AZUL_PACIFICO,
+    backgroundColor: Colors.AZURE,
     maxWidth: 80,
     width: 50,
     height: 20,
     borderRadius: 20,
     alignItems: 'center',
-    marginTop: 95,
-    marginLeft: -20,
+    marginTop: 70,
   },
   buttomText:{
     color: Colors.BRANCO,
   },
   NameSu:{
-    color: Colors.BRANCO,
-    //marginTop:5,
+    color: Colors.MALTE
   },
   ContainerImage:{
     alignItems: 'center'

@@ -49,7 +49,7 @@ export default function StackNavigation() {
           <Stack.Screen name='Jobs' component={JobScreen} options={{ headerTitle: 'Vagas' }}/>
           <Stack.Screen name='JobsDesc' component={JobsDescScreen} options={{ headerTitle: 'Descrição da Vaga' }}/>
           <Stack.Screen name='Profile' component={ProfileScreen} options={{ headerTitle: 'Perfil' }}/>
-          <Stack.Screen name='Login' component={LoginScreen}/>
+          <Stack.Screen name='Login' component={LoginScreen} options={{ headerTitle: 'JCon - Conecte seu serviço '}}/>
           <Stack.Screen name='Register' component={RegisterScreen}/>
 
           <Stack.Screen name='EditAboutMe' component={EditAboutMeScreen} options={{ headerTitle: 'Sobre mim' }}/>
