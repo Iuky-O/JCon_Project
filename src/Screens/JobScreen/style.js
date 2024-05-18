@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     paddingRight: 10,
   },
   iconBack: {
-    marginTop: 35,
+    marginTop: 30,
     color: Colors.BRANCO,
   },
   imgLogo: {
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   inputBusca: {
     flex: 1,
     borderRadius: 25,
-    fontSize: 20,
+    fontSize: 15,
     paddingHorizontal: 15,
 
   },
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   },
   textTitle: {
     color: Colors.MALTE,
-    fontSize: 30,
+    fontSize: 25,
     marginBottom: 10,
   },
   textFiltrar: {

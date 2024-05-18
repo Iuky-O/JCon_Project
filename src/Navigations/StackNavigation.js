@@ -22,7 +22,7 @@ const Stack = createStackNavigator();
 export default function StackNavigation() {
   return (
     
-      <Stack.Navigator initialRouteName="Tab"
+      <Stack.Navigator initialRouteName="Login"
       screenOptions={{
         headerStyle: {
           backgroundColor: Colors.MALTE, 

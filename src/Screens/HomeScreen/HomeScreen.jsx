@@ -264,7 +264,9 @@ const isCarousel = React.useRef(null)
 
   return (
     <SafeAreaView >
-       
+       <View style={styles.anuncio}>
+        <Text style={styles.textAnuncio}>Anúncio</Text>
+      </View>
       <ScrollView>
           <View style={{width: '100%', flex:1}}>
             <Text style={styles.textTopic}>Ranking</Text> 
