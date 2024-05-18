@@ -16,9 +16,8 @@ logoImage:{
 textTopic:{
     fontSize: 20,
     color: Colors.MALTE,
-    marginLeft: 15,
-    marginTop: 20,
-    marginBottom: 15,
+    marginTop: 10,
+    paddingHorizontal: 5,
   },
   textTitle:{
     maxWidth: 'auto',
@@ -28,8 +27,12 @@ textTopic:{
   },
   textDesc:{
     maxWidth: 'auto',
-    padding: 15,
-    fontSize: 15,
+    fontSize: 18,
+    paddingHorizontal: 10,
+  },
+  subText:{
+    maxWidth: 'auto',
+    fontSize: 12,
     paddingHorizontal: 10,
   },
   textInfo:{
@@ -42,16 +45,32 @@ textTopic:{
     height: 50,
     paddingHorizontal: 10,
   },
-  Button:{
+  text:{
+    fontSize: 15,
+    paddingHorizontal: 10,
+    
+  },
+  Button1:{
     backgroundColor: Colors.AZURE,
     alignItems: 'center',
-    borderRadius: 20,
-    height: 30,
+    borderRadius: 10,
+    height: 40,
     width: '40%',
+    margin:10,
+  },
+  Button2:{
+    backgroundColor: Colors.PRATA,
+    alignItems: 'center',
+    borderRadius: 10,
+    height: 40,
+    width: '40%',
+    margin:10,
   },
   buttomText:{
+    marginTop:10,
     color: 'white', 
-    fontSize: 17
+    fontSize: 17,
+    
   },
 
 })
