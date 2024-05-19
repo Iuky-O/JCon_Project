@@ -15,7 +15,9 @@ import RegisterScreen from '../Screens/RegisterScreen/RegisterScreen'
 import EditAboutMeScreen from '../Screens/EditAboutMeScreen/EditAboutMeScreen'
 import CreateJobsScreen from '../Screens/CreateJobsScreen/CreateJobsScreen'
 import ExteProfileScreen from '../Screens/ExteProfileScreen/ExterProfileScreen'
-import OptionsJobsScreen from '../Screens/OptionsJobs/OptionsJobsScreen';
+import OptionsJobsScreen from '../Screens/OptionsJobs/OptionsJobsScreen'
+import OptionsJobsPrestador from '../Screens/OptionsJobs/OptionsJobsPrestador'
+
 import Colors from '../Utils/Colors'
 
 const Stack = createStackNavigator();
@@ -37,25 +39,26 @@ export default function StackNavigation() {
               <TouchableOpacity
                 onPress={() => navigation.navigate('Profile')} 
                 style={{ marginRight: 15 }}>
-                <Image source={require('../../assets/images/logo-azul-claro.jpg')} style={styles.imageLogo}/>
+                <Image source={require('../../assets/images/logo-sem-nome.png')} style={styles.imageLogo}/>
               </TouchableOpacity>
             ),
             headerTintColor: Colors.MALTE
           })}/>
           <Stack.Screen name='Home' component={HomeScreen}/>
-          <Stack.Screen name='Conversations' component={ConversationsScreen} options={{ headerTitle: 'Conversas' }}/>
+          <Stack.Screen name='Conversations' component={ConversationsScreen} options={{ headerTitle: 'Conversas'}}/>
           <Stack.Screen name='Chat' component={ChatScreen} options={{ headerShown: false }}/>
           <Stack.Screen name='Ranking' component={RankingScreen}/>
           <Stack.Screen name='Jobs' component={JobScreen} options={{ headerTitle: 'Vagas' }}/>
           <Stack.Screen name='JobsDesc' component={JobsDescScreen} options={{ headerTitle: 'Descrição da Vaga' }}/>
           <Stack.Screen name='Profile' component={ProfileScreen} options={{ headerTitle: 'Perfil' }}/>
-          <Stack.Screen name='Login' component={LoginScreen} options={{ headerTitle: 'JCon - Conecte seu serviço '}}/>
-          <Stack.Screen name='Register' component={RegisterScreen}/>
+          <Stack.Screen name='Login' component={LoginScreen} options={{ headerTitle: 'JCon - Conecte seu serviço'}}/>
+          <Stack.Screen name='Register' component={RegisterScreen} options={{ headerTitle: 'Cadastre-se'}}/>
 
           <Stack.Screen name='EditAboutMe' component={EditAboutMeScreen} options={{ headerTitle: 'Sobre mim' }}/>
           <Stack.Screen name='ExteProfile' component={ExteProfileScreen} options={{ headerTitle: 'Perfil' }}/>
           <Stack.Screen name='CreateJobs' component={CreateJobsScreen} options={{ headerTitle: 'Crie uma vaga' }}/>
-          <Stack.Screen name='OptionsJobs' component={OptionsJobsScreen} options={{ headerTitle: 'Vagas e Submissões' }}/>
+          <Stack.Screen name='OptionsJobs' component={OptionsJobsScreen} options={{ headerTitle: 'Vagas e Contratações' }}/>
+          <Stack.Screen name='OptionsJobsPrestador' component={OptionsJobsPrestador} options={{ headerTitle: 'Submissões' }}/>
 
       </Stack.Navigator>
   

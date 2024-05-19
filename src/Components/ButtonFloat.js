@@ -1,10 +1,12 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useContext } from 'react'
 import {View, Image, StyleSheet, TouchableWithoutFeedback, Animated} from 'react-native'
 import Colors from '../Utils/Colors'
 import { useNavigation } from '@react-navigation/native';
+import { UserContext } from '../Scripts/UserContext';
 
 const ButtonFloat = () => {
 
+    const {userData} = useContext(UserContext);
     const navigation = useNavigation();
     const [showText, setShowText] = useState(false);
     const timeoutRef = useRef(null);
@@ -85,12 +87,20 @@ const ButtonFloat = () => {
     return(
         
         <View style={styles.screen}>
-
-            <TouchableWithoutFeedback onPress={() => navigation.navigate('OptionsJobs')}>
-                <Animated.View style={[styles.button, styles.secondary, jobStyle]}>
-                <Image source={require('../../assets/images/icon-create-jobs.png')} style={{height: 20, width: 20}}/>
-                </Animated.View> 
-            </TouchableWithoutFeedback>
+            {userData?.TypeUser === 'contratante' ? (
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('OptionsJobs')}>
+                    <Animated.View style={[styles.button, styles.secondary, jobStyle]}>
+                    <Image source={require('../../assets/images/icon-create-jobs.png')} style={{height: 20, width: 20}}/>
+                    </Animated.View> 
+                </TouchableWithoutFeedback>
+            ):(
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('OptionsJobsPrestador')}>
+                    <Animated.View style={[styles.button, styles.secondary, jobStyle]}>
+                    <Image source={require('../../assets/images/icon-create-jobs.png')} style={{height: 20, width: 20}}/>
+                    </Animated.View> 
+                </TouchableWithoutFeedback>
+            )}
+            
 
             <TouchableWithoutFeedback onPress={() => {}}>
                 <Animated.View style={[styles.button, styles.secondary, heartStyle]}>

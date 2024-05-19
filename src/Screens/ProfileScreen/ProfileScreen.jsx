@@ -1,6 +1,6 @@
 
 import { View, Image, Text, SafeAreaView, ScrollView, Animated} from 'react-native'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import styles from './style';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
@@ -10,6 +10,7 @@ import { Stars5, Stars4, Stars3, Stars2, Stars1, Stars0 } from '../../Scripts/fu
 import "firebase/firestore";
 import { firebase } from '../../Firebase/firebaseConfig';
 import { getFirestore, collection, getDocs, query, where} from "firebase/firestore";
+import { UserContext } from '../../Scripts/UserContext';
 
 const avaliacoes = [
   {
@@ -93,29 +94,12 @@ function renderAvaliations(){
 
 export default function ProfileScreen() {
 
-  const [userData, setUserData] = useState(null);
+  const {userData} = useContext(UserContext);
   const [scrollY, setSrollY] = useState(new Animated.Value(0));
   const navigation = useNavigation();
   const [controler, setControler] = useState(true);
 
-    useEffect(() => {
-      async function fetchUserData() {
-        try {
-          const db = getFirestore();
-          const usersCollection = collection(db, "usuarios");
-          const q = query(usersCollection, where("Name", "==", "Jenny Cooper")); 
-  
-          const querySnapshot = await getDocs(q);
-          const userDataArray = querySnapshot.docs.map(doc => doc.data());
-          setUserData(userDataArray[0]);
-        } catch (error) {
-          console.error("Erro ao buscar dados do usuário:", error);
-        }
-      }
-  
-      fetchUserData();
-    }, []);
-
+  /*
     async function saveAboutMe() {
       try {
         const db = getFirestore();
@@ -136,7 +120,7 @@ export default function ProfileScreen() {
         console.error("Erro ao salvar descrição do usuário:", error);
       }
     }
-
+*/
     function createAboutMe(){
       <TouchableOpacity onPress={() => navigation.navigate("EditAboutMe", { currentAboutMe: userData.aboutMe })}>
               <View style={{ margin: 20, padding: 10 }}>

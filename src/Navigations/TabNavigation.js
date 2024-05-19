@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Image, StyleSheet, Text } from 'react-native';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -8,11 +8,14 @@ import JobScreen from '../Screens/JobScreen/JobScreen';
 import ProfileScreen from '../Screens/ProfileScreen/ProfileScreen';
 import ConversationScreen from '../Screens/ConversationScreen/ConversationScreen';
 import RankingScreen from '../Screens/RankingScreen/RankingScreen';
+import PesqScreen from '../Screens/PesqScreen/PesqScreen'
 import Colors from '../Utils/Colors';
+import { UserContext } from '../Scripts/UserContext';
 
 const Tab = createBottomTabNavigator();
 
 export default function TabNavigation(){
+    const {userData} = useContext(UserContext);
     return(
         
             <Tab.Navigator  screenOptions={{
@@ -35,22 +38,34 @@ export default function TabNavigation(){
                           ),
                     }}
                 />
-
-                <Tab.Screen name="Job" component={JobScreen}
-                    options={{
-                        tabBarLabel:()=>(
-                            <Text style={Styles.Label}> Jobs </Text>
-                          ),
-                          tabBarIcon:()=>(
-                            <Image source={require('../../assets/images/icon-work.png')} style={{height: 20, width: 20}}/>
-                          )
-                    }}
-                />
+                {userData?.TypeUser === 'contratante' ? ( 
+                    <Tab.Screen  name="Pesq" component={PesqScreen}
+                        options={{
+                            tabBarLabel:()=>(
+                                <Text style={Styles.Label}> Busca </Text>
+                            ),
+                            tabBarIcon:()=>(
+                                <Image source={require('../../assets/images/icon-procurar.png')} style={{height: 20, width: 20}}/>
+                            )
+                        }}
+                    />
+                ) : (
+                   <Tab.Screen  name="Job" component={JobScreen}
+                        options={{
+                            tabBarLabel:()=>(
+                                <Text style={Styles.Label}> Jobs </Text>
+                            ),
+                            tabBarIcon:()=>(
+                                <Image source={require('../../assets/images/icon-work.png')} style={{height: 20, width: 20}}/>
+                            )
+                        }}
+                    /> 
+                )}
 
                 <Tab.Screen name="Profile" component={ProfileScreen}
                     options={{
                         tabBarLabel:()=>(
-                            <Text style={Styles.Label}> Profile </Text>
+                            <Text style={Styles.Label}> Perfil </Text>
                           ),
                           tabBarIcon:()=>(
                             <Image source={require('../../assets/images/icon-user.png')} style={{height: 20, width: 20}}/>

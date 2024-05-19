@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
     alignItems: 'center',
     maxHeight: 30,
+    paddingHorizontal: 100
   },
   containerImg: {
     height: 90, 
@@ -98,14 +99,16 @@ const styles = StyleSheet.create({
     color:Colors.MALTE,
   },
   Button:{
-    alignContent: 'center',
     alignItems: 'center',
     backgroundColor: Colors.MALTE,
     width: 110,
     height: 20,
     borderRadius: 20,
-    marginBottom: 5,
-    marginTop: -5
+
+    marginTop: 100, 
+    position: 'absolute', 
+    right: 10, 
+    top: -80
   },
   lineSeparator: {
     height: 1,
@@ -114,7 +117,7 @@ const styles = StyleSheet.create({
   },
   buttomText:{
     color: Colors.BRANCO,
-    fontSize:10,
+    fontSize:12,
   },
   traco:{
     margin:10,
@@ -139,6 +142,47 @@ const styles = StyleSheet.create({
     margin:10,
     height:130,
     width:130,
+  },
+  textTopic:{
+    fontSize: 17,
+    marginTop:30,
+    color:Colors.MALTE,
+  },
+  topicButtomActive:{
+    fontWeight: 'bold', 
+    borderBottomWidth: 1, 
+    borderColor: Colors.AZUL_IRIS
+  },
+  containerAvaliacao:{
+    flex:1,
+    backgroundColor: Colors.TURQUESA_CLARO,
+    borderTopRightRadius: 30,
+    borderTopLeftRadius: 30,
+  },
+  avaliacaoFull:{
+    flex:1, 
+    flexDirection: 'column', 
+    gap: 10, 
+    padding: 10, 
+    backgroundColor: Colors.BRANCO, 
+    borderRadius: 10, 
+    marginBottom: 10, 
+    maxWidth: '90%',
+    width: '90%'
+  },
+  textAvaliacao:{
+    fontWeight: 'bold',
+  },
+  textUser:{
+    color: Colors.AZUL_MARINHO,
+    fontWeight: 'bold',
+  },
+  iconesAvaliacao:{
+    direction: 'rtl',
+    marginTop: 100, 
+    position: 'absolute', 
+    right: 10, 
+    bottom: 100,
   },
 });
 export default styles
