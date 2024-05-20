@@ -1,5 +1,5 @@
 import { View,Image, TouchableOpacity, Text, TextInput, KeyboardAvoidingView, SafeAreaView} from 'react-native'
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import { ScrollView } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import {styles} from '../LoginScreen/styles'
@@ -9,33 +9,15 @@ import { auth } from '../../Firebase/firebaseConfig';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import "firebase/firestore";
 import { getFirestore, collection, getDocs, query, where} from "firebase/firestore";
+import { UserContext } from '../../Scripts/UserContext';
 
 export default function LoginScreen() {
     const [userData, setUserData] = useState(null);
     const [userEmail, setUserEmail] = useState('');
     const [userPassword, setUserPassword] = useState('');
-    
     const navigation = useNavigation(); 
+    const {fetchUserData} = useContext(UserContext);
 
-    useEffect(() => {
-    
-      async function fetchUserData() {
-        try {
-          const db = getFirestore();
-          const usersCollection = collection(db, "usuarios");
-          const q = query(usersCollection, where("Email", "==", {userEmail})); 
-  
-          const querySnapshot = await getDocs(q);
-          const userDataArray = querySnapshot.docs.map(doc => doc.data());
-          setUserData(userDataArray[0]);
-          
-        } catch (error) {
-          console.error("Erro ao buscar dados do usuário:", error);
-        }
-      }
-  
-      fetchUserData();
-    }, []);
 
     function newUser(){
       navigation.navigate('Register'); 
@@ -45,6 +27,7 @@ export default function LoginScreen() {
         signInWithEmailAndPassword(auth, userEmail, userPassword) 
         .then((userCredential) => { 
             const user = userCredential.user;
+            fetchUserData(userEmail)
             alert("Login efetuado com sucesso!"); 
             //console.log(user); 
 
