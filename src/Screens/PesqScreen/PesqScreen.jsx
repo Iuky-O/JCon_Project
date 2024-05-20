@@ -14,7 +14,7 @@ const dataPatrocinados = [
     id: '1',
     imageUrl: 'https://blog.ebaconline.com.br/blog/wp-content/uploads/2022/12/edptt4frrzbpknuf6ra99-e1674746309883.png',
     title: 'Fotógrafo',
-    local: 'Nova Olinda, Castanhal - PA',
+    local: ' Nova Olinda, Castanhal - PA',
     NameSub: 'Davi',
     description: 'Olá, meu nome é Davi e sou fotógrafo. Tenho 25 anos e a fotografia é a minha grande paixão. Como fotógrafo, gosto de me descrever como versátil. Meu portfólio inclui desde fotografias de casamento emocionantes e retratos intimistas até moda estilizada e projetos documentais. Para mim, cada fotografia deve contar uma história e transmitir uma emoção autêntica.',
     services: 'Fotografia de produtos, paisagens e eventos.',
@@ -29,7 +29,7 @@ const dataPatrocinados = [
     id: '2',
     imageUrl: 'https://static.vecteezy.com/ti/fotos-gratis/p1/6853663-asiatico-adolescente-mulher-trabalhe-e-estudo-online-via-internet-em-casa-gratis-foto.jpg',
     title: 'Programadora',
-    local: 'Imperador, Castanhal - PA',
+    local: ' Imperador, Castanhal - PA',
     NameSub: 'Eyko Hiroshi',
     description: 'Olá! Meu nome é Eyko e sou uma programadora apaixonada por transformar linhas de código em soluções criativas e inovadoras. Sou apaixonada por desafios e não há nada mais gratificante para mim do que ver um projeto ganhar vida através do meu código.',
     services: 'Dev Back-End, C#, Python',
@@ -42,8 +42,7 @@ const dataPatrocinados = [
     id: '3',
     imageUrl: 'https://st.depositphotos.com/1049184/1457/i/450/depositphotos_14570971-stock-photo-smiley-charlady-with-rug-and.jpg',
     title: 'Faxineira',
-    local: 'Castanheira, Belém - PA',
-    data: '31/04/2024',
+    local: ' Castanheira, Belém - PA',
     NameSub: 'Juraci Santana',
     description: 'Olá, sou Juraci e amo limpeza. Hoje em dia este é meu modo de sustento e me sinto orgulhosa por trabalhar organizando.',
     services: 'Limpeza de casas e apartamentos.',
@@ -60,7 +59,7 @@ const dataNaoPatrocinados = [
     id: '1',
     imageUrl: 'https://cptstatic.s3.amazonaws.com/imagens/enviadas/materias/materia28380/jardineiro-cpt.jpg',
     title: 'Jardinagem',
-    local: 'Nova Olinda, Castanhal - PA',
+    local: ' Nova Olinda, Castanhal - PA',
     NameSub: 'Jorge Flor',
     description: 'Olá sou Jorge Flor, sou jardineiro por amor, trabalho com podagem, limpeza e roçagem. Amo o cuidado com plantas e jardins.',
     services: 'Podagem, limpeza e roçagem',
@@ -74,7 +73,7 @@ const dataNaoPatrocinados = [
     id: '2',
     imageUrl: 'https://thumbs.dreamstime.com/b/homem-pregando-fundo-do-trabalhador-consertar-coisas-ferramentas-relacionadas-%C3%A0-casa-224207028.jpg',
     title: 'Carpinteiro',
-    local: 'Imperador, Castanhal - PA',
+    local: ' Imperador, Castanhal - PA',
     NameSub: 'Ruan Amalri',
     description: 'Sou Amalri, e trabalho desde jovem com carpintaria, faço ideias criativas para qualquer lugar.',
     services: 'Carpintagem, peças, casas e móveis.',
@@ -89,7 +88,7 @@ const dataNaoPatrocinados = [
     id: '3',
     imageUrl: 'https://media.istockphoto.com/id/1334005366/pt/foto/portrait-young-woman-smiling-on-yellow-background.jpg?s=612x612&w=0&k=20&c=g04Edy8itF0Y5fYIFKaHwRr4vC1ApRl6YemlbfPOXrA=',
     title: 'Faxina',
-    local: 'Castanheira, Belém - PA',
+    local: ' Castanheira, Belém - PA',
     NameSub: 'Bia Alexandrina',
     description: 'Olá sou Biatriz e faço serviço de faxina, principalmente em apartamentos, mas extendo meus serviços há casas e prédios comerciais.',
     services: 'Limpeza de casas e apartamentos.',
@@ -103,7 +102,7 @@ const dataNaoPatrocinados = [
     id: '4',
     imageUrl: 'https://plus.unsplash.com/premium_photo-1689551670902-19b441a6afde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     title: 'Social Mídia',
-    local: 'Juazeiro, Santa Izabel - PA',
+    local: ' Juazeiro, Santa Izabel - PA',
     NameSub: 'Regina Lira',
     description: 'Olá! Sou Regina e sou uma profissional apaixonada por Social Media. Tenho experiência em criar e gerenciar conteúdo para diversas plataformas, incluindo Facebook, Instagram, Twitter e LinkedIn. Meu objetivo é sempre desenvolver estratégias de conteúdo que não apenas aumentem a visibilidade da marca, mas também criem uma comunidade engajada e leal. Adoro a combinação de criatividade e análise que este trabalho exige, permitindo-me experimentar novas ideias e medir seu impacto em tempo real.',
     services: 'Gerência de mídias sociais',
@@ -117,7 +116,7 @@ const dataNaoPatrocinados = [
     id: '5',
     imageUrl: 'https://images.unsplash.com/photo-1642257859842-c95f9fa8121d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     title: 'Contabilidade',
-    local: '1901 Thornridge Cir. Shiloh, Hawaii 81063',
+    local: ' 1901 Thornridge Cir. Shiloh, Hawaii 81063',
     NameSub: 'Rubens',
     description: 'Olá sou Rubens e trabalho com contabilidade, sempre proto para novos desafios busco otimizar o setor financeiro de uma empresa.',
     services: 'Contabilidade',
@@ -131,7 +130,7 @@ const dataNaoPatrocinados = [
     id: '6',
     imageUrl: 'https://images.unsplash.com/photo-1551836022-deb4988cc6c0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     title: 'Advogada',
-    local: 'Centro, Abaetetuba - PA',
+    local: ' Centro, Abaetetuba - PA',
     NameSub: 'Mariana',
     description: 'Trabalho com advocacia voltada para os direitos trabalhistas.',
     services: 'Advocacia trabalhista',
@@ -174,20 +173,12 @@ const Item = ({item, navigation}) => (
         {item.title}</Text>
       <Text style={styles.subtitle}>
         <Ionicons
-          name="map-outline"
+          name="location-sharp"
           size={10}
           color="write"
           onPress={() => { }}
         />
         {item.local}</Text>
-      <Text style={styles.subtitle}>
-        <Ionicons
-          name="calendar-outline"
-          size={10}
-          color="write"
-          onPress={() => { }}
-        />
-        {item.data}</Text>
     </View>
 
     <View style={styles.Button}>
