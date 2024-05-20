@@ -201,9 +201,9 @@ export default function ProfileScreen() {
           <Text style={styles.lineSeparator}></Text>
 
           <View style={styles.textInfo}>
-            <Text>Design ➖ ➖ </Text>
-            <Text>Programação ➖ ➖ </Text>
-            <Text>UX </Text>
+            <Text> Design </Text>             
+            <Text>🔹 Programação 🔹</Text>
+            <Text> UX</Text>
           </View>
 
           <Text style={styles.textSubtitle}>SOBRE MIM</Text>
