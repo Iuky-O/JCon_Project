@@ -6,11 +6,11 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import ButtonFloat from '../../Components/ButtonFloat';
 import Colors from '../../Utils/Colors';
-import { Stars5, Stars4, Stars3, Stars2, Stars1, Stars0 } from '../../Scripts/functions'
 import "firebase/firestore";
 import { firebase } from '../../Firebase/firebaseConfig';
 import { getFirestore, collection, getDocs, query, where} from "firebase/firestore";
 import { UserContext } from '../../Scripts/UserContext';
+import { Stars5, Stars4M, Stars4, Stars3M, Stars3, Stars2M, Stars2, Stars1M, Stars1, StarsM, Stars0 } from '../../Scripts/functions';
 
 const avaliacoes = [
   {
@@ -129,7 +129,30 @@ export default function ProfileScreen() {
       </TouchableOpacity>
     }
 
-
+  function Post () {
+    return (
+      <View style={styles.post}>
+        {userData.midias.map((midia, index) => (
+          <Image
+            key={index} 
+            style={styles.postImage}
+            source={{ uri:`${midia}`}} 
+          />
+        ))}
+      </View>
+    );
+  };
+  function Services () {
+    return (
+      <View style={styles.textInfo}>
+        {userData.services.map((service, index) => (
+          <View>
+            <Text key={index}>🔹{service}</Text> 
+          </View>
+        ))}
+      </View>
+    );
+  };
   return (
 
     <SafeAreaView>
@@ -144,19 +167,25 @@ export default function ProfileScreen() {
 
 
             <Image style={styles.containerImg}
-              source={require('../../../assets/images/profile.jpg')}
+              source={{ uri:`${userData.profile_picture}`}}
             />
         
           <Text style={styles.textTitle}>{userData.Name}</Text>
 
           <View style={styles.containerAval}>
             <View style={styles.stars}>
-            <Image source={require('../../../assets/images/icon-star-max.png')} style={{height: 20, width: 20}}/>
-            <Image source={require('../../../assets/images/icon-star-max.png')} style={{height: 20, width: 20}}/>
-            <Image source={require('../../../assets/images/icon-star-max.png')} style={{height: 20, width: 20}}/>
-            <Image source={require('../../../assets/images/icon-star-medium.png')} style={{height: 20, width: 20}}/>
-            <Image source={require('../../../assets/images/icon-star-min.png')} style={{height: 20, width: 20}}/>
-              <Text style={{opacity: 0.5, color: Colors.MALTE}}> 3.5 </Text>
+                    {userData.estrelas === 5 && Stars5() }
+                    {userData.estrelas === 4.5 && Stars4M()}
+                    {userData.estrelas === 4 && Stars4()}
+                    {userData.estrelas === 3.5 && Stars3M()}
+                    {userData.estrelas === 3 && Stars3()}
+                    {userData.estrelas === 2.5 && Stars2M()}
+                    {userData.estrelas === 2 && Stars2()}
+                    {userData.estrelas === 1.5 && Stars1M()}
+                    {userData.estrelas === 1 && Stars1()}
+                    {userData.estrelas === 0.5 && StarsM()}
+                    {userData.estrelas === 0 && Stars0()}
+              <Text style={{opacity: 0.5, color: Colors.MALTE}}>{userData.estrelas}</Text>
             </View>
 
             <View style={styles.containerTopics}>
@@ -200,11 +229,7 @@ export default function ProfileScreen() {
           <Text style={styles.textSubtitle}>SERVIÇOS</Text>
           <Text style={styles.lineSeparator}></Text>
 
-          <View style={styles.textInfo}>
-            <Text> Design </Text>             
-            <Text>🔹 Programação 🔹</Text>
-            <Text> UX</Text>
-          </View>
+          {Services()}
 
           <Text style={styles.textSubtitle}>SOBRE MIM</Text>
           <Text style={styles.lineSeparator}></Text>
@@ -216,17 +241,7 @@ export default function ProfileScreen() {
           <Text style={styles.textSubtitle}>POSTAGENS</Text>
           <Text style={styles.lineSeparator}></Text>
 
-          <View style={styles.post}>
-            <Image style={styles.postImage}
-              source={require('../../../assets/images/postagen1.jpg')}
-            />
-            <Image style={styles.postImage}
-              source={require('../../../assets/images/postagem2.jpg')}
-            />
-            <Image style={styles.postImage}
-              source={require('../../../assets/images/postagem3.jpg')}
-            />
-          </View>
+          {Post()}
 
         </View>
         ) : (

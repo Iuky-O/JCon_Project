@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
     alignItems: 'center',
     maxHeight: 30,
+    paddingHorizontal: 100
   },
   containerImg: {
     height: 90, 
